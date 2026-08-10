@@ -71,8 +71,8 @@ def validate(e, idx):
         errs.append(f"entry[{idx}] summary too short")
     if not e["why_it_matters"]:
         errs.append(f"entry[{idx}] why_it_matters empty")
-    if not isinstance(e["year"], int):
-        errs.append(f"entry[{idx}] year must be int")
+    if not isinstance(e["year"], int) or not (1800 <= e["year"] <= 2035):
+        errs.append(f"entry[{idx}] year must be int in 1800..2035")
     return errs
 
 
@@ -114,10 +114,15 @@ def main():
             print(f"DUPLICATE TITLE: {e['title']} (id={e['id']})")
             sys.exit(1)
         catalog.append(e)
-        ids.add(e["id"])
-        urls.add(e["url"].lower())
-        titles.add(e["title"].lower())
         added += 1
+
+    # rebuild dedup sets from the merged catalog so stale entries from updates don't linger
+    ids = {e["id"] for e in catalog}
+    urls = {e["url"].lower() for e in catalog}
+    titles = {e["title"].lower() for e in catalog}
+    if len(urls) != len(catalog) or len(titles) != len(catalog) or len(ids) != len(catalog):
+        print("MERGE ERROR: duplicate id/url/title across merged catalog — fix before proceeding")
+        sys.exit(1)
 
     save(catalog, ENTRIES)
     print(f"MERGED: {added} added, {updated} updated -> {len(catalog)} total entries in data/entries.json")

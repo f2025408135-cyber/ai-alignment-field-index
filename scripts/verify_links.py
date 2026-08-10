@@ -58,7 +58,7 @@ def main():
             results[e["id"]] = (code, note)
 
     live = blocked = dead = 0
-    print(f"{'STATUS':<8} {'CODE':<6} ID / URL")
+    print(f"{'STATUS':<13} {'CODE':<6} ID / URL")
     for e in catalog:
         code, note = results[e["id"]]
         if code == -1:
@@ -68,23 +68,38 @@ def main():
             live += 1
             st = "live"
         elif code in (401, 403):
+            # bot-blocked: exists but refuses curl/urllib; counted live with a caveat label
             blocked += 1
-            st = "BLOCKED"
+            live += 1
+            st = "live(blocked)"
         else:
             dead += 1
             st = "DEAD"
         extra = f" -> {note}" if note != e["url"] else ""
-        print(f"{st:<8} {code:<6} {e['id']}  {e['url']}{extra}")
+        print(f"{st:<13} {code:<6} {e['id']}  {e['url']}{extra}")
 
-    print(f"\nSUMMARY: {len(catalog)} checked, {live} live, {blocked} bot-blocked(caveat), {dead} dead/failed")
+    print(f"\nSUMMARY: {len(catalog)} checked, {live} live ({blocked} bot-blocked/401-403), {dead} dead/failed")
 
     if args.apply:
+        from datetime import date
+        today = date.today().isoformat()
         changed = 0
         for e in catalog:
             code, _ = results[e["id"]]
-            new = "dead" if code in (-1,) or code >= 400 else "live"
-            if new != e["status"] and e["status"] not in ("paywalled",):
+            resolved = code not in (-1,) and (code < 400 or code in (401, 403))
+            if not resolved:
+                new = "dead"            # paywalled can rot too; keep the record
+            elif e["status"] == "paywalled":
+                new = "paywalled"       # resolved fine — never upgrade paywalled to live
+            else:
+                new = "live"
+            if new != e["status"]:
                 e["status"] = new
+                if resolved:
+                    e["last_verified"] = today
+                changed += 1
+            elif resolved and e["last_verified"] != today:
+                e["last_verified"] = today
                 changed += 1
         tmp = ENTRIES + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:

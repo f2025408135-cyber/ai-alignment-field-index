@@ -28,10 +28,24 @@ EXPECTED_SUBTOPICS = {
 ENTRY_TIER_DOMAINS = {"entry-tier", "governance-policy", "philosophy-values", "field-infrastructure"}
 
 
-def similarity(a, b):
-    """Rough token-set Jaccard-ish similarity on lowercase alnum tokens."""
-    import difflib
-    return difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()
+def similarity(a, b, is_url=False):
+    """Token-set Jaccard similarity on lowercase alnum tokens.
+    For URLs, strip scheme+host first (distinct arXiv/GitHub/YouTube URLs share
+    a long identical prefix; comparing full strings false-positives).
+    """
+    import re
+    if is_url:
+        s = a.split("://", 1)[-1]
+        parts = s.split("/", 1)
+        a = parts[1] if len(parts) > 1 else parts[0]
+        s = b.split("://", 1)[-1]
+        parts = s.split("/", 1)
+        b = parts[1] if len(parts) > 1 else parts[0]
+    ta = set(re.findall(r"[a-z0-9]+", a.lower()))
+    tb = set(re.findall(r"[a-z0-9]+", b.lower()))
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
 
 
 def main():
@@ -65,12 +79,12 @@ def main():
         has_entry_tier = any(e["domain"] == d and e["tier"] == "entry" for e in catalog)
         check(f"entry-tier-material {d}", has_entry_tier)
 
-    # 3. dedup: >90% title or url similarity
+    # 3. dedup: >90% title or url similarity (URLs compared by path tokens only)
     dupes = []
     for i in range(len(catalog)):
         for j in range(i + 1, len(catalog)):
             a, b = catalog[i], catalog[j]
-            if similarity(a["url"], b["url"]) > 0.90 or similarity(a["title"], b["title"]) > 0.90:
+            if similarity(a["url"], b["url"], is_url=True) > 0.90 or similarity(a["title"], b["title"]) > 0.90:
                 dupes.append((a["id"], b["id"]))
     check("dedup", not dupes, f"dupes: {dupes[:5]}" if dupes else "")
 
@@ -90,23 +104,11 @@ def main():
                     dangling.append((e["id"], k, i))
     check("crossref-integrity", not dangling, f"dangling: {dangling[:5]}" if dangling else "")
 
-    # 7. domains md freshness: regenerate to temp and diff
+    # 7. domains md freshness: generator --check renders and diffs WITHOUT writing (no side effects)
     import subprocess
-    r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "generate_domains.py")],
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "generate_domains.py"), "--check"],
                        capture_output=True, text=True)
-    if r.returncode != 0:
-        check("generate-runs", False, r.stderr[:300])
-    else:
-        stale = []
-        for f in os.listdir(os.path.join(ROOT, "domains")):
-            if f.endswith(".md"):
-                path = os.path.join(ROOT, "domains", f)
-                with open(path, "r", encoding="utf-8") as fh:
-                    content = fh.read()
-                # regenerate single-domain content by re-running generator is full; instead check marker
-                if "Generated from `data/entries.json`" not in content:
-                    stale.append(f)
-        check("domains-md-present", not stale, f"missing marker: {stale}" if stale else "")
+    check("domains-md-fresh", r.returncode == 0, (r.stdout or r.stderr).strip()[:300])
 
     # 8. PROGRESS all done
     progress_path = os.path.join(ROOT, "PROGRESS.md")

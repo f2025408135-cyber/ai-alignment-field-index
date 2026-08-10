@@ -5,8 +5,10 @@ One file per domain, grouped by tier (entry / core / deep), rendered as a table
 (Resource | Type | Tier | Prerequisites | Why it matters). Live/paywalled entries only;
 `dead` entries are kept in the catalog but excluded from the published markdown.
 """
+import argparse
 import json
 import os
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, "data", "entries.json")
@@ -38,12 +40,23 @@ def fmt_crossrefs(ids, by_id):
     return ", ".join(out) if out else "—"
 
 
+def esc(s):
+    """Escape markdown-table-breaking pipe characters in cell text."""
+    return str(s).replace("|", "\\|")
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--check", action="store_true",
+                    help="render and compare against existing files without writing; exit 1 if stale")
+    args = ap.parse_args()
+
     with open(ENTRIES, "r", encoding="utf-8") as f:
         catalog = json.load(f)
     by_id = {e["id"]: e for e in catalog}
     os.makedirs(DOMAINS_DIR, exist_ok=True)
     total_rendered = 0
+    rendered = {}
     for dom_id, dom_title, dom_desc in DOMAINS:
         entries = [e for e in catalog if e["domain"] == dom_id and e["status"] != "dead"]
         total_rendered += len(entries)
@@ -70,12 +83,28 @@ def main():
             lines.append("| Resource | Type | Tier | Prerequisites | Why it matters |")
             lines.append("|---|---|---|---|---|")
             for e in tier_entries:
-                resource = f"[{e['title']}]({e['url']}) ({', '.join(e['authors'][:3])}{' et al.' if len(e['authors']) > 3 else ''}, {e['year']})"
-                pre = fmt_crossrefs(e["prerequisites"], by_id)
-                lines.append(f"| {resource} | {e['type']} | {e['tier']} | {pre} | {e['why_it_matters']} |")
+                authors = ", ".join(esc(a) for a in e["authors"][:3])
+                if len(e["authors"]) > 3:
+                    authors += " et al."
+                resource = f"[{esc(e['title'])}]({e['url']}) ({authors}, {e['year']})"
+                pre = esc(fmt_crossrefs(e["prerequisites"], by_id))
+                lines.append(f"| {resource} | {e['type']} | {e['tier']} | {pre} | {esc(e['why_it_matters'])} |")
             lines.append("")
-        with open(os.path.join(DOMAINS_DIR, f"{dom_id}.md"), "w", encoding="utf-8") as f:
-            f.write("\n".join(lines))
+        rendered[dom_id] = "\n".join(lines)
+        if not args.check:
+            with open(os.path.join(DOMAINS_DIR, f"{dom_id}.md"), "w", encoding="utf-8") as f:
+                f.write(rendered[dom_id])
+    if args.check:
+        stale = []
+        for dom_id, content in rendered.items():
+            path = os.path.join(DOMAINS_DIR, f"{dom_id}.md")
+            if not os.path.exists(path) or open(path, encoding="utf-8").read() != content:
+                stale.append(dom_id)
+        if stale:
+            print(f"STALE: {', '.join(stale)} — run `python scripts/generate_domains.py`")
+            sys.exit(1)
+        print(f"OK: {len(DOMAINS)} domain files match data/entries.json")
+        sys.exit(0)
     print(f"GENERATED {len(DOMAINS)} domain files, {total_rendered} entries rendered "
           f"(catalog has {len(catalog)} total, {sum(1 for e in catalog if e['status'] == 'dead')} dead excluded)")
 
