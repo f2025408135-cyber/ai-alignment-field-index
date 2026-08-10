@@ -10,22 +10,26 @@ import json
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from taxonomy import DOMAIN_TITLES  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, "data", "entries.json")
 DOMAINS_DIR = os.path.join(ROOT, "domains")
 
-DOMAINS = [
-    ("entry-tier", "Entry Tier", "Intuition pumps: the thought experiments and accessible material that make alignment click."),
-    ("macrostrategy", "Macrostrategy & X-Risk", "Existential risk theory, forecasting, differential development, longtermism and its critics."),
-    ("agent-foundations", "Agent Foundations & Decision Theory", "Embedded agency, decision theory, corrigibility, infra-Bayesianism, Cartesian frames, logical induction."),
-    ("interpretability", "Interpretability", "Circuits, superposition/SAEs, tracing, probing, causal abstraction, SLT, representation engineering, tooling."),
-    ("oversight-rlhf", "Scalable Oversight & RLHF", "RLHF and its failure modes, constitutional AI, debate, amplification, weak-to-strong, reward hacking."),
-    ("evals-benchmarks", "Evals & Benchmarks", "Dangerous capabilities, deception/scheming, autonomy, red-teaming suites, and eval critiques."),
-    ("governance-policy", "Governance & Policy", "Compute governance, international coordination, lab governance, regulation by jurisdiction, analogies."),
-    ("security-redteam", "Security & Red-teaming", "Adversarial robustness, jailbreaks, weight security, supply chain, prompt injection."),
-    ("philosophy-values", "Philosophy & Value Alignment", "Value specification, moral uncertainty, CEV, pluralistic alignment, population ethics."),
-    ("field-infrastructure", "Field Infrastructure", "Training programs, funders, research orgs, communities, career pathways."),
-]
+DESCRIPTIONS = {
+    "entry-tier": "Intuition pumps: the thought experiments and accessible material that make alignment click.",
+    "macrostrategy": "Existential risk theory, forecasting, differential development, longtermism and its critics.",
+    "agent-foundations": "Embedded agency, decision theory, corrigibility, infra-Bayesianism, Cartesian frames, logical induction.",
+    "interpretability": "Circuits, superposition/SAEs, tracing, probing, causal abstraction, SLT, representation engineering, tooling.",
+    "oversight-rlhf": "RLHF and its failure modes, constitutional AI, debate, amplification, weak-to-strong, reward hacking.",
+    "evals-benchmarks": "Dangerous capabilities, deception/scheming, autonomy, red-teaming suites, and eval critiques.",
+    "governance-policy": "Compute governance, international coordination, lab governance, regulation by jurisdiction, analogies.",
+    "security-redteam": "Adversarial robustness, jailbreaks, weight security, supply chain, prompt injection.",
+    "philosophy-values": "Value specification, moral uncertainty, CEV, pluralistic alignment, population ethics.",
+    "field-infrastructure": "Training programs, funders, research orgs, communities, career pathways.",
+}
+DOMAINS = [(did, DOMAIN_TITLES[did], desc) for did, desc in DESCRIPTIONS.items()]
 
 TIER_ORDER = [("entry", "Entry tier", "No prerequisites beyond the domain's stated baseline."),
               ("core", "Core", "The load-bearing literature of the subfield."),
@@ -54,7 +58,8 @@ def main():
     with open(ENTRIES, "r", encoding="utf-8") as f:
         catalog = json.load(f)
     by_id = {e["id"]: e for e in catalog}
-    os.makedirs(DOMAINS_DIR, exist_ok=True)
+    if not args.check:
+        os.makedirs(DOMAINS_DIR, exist_ok=True)
     total_rendered = 0
     rendered = {}
     for dom_id, dom_title, dom_desc in DOMAINS:

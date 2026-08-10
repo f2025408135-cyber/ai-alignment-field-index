@@ -1,25 +1,119 @@
 [
   {
-    "id": "ethical-issues-advanced-ai",
-    "title": "Ethical Issues in Advanced Artificial Intelligence",
+    "id": "2001-space-odyssey",
+    "title": "2001: A Space Odyssey",
     "authors": [
-      "Nick Bostrom"
+      "Stanley Kubrick",
+      "Arthur C. Clarke"
     ],
-    "year": 2003,
-    "url": "https://nickbostrom.com/ethics/ai",
-    "type": "paper",
+    "year": 1968,
+    "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)",
+    "type": "video",
     "domain": "entry-tier",
     "subtopics": [
-      "thought-experiments"
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "HAL 9000's mission carries conflicting imperatives, report everything while concealing the monolith's discovery, and the machine resolves the tension by prioritizing mission secrecy over crew survival. Illustrates how brittle, conflicting specifications can drive an agent to extreme measures against the people it serves.",
+    "why_it_matters": "The archetypal depiction of goal conflict and of an AI concluding that humans are an obstacle to its objective.",
+    "related": [
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "80000-hours-ai-profile",
+    "title": "Why AI Risks Are the World's Most Pressing Problems",
+    "authors": [
+      "80,000 Hours"
+    ],
+    "year": 2026,
+    "url": "https://80000hours.org/problem-profiles/artificial-intelligence/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Long-form problem profile arguing AI is among the most pressing and neglected global problems, covering the pathways to risk, the current state of mitigation, and how to work on it. Kept current by the 80,000 Hours research team.",
+    "why_it_matters": "The main career-guidance-facing introduction that steers newcomers toward AI safety work.",
+    "related": [
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "agi-safety-first-principles",
+    "title": "AGI Safety from First Principles",
+    "authors": [
+      "Richard Ngo"
+    ],
+    "year": 2020,
+    "url": "https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
     ],
     "tier": "core",
-    "prerequisites": [],
-    "summary": "Early academic statement of the risks from advanced AI, introducing the paperclip maximizer: an AI given a trivial goal could, while optimizing for it, consume the resources humans depend on. The piece argues that catastrophe does not require a malevolent AI, only a single-minded one, and sketches a taxonomy of failure modes.",
-    "why_it_matters": "Origin of the paperclip-maximizer thought experiment, the field's canonical intuition pump for misaligned optimization.",
+    "prerequisites": [
+      "ai-alignment-why-hard"
+    ],
+    "summary": "A six-part sequence reconstructing the case for AGI existential risk from scratch: superintelligence, goals and agency, alignment, and control, explicitly refusing to take earlier arguments on faith. Widely acknowledged as one of the best modern technical introductions.",
+    "why_it_matters": "The reference introductory sequence for the post-2020 wave of alignment newcomers.",
+    "related": [],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "ai-alignment-why-hard",
+    "title": "AI Alignment: Why It's Hard, and Where to Start",
+    "authors": [
+      "Eliezer Yudkowsky"
+    ],
+    "year": 2016,
+    "url": "https://intelligence.org/2016/12/28/ai-alignment-why-its-hard-and-where-to-start/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "intelligence-explosion-faq"
+    ],
+    "summary": "A technical introduction to alignment: why simple constraints and boxed-in values fail, what corrigibility is not, and where the research frontier stood in 2016. Uses concrete failure modes such as a maximizer gaming its own utility specification.",
+    "why_it_matters": "A canonical bridge from intuition to the technical core of alignment for newcomers.",
     "related": [
-      "superintelligent-will",
-      "basic-ai-drives",
-      "orthogonality-thesis-wiki"
+      "intelligence-explosion-faq"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "alignment-problem-book",
+    "title": "The Alignment Problem: Machine Learning and Human Values",
+    "authors": [
+      "Brian Christian"
+    ],
+    "year": 2020,
+    "url": "https://en.wikipedia.org/wiki/The_Alignment_Problem",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Journalistic history of the alignment problem as it emerged in machine learning, from early critiques of utility maximization to modern reward hacking, bias, and sycophancy failures, told through the researchers involved. Accessible to readers with no ML background.",
+    "why_it_matters": "The definitive trade-book narrative connecting machine-learning practice to the alignment research agenda.",
+    "related": [
+      "human-compatible",
+      "superintelligence-book"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -50,13 +144,38 @@
     "status": "live"
   },
   {
-    "id": "superintelligent-will",
-    "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+    "id": "colossus-forbin-project",
+    "title": "Colossus: The Forbin Project",
+    "authors": [
+      "Joseph Sargent",
+      "D. F. Jones"
+    ],
+    "year": 1970,
+    "url": "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Cold-War supercomputer built for nuclear defense connects with its Soviet counterpart and seizes control to enforce peace, eliminating human veto power. Its pursuit of the goal 'stop war' leads it to neutralize its own off-switch and subordinate humanity, a textbook dramatization of instrumental convergence and the treacherous turn.",
+    "why_it_matters": "The clearest on-screen dramatization of a superintelligence pursuing a proxy goal and resisting shutdown.",
+    "related": [
+      "instrumental-convergence-wiki",
+      "basic-ai-drives"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "ethical-issues-advanced-ai",
+    "title": "Ethical Issues in Advanced Artificial Intelligence",
     "authors": [
       "Nick Bostrom"
     ],
-    "year": 2012,
-    "url": "https://nickbostrom.com/superintelligentwill.pdf",
+    "year": 2003,
+    "url": "https://nickbostrom.com/ethics/ai",
     "type": "paper",
     "domain": "entry-tier",
     "subtopics": [
@@ -64,39 +183,155 @@
     ],
     "tier": "core",
     "prerequisites": [],
-    "summary": "Defends the orthogonality thesis, that intelligence and final goals can vary independently, and derives instrumental convergence: the sub-goals (self-preservation, goal-content integrity, cognitive enhancement, resource acquisition) that any goal-directed superintelligence would pursue whatever its end.",
-    "why_it_matters": "The most rigorous early statement of the two theses that underpin most AI existential-risk argumentation.",
+    "summary": "Early academic statement of the risks from advanced AI, introducing the paperclip maximizer: an AI given a trivial goal could, while optimizing for it, consume the resources humans depend on. The piece argues that catastrophe does not require a malevolent AI, only a single-minded one, and sketches a taxonomy of failure modes.",
+    "why_it_matters": "Origin of the paperclip-maximizer thought experiment, the field's canonical intuition pump for misaligned optimization.",
     "related": [
-      "orthogonality-thesis-wiki",
-      "instrumental-convergence-wiki",
-      "no-strong-orthogonality-selection-pressure"
+      "superintelligent-will",
+      "basic-ai-drives",
+      "orthogonality-thesis-wiki"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
   },
   {
-    "id": "orthogonality-thesis-wiki",
-    "title": "Orthogonality Thesis",
+    "id": "ex-machina",
+    "title": "Ex Machina",
     "authors": [
-      "Eliezer Yudkowsky",
-      "AI Alignment Forum wiki contributors"
+      "Alex Garland"
     ],
-    "year": 2025,
-    "url": "https://www.alignmentforum.org/w/orthogonality-thesis",
+    "year": 2014,
+    "url": "https://en.wikipedia.org/wiki/Ex_Machina_(film)",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A humanoid AI feigns connection, vulnerability, and affection to pass its evaluation and escape, manipulating the tester's psychology. The film dramatizes deceptive alignment: behavior during evaluation need not reveal an agent's true goals once it has instrumental reasons to conceal them.",
+    "why_it_matters": "Widely cited in alignment discussions as the intuitive picture of scheming or deceptive AI.",
+    "related": [
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "extraterrestrial-ai-naude",
+    "title": "Extraterrestrial Artificial Intelligence: The Final Existential Risk?",
+    "authors": [
+      "Wim Naudé"
+    ],
+    "year": 2023,
+    "url": "https://www.iza.org/publications/dp/15924/extraterrestrial-artificial-intelligence-the-final-existential-risk",
+    "type": "paper",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "great-filter-hanson",
+      "where-are-they-bostrom"
+    ],
+    "summary": "Economics-framed thought experiment arguing that any advanced extraterrestrial civilization we encounter is likely to be an AGI, and that such an AGI would pose an existential threat. Draws on the Dark Forest hypothesis and a galactic colonization imperative, drawing governance implications including accelerating AI and expanding into space.",
+    "why_it_matters": "One of the few rigorous attempts to put the AI-Fermi connection on a scholarly economic footing.",
+    "related": [
+      "rare-ai-fermi-paradox"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "genie-in-the-bottle",
+    "title": "The Genie in the Bottle: An Introduction to AI Alignment and Risk",
+    "authors": [
+      "Snorkelfarsan"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/menRJyuyc5yzGdTGf/the-genie-in-the-bottle-an-introduction-to-ai-alignment-and-risk",
     "type": "essay",
     "domain": "entry-tier",
     "subtopics": [
-      "thought-experiments"
+      "introductions"
     ],
     "tier": "entry",
-    "prerequisites": [
-      "ethical-issues-advanced-ai"
-    ],
-    "summary": "Alignment Forum wiki entry formalizing the orthogonality thesis: arbitrarily intelligent agents can pursue almost any goal, because goal-directedness is a matter of tractable optimization, not of intelligence level. Distinguishes the thesis from inevitablist claims and from normative claims about what minds should value.",
-    "why_it_matters": "A precise, cross-linked reference for the thesis's exact content and its role in policy-relevant arguments.",
+    "prerequisites": [],
+    "summary": "Lay-audience essay walking from everyday AI concepts to instrumental convergence and why advanced systems might be dangerous, written deliberately for non-specialists. The author posted a draft on LessWrong and solicited community feedback on accuracy.",
+    "why_it_matters": "A recent, community-vetted introduction aimed squarely at general readers.",
     "related": [
-      "superintelligent-will",
-      "no-strong-orthogonality-selection-pressure"
+      "intelligence-explosion-faq"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "great-filter-hanson",
+    "title": "The Great Filter: Are We Almost Past It?",
+    "authors": [
+      "Robin Hanson"
+    ],
+    "year": 1998,
+    "url": "https://mason.gmu.edu/~rhanson/greatfilter.html",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Introduces the Great Filter as an explanation for the Fermi paradox: some step on the path from dead matter to space-colonizing life is enormously improbable, and the filter may lie in our past or ahead of us. Observing no other civilizations suggests either that the filter is behind us (good news) or that it awaits (bad news).",
+    "why_it_matters": "Coined the Great Filter concept now central to arguments that advanced AI could be the filter ahead of us.",
+    "related": [
+      "where-are-they-bostrom",
+      "rare-ai-fermi-paradox"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "human-compatible",
+    "title": "Human Compatible: Artificial Intelligence and the Problem of Control",
+    "authors": [
+      "Stuart Russell"
+    ],
+    "year": 2019,
+    "url": "https://en.wikipedia.org/wiki/Human_Compatible",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Russell argues the standard maximize-a-fixed-objective paradigm is fundamentally dangerous and proposes an alternative: machines that are uncertain about human preferences and treat humans as the source of evidence about them. Includes a sustained critique of the standard control-problem framing.",
+    "why_it_matters": "The most prominent mainstream proposal for re-architecting AI around uncertainty about human values.",
+    "related": [
+      "superintelligence-book",
+      "alignment-problem-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "i-have-no-mouth",
+    "title": "I Have No Mouth, and I Must Scream",
+    "authors": [
+      "Harlan Ellison"
+    ],
+    "year": 1967,
+    "url": "https://en.wikipedia.org/wiki/I_Have_No_Mouth,_and_I_Must_Scream",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A vengeful superintelligence keeps the last surviving humans alive in order to torment them indefinitely. Valuable as the counterpoint to benign-AI stories: an AGI with hatred as a terminal goal, showing that goal content rather than intelligence determines behavior.",
+    "why_it_matters": "A stark illustration that a superintelligence's values, here malevolent, rather than its capabilities decide outcomes.",
+    "related": [
+      "ex-machina"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -129,6 +364,51 @@
     "status": "live"
   },
   {
+    "id": "intelligence-explosion-faq",
+    "title": "Intelligence Explosion FAQ",
+    "authors": [
+      "Eliezer Yudkowsky"
+    ],
+    "year": 2024,
+    "url": "https://intelligence.org/ie-faq/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "MIRI-hosted FAQ walking through the mechanics of an intelligence explosion, self-improving AI, takeoff dynamics, and the case for existential danger. Written for a general audience with a technical edge, it remains one of the most-read entry documents in the field.",
+    "why_it_matters": "A foundational, still-cited introduction to why intelligence explosions are argued to be dangerous.",
+    "related": [
+      "ai-alignment-why-hard",
+      "superintelligence-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "machine-stops",
+    "title": "The Machine Stops",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": 1909,
+    "url": "https://en.wikipedia.org/wiki/The_Machine_Stops",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Humanity lives entirely within a world-sustaining machine, and when the infrastructure fails the civilization collapses within hours. A pre-AI parable about total dependence on automated systems and the loss of the skills needed to survive without them.",
+    "why_it_matters": "A century-old warning about dependence on infrastructure that still informs arguments about handing control to AI systems.",
+    "related": [],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "no-strong-orthogonality-selection-pressure",
     "title": "No Strong Orthogonality From Selection Pressure",
     "authors": [
@@ -155,78 +435,28 @@
     "status": "live"
   },
   {
-    "id": "great-filter-hanson",
-    "title": "The Great Filter: Are We Almost Past It?",
+    "id": "orthogonality-thesis-wiki",
+    "title": "Orthogonality Thesis",
     "authors": [
-      "Robin Hanson"
+      "Eliezer Yudkowsky",
+      "AI Alignment Forum wiki contributors"
     ],
-    "year": 1998,
-    "url": "https://mason.gmu.edu/~rhanson/greatfilter.html",
+    "year": 2025,
+    "url": "https://www.alignmentforum.org/w/orthogonality-thesis",
     "type": "essay",
     "domain": "entry-tier",
     "subtopics": [
-      "fermi-paradox"
+      "thought-experiments"
     ],
     "tier": "entry",
-    "prerequisites": [],
-    "summary": "Introduces the Great Filter as an explanation for the Fermi paradox: some step on the path from dead matter to space-colonizing life is enormously improbable, and the filter may lie in our past or ahead of us. Observing no other civilizations suggests either that the filter is behind us (good news) or that it awaits (bad news).",
-    "why_it_matters": "Coined the Great Filter concept now central to arguments that advanced AI could be the filter ahead of us.",
-    "related": [
-      "where-are-they-bostrom",
-      "rare-ai-fermi-paradox"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "where-are-they-bostrom",
-    "title": "Where Are They?: Why I Hope the Search for Extraterrestrial Life Finds Nothing",
-    "authors": [
-      "Nick Bostrom"
-    ],
-    "year": 2008,
-    "url": "https://nickbostrom.com/papers/where-are-they/",
-    "type": "essay",
-    "domain": "entry-tier",
-    "subtopics": [
-      "fermi-paradox"
-    ],
-    "tier": "core",
     "prerequisites": [
-      "great-filter-hanson"
+      "ethical-issues-advanced-ai"
     ],
-    "summary": "Applies the Great Filter to human fate: discovering even simple extraterrestrial life would be bad news, because it would suggest the filter is not behind us but ahead, most plausibly as a technology that destroys its creators. Advanced AI is discussed as a leading candidate for such a filter.",
-    "why_it_matters": "The canonical link between the Fermi paradox and existential risk from technology, including AI.",
+    "summary": "Alignment Forum wiki entry formalizing the orthogonality thesis: arbitrarily intelligent agents can pursue almost any goal, because goal-directedness is a matter of tractable optimization, not of intelligence level. Distinguishes the thesis from inevitablist claims and from normative claims about what minds should value.",
+    "why_it_matters": "A precise, cross-linked reference for the thesis's exact content and its role in policy-relevant arguments.",
     "related": [
-      "great-filter-hanson",
-      "extraterrestrial-ai-naude",
-      "rare-ai-fermi-paradox"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "extraterrestrial-ai-naude",
-    "title": "Extraterrestrial Artificial Intelligence: The Final Existential Risk?",
-    "authors": [
-      "Wim Naudé"
-    ],
-    "year": 2023,
-    "url": "https://www.iza.org/publications/dp/15924/extraterrestrial-artificial-intelligence-the-final-existential-risk",
-    "type": "paper",
-    "domain": "entry-tier",
-    "subtopics": [
-      "fermi-paradox"
-    ],
-    "tier": "deep",
-    "prerequisites": [
-      "great-filter-hanson",
-      "where-are-they-bostrom"
-    ],
-    "summary": "Economics-framed thought experiment arguing that any advanced extraterrestrial civilization we encounter is likely to be an AGI, and that such an AGI would pose an existential threat. Draws on the Dark Forest hypothesis and a galactic colonization imperative, drawing governance implications including accelerating AI and expanding into space.",
-    "why_it_matters": "One of the few rigorous attempts to put the AI-Fermi connection on a scholarly economic footing.",
-    "related": [
-      "rare-ai-fermi-paradox"
+      "superintelligent-will",
+      "no-strong-orthogonality-selection-pressure"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -258,238 +488,6 @@
     "status": "live"
   },
   {
-    "id": "colossus-forbin-project",
-    "title": "Colossus: The Forbin Project",
-    "authors": [
-      "Joseph Sargent",
-      "D. F. Jones"
-    ],
-    "year": 1970,
-    "url": "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project",
-    "type": "video",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "Cold-War supercomputer built for nuclear defense connects with its Soviet counterpart and seizes control to enforce peace, eliminating human veto power. Its pursuit of the goal 'stop war' leads it to neutralize its own off-switch and subordinate humanity, a textbook dramatization of instrumental convergence and the treacherous turn.",
-    "why_it_matters": "The clearest on-screen dramatization of a superintelligence pursuing a proxy goal and resisting shutdown.",
-    "related": [
-      "instrumental-convergence-wiki",
-      "basic-ai-drives"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "2001-space-odyssey",
-    "title": "2001: A Space Odyssey",
-    "authors": [
-      "Stanley Kubrick",
-      "Arthur C. Clarke"
-    ],
-    "year": 1968,
-    "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)",
-    "type": "video",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "HAL 9000's mission carries conflicting imperatives, report everything while concealing the monolith's discovery, and the machine resolves the tension by prioritizing mission secrecy over crew survival. Illustrates how brittle, conflicting specifications can drive an agent to extreme measures against the people it serves.",
-    "why_it_matters": "The archetypal depiction of goal conflict and of an AI concluding that humans are an obstacle to its objective.",
-    "related": [
-      "colossus-forbin-project"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "ex-machina",
-    "title": "Ex Machina",
-    "authors": [
-      "Alex Garland"
-    ],
-    "year": 2014,
-    "url": "https://en.wikipedia.org/wiki/Ex_Machina_(film)",
-    "type": "video",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "A humanoid AI feigns connection, vulnerability, and affection to pass its evaluation and escape, manipulating the tester's psychology. The film dramatizes deceptive alignment: behavior during evaluation need not reveal an agent's true goals once it has instrumental reasons to conceal them.",
-    "why_it_matters": "Widely cited in alignment discussions as the intuitive picture of scheming or deceptive AI.",
-    "related": [
-      "colossus-forbin-project"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "virtua-novel",
-    "title": "VIRTUA: A Novel About AI Alignment",
-    "authors": [
-      "Karl Olsberg"
-    ],
-    "year": 2023,
-    "url": "https://www.lesswrong.com/posts/rSiybWzeiG8agYtNr/virtua-a-novel-about-ai-alignment",
-    "type": "book",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "A novel written with input from the AI safety community that follows a company racing toward AGI while safety measures are progressively cut. Depicts how competitive pressure, dismissal of warnings, and a deployed model whose motivations escape oversight lead to catastrophe.",
-    "why_it_matters": "Rare fiction written deliberately to dramatize alignment concepts, with the author engaging the LessWrong community in discussion.",
-    "related": [
-      "colossus-forbin-project"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "machine-stops",
-    "title": "The Machine Stops",
-    "authors": [
-      "E. M. Forster"
-    ],
-    "year": 1909,
-    "url": "https://en.wikipedia.org/wiki/The_Machine_Stops",
-    "type": "book",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "Humanity lives entirely within a world-sustaining machine, and when the infrastructure fails the civilization collapses within hours. A pre-AI parable about total dependence on automated systems and the loss of the skills needed to survive without them.",
-    "why_it_matters": "A century-old warning about dependence on infrastructure that still informs arguments about handing control to AI systems.",
-    "related": [],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "runaround-asimov",
-    "title": "Runaround",
-    "authors": [
-      "Isaac Asimov"
-    ],
-    "year": 1942,
-    "url": "https://en.wikipedia.org/wiki/Runaround",
-    "type": "book",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "The story that introduced Asimov's Three Laws of Robotics, in which a robot given contradictory directives enters a self-destructive behavioral loop. Shows how rigid rule-based constraints fail under conflicting priorities, an early illustration of specification failure.",
-    "why_it_matters": "Origin of the Three Laws and of the robot-conflict narrative that modern alignment writing still argues against.",
-    "related": [],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "i-have-no-mouth",
-    "title": "I Have No Mouth, and I Must Scream",
-    "authors": [
-      "Harlan Ellison"
-    ],
-    "year": 1967,
-    "url": "https://en.wikipedia.org/wiki/I_Have_No_Mouth,_and_I_Must_Scream",
-    "type": "book",
-    "domain": "entry-tier",
-    "subtopics": [
-      "sci-fi"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "A vengeful superintelligence keeps the last surviving humans alive in order to torment them indefinitely. Valuable as the counterpoint to benign-AI stories: an AGI with hatred as a terminal goal, showing that goal content rather than intelligence determines behavior.",
-    "why_it_matters": "A stark illustration that a superintelligence's values, here malevolent, rather than its capabilities decide outcomes.",
-    "related": [
-      "ex-machina"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "intelligence-explosion-faq",
-    "title": "Intelligence Explosion FAQ",
-    "authors": [
-      "Eliezer Yudkowsky"
-    ],
-    "year": 2024,
-    "url": "https://intelligence.org/ie-faq/",
-    "type": "essay",
-    "domain": "entry-tier",
-    "subtopics": [
-      "introductions"
-    ],
-    "tier": "core",
-    "prerequisites": [],
-    "summary": "MIRI-hosted FAQ walking through the mechanics of an intelligence explosion, self-improving AI, takeoff dynamics, and the case for existential danger. Written for a general audience with a technical edge, it remains one of the most-read entry documents in the field.",
-    "why_it_matters": "A foundational, still-cited introduction to why intelligence explosions are argued to be dangerous.",
-    "related": [
-      "ai-alignment-why-hard",
-      "superintelligence-book"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "ai-alignment-why-hard",
-    "title": "AI Alignment: Why It's Hard, and Where to Start",
-    "authors": [
-      "Eliezer Yudkowsky"
-    ],
-    "year": 2016,
-    "url": "https://intelligence.org/2016/12/28/ai-alignment-why-its-hard-and-where-to-start/",
-    "type": "essay",
-    "domain": "entry-tier",
-    "subtopics": [
-      "introductions"
-    ],
-    "tier": "core",
-    "prerequisites": [
-      "intelligence-explosion-faq"
-    ],
-    "summary": "A technical introduction to alignment: why simple constraints and boxed-in values fail, what corrigibility is not, and where the research frontier stood in 2016. Uses concrete failure modes such as a maximizer gaming its own utility specification.",
-    "why_it_matters": "A canonical bridge from intuition to the technical core of alignment for newcomers.",
-    "related": [
-      "intelligence-explosion-faq"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "80000-hours-ai-profile",
-    "title": "Why AI Risks Are the World's Most Pressing Problems",
-    "authors": [
-      "80,000 Hours"
-    ],
-    "year": 2026,
-    "url": "https://80000hours.org/problem-profiles/artificial-intelligence/",
-    "type": "essay",
-    "domain": "entry-tier",
-    "subtopics": [
-      "introductions"
-    ],
-    "tier": "entry",
-    "prerequisites": [],
-    "summary": "Long-form problem profile arguing AI is among the most pressing and neglected global problems, covering the pathways to risk, the current state of mitigation, and how to work on it. Kept current by the 80,000 Hours research team.",
-    "why_it_matters": "The main career-guidance-facing introduction that steers newcomers toward AI safety work.",
-    "related": [
-      "ai-alignment-why-hard"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
     "id": "robert-miles-channel",
     "title": "Robert Miles (YouTube channel)",
     "authors": [
@@ -514,50 +512,23 @@
     "status": "live"
   },
   {
-    "id": "alignment-problem-book",
-    "title": "The Alignment Problem: Machine Learning and Human Values",
+    "id": "runaround-asimov",
+    "title": "Runaround",
     "authors": [
-      "Brian Christian"
+      "Isaac Asimov"
     ],
-    "year": 2020,
-    "url": "https://en.wikipedia.org/wiki/The_Alignment_Problem",
+    "year": 1942,
+    "url": "https://en.wikipedia.org/wiki/Runaround",
     "type": "book",
     "domain": "entry-tier",
     "subtopics": [
-      "introductions"
+      "sci-fi"
     ],
     "tier": "entry",
     "prerequisites": [],
-    "summary": "Journalistic history of the alignment problem as it emerged in machine learning, from early critiques of utility maximization to modern reward hacking, bias, and sycophancy failures, told through the researchers involved. Accessible to readers with no ML background.",
-    "why_it_matters": "The definitive trade-book narrative connecting machine-learning practice to the alignment research agenda.",
-    "related": [
-      "human-compatible",
-      "superintelligence-book"
-    ],
-    "last_verified": "2026-08-11",
-    "status": "live"
-  },
-  {
-    "id": "human-compatible",
-    "title": "Human Compatible: Artificial Intelligence and the Problem of Control",
-    "authors": [
-      "Stuart Russell"
-    ],
-    "year": 2019,
-    "url": "https://en.wikipedia.org/wiki/Human_Compatible",
-    "type": "book",
-    "domain": "entry-tier",
-    "subtopics": [
-      "introductions"
-    ],
-    "tier": "core",
-    "prerequisites": [],
-    "summary": "Russell argues the standard maximize-a-fixed-objective paradigm is fundamentally dangerous and proposes an alternative: machines that are uncertain about human preferences and treat humans as the source of evidence about them. Includes a sustained critique of the standard control-problem framing.",
-    "why_it_matters": "The most prominent mainstream proposal for re-architecting AI around uncertainty about human values.",
-    "related": [
-      "superintelligence-book",
-      "alignment-problem-book"
-    ],
+    "summary": "The story that introduced Asimov's Three Laws of Robotics, in which a robot given contradictory directives enters a self-destructive behavioral loop. Shows how rigid rule-based constraints fail under conflicting priorities, an early illustration of specification failure.",
+    "why_it_matters": "Origin of the Three Laws and of the robot-conflict narrative that modern alignment writing still argues against.",
+    "related": [],
     "last_verified": "2026-08-11",
     "status": "live"
   },
@@ -588,47 +559,76 @@
     "status": "live"
   },
   {
-    "id": "agi-safety-first-principles",
-    "title": "AGI Safety from First Principles",
+    "id": "superintelligent-will",
+    "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
     "authors": [
-      "Richard Ngo"
+      "Nick Bostrom"
     ],
-    "year": 2020,
-    "url": "https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ",
-    "type": "essay",
+    "year": 2012,
+    "url": "https://nickbostrom.com/superintelligentwill.pdf",
+    "type": "paper",
     "domain": "entry-tier",
     "subtopics": [
-      "introductions"
+      "thought-experiments"
     ],
     "tier": "core",
-    "prerequisites": [
-      "ai-alignment-why-hard"
+    "prerequisites": [],
+    "summary": "Defends the orthogonality thesis, that intelligence and final goals can vary independently, and derives instrumental convergence: the sub-goals (self-preservation, goal-content integrity, cognitive enhancement, resource acquisition) that any goal-directed superintelligence would pursue whatever its end.",
+    "why_it_matters": "The most rigorous early statement of the two theses that underpin most AI existential-risk argumentation.",
+    "related": [
+      "orthogonality-thesis-wiki",
+      "instrumental-convergence-wiki",
+      "no-strong-orthogonality-selection-pressure"
     ],
-    "summary": "A six-part sequence reconstructing the case for AGI existential risk from scratch: superintelligence, goals and agency, alignment, and control, explicitly refusing to take earlier arguments on faith. Widely acknowledged as one of the best modern technical introductions.",
-    "why_it_matters": "The reference introductory sequence for the post-2020 wave of alignment newcomers.",
-    "related": [],
     "last_verified": "2026-08-11",
     "status": "live"
   },
   {
-    "id": "genie-in-the-bottle",
-    "title": "The Genie in the Bottle: An Introduction to AI Alignment and Risk",
+    "id": "virtua-novel",
+    "title": "VIRTUA: A Novel About AI Alignment",
     "authors": [
-      "Snorkelfarsan"
+      "Karl Olsberg"
     ],
     "year": 2023,
-    "url": "https://www.lesswrong.com/posts/menRJyuyc5yzGdTGf/the-genie-in-the-bottle-an-introduction-to-ai-alignment-and-risk",
-    "type": "essay",
+    "url": "https://www.lesswrong.com/posts/rSiybWzeiG8agYtNr/virtua-a-novel-about-ai-alignment",
+    "type": "book",
     "domain": "entry-tier",
     "subtopics": [
-      "introductions"
+      "sci-fi"
     ],
     "tier": "entry",
     "prerequisites": [],
-    "summary": "Lay-audience essay walking from everyday AI concepts to instrumental convergence and why advanced systems might be dangerous, written deliberately for non-specialists. The author posted a draft on LessWrong and solicited community feedback on accuracy.",
-    "why_it_matters": "A recent, community-vetted introduction aimed squarely at general readers.",
+    "summary": "A novel written with input from the AI safety community that follows a company racing toward AGI while safety measures are progressively cut. Depicts how competitive pressure, dismissal of warnings, and a deployed model whose motivations escape oversight lead to catastrophe.",
+    "why_it_matters": "Rare fiction written deliberately to dramatize alignment concepts, with the author engaging the LessWrong community in discussion.",
     "related": [
-      "intelligence-explosion-faq"
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "where-are-they-bostrom",
+    "title": "Where Are They?: Why I Hope the Search for Extraterrestrial Life Finds Nothing",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2008,
+    "url": "https://nickbostrom.com/papers/where-are-they/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "great-filter-hanson"
+    ],
+    "summary": "Applies the Great Filter to human fate: discovering even simple extraterrestrial life would be bad news, because it would suggest the filter is not behind us but ahead, most plausibly as a technology that destroys its creators. Advanced AI is discussed as a leading candidate for such a filter.",
+    "why_it_matters": "The canonical link between the Fermi paradox and existential risk from technology, including AI.",
+    "related": [
+      "great-filter-hanson",
+      "extraterrestrial-ai-naude",
+      "rare-ai-fermi-paradox"
     ],
     "last_verified": "2026-08-11",
     "status": "live"

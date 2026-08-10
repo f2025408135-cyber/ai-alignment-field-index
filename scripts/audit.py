@@ -8,23 +8,16 @@ README counts. Originality spot-checks and last-24h URL re-verification remain m
 import json
 import os
 import re
+import subprocess
 import sys
+from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, "data", "entries.json")
 
-EXPECTED_SUBTOPICS = {
-    "entry-tier": ["thought-experiments", "fermi-paradox", "sci-fi", "introductions"],
-    "macrostrategy": ["xrisk-theory", "great-filter", "forecasting", "differential-development", "longtermism"],
-    "agent-foundations": ["embedded-agency", "decision-theory", "corrigibility", "infra-bayesianism", "cartesian-frames", "logical-induction"],
-    "interpretability": ["circuits", "superposition-saes", "tracing", "probing", "causal-abstraction", "slt", "rep-engineering", "tooling"],
-    "oversight-rlhf": ["rlhf", "constitutional-ai", "debate", "amplification", "weak-to-strong", "process-outcome", "reward-hacking"],
-    "evals-benchmarks": ["dangerous-capabilities", "deception", "autonomy", "red-teaming", "eval-critiques"],
-    "governance-policy": ["compute-governance", "international", "lab-governance", "regulation", "analogies"],
-    "security-redteam": ["adversarial-robustness", "jailbreaks", "weights", "supply-chain", "prompt-injection"],
-    "philosophy-values": ["value-specification", "moral-uncertainty", "cev", "pluralism", "population-ethics"],
-    "field-infrastructure": ["training", "funders", "orgs", "communities", "careers"],
-}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from taxonomy import EXPECTED_SUBTOPICS  # noqa: E402
+
 ENTRY_TIER_DOMAINS = {"entry-tier", "governance-policy", "philosophy-values", "field-infrastructure"}
 
 
@@ -33,7 +26,6 @@ def similarity(a, b, is_url=False):
     For URLs, strip scheme+host first (distinct arXiv/GitHub/YouTube URLs share
     a long identical prefix; comparing full strings false-positives).
     """
-    import re
     if is_url:
         s = a.split("://", 1)[-1]
         parts = s.split("/", 1)
@@ -104,8 +96,18 @@ def main():
                     dangling.append((e["id"], k, i))
     check("crossref-integrity", not dangling, f"dangling: {dangling[:5]}" if dangling else "")
 
+    # freshness flag (brief Section 2: flag anything >12 months old for a freshness check).
+    # Catalog has only a year int, so the cutoff is calendar-granular and intentionally errs
+    # toward flagging (anything published in or before the previous calendar year).
+    cutoff = date.today().year - 1
+    fresh_queue = sorted(e["id"] for e in catalog
+                         if e["status"] != "dead" and e["year"] <= cutoff)
+    print(f"[INFO] freshness review queue: {len(fresh_queue)} entries published in {cutoff} or earlier "
+          f"(year-granular; historical canon may stay; each must be reviewed in the final pass)")
+    for eid in fresh_queue[:40]:
+        print(f"       {eid}")
+
     # 7. domains md freshness: generator --check renders and diffs WITHOUT writing (no side effects)
-    import subprocess
     r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "generate_domains.py"), "--check"],
                        capture_output=True, text=True)
     check("domains-md-fresh", r.returncode == 0, (r.stdout or r.stderr).strip()[:300])
@@ -131,7 +133,8 @@ def main():
     check("readme-total", readme_total and int(readme_total.group(1)) == total,
           f"({readme_total.group(1) if readme_total else '?'} vs {total})")
     for d, n in per_dom.items():
-        m = re.search(rf"\|\s*\[[^\]]+\]\(domains/{d}\.md\)[^|]*\|\s*(\d+)\s*\|", readme)
+        # README row: | [Title](domains/<d>.md) | <what's inside> | <count> | — skip the description cell
+        m = re.search(rf"\|\s*\[[^\]]+\]\(domains/{d}\.md\)[^|]*\|[^|]*\|\s*(\d+)\s*\|", readme)
         check(f"readme-count {d}", m and int(m.group(1)) == n, f"(readme {m.group(1) if m else '?'} vs {n})")
 
     print("\n" + ("AUDIT: ALL MECHANICAL CHECKS PASS" if ok else "AUDIT: FAILURES PRESENT"))

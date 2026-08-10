@@ -7,16 +7,16 @@ then writes entries.json back atomically (tmp + rename). Prints a summary.
 """
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, "data", "entries.json")
 
-DOMAINS = {
-    "entry-tier", "macrostrategy", "agent-foundations", "interpretability",
-    "oversight-rlhf", "evals-benchmarks", "governance-policy",
-    "security-redteam", "philosophy-values", "field-infrastructure",
-}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from taxonomy import EXPECTED_SUBTOPICS  # noqa: E402
+
+DOMAINS = set(EXPECTED_SUBTOPICS)
 TYPES = {"paper", "course", "org", "tool", "community", "book", "video", "essay", "dataset"}
 TIERS = {"entry", "core", "deep"}
 STATUSES = {"live", "paywalled", "dead"}
@@ -64,6 +64,11 @@ def validate(e, idx):
         errs.append(f"entry[{idx}] authors must be a non-empty list")
     if not isinstance(e["subtopics"], list) or not e["subtopics"]:
         errs.append(f"entry[{idx}] subtopics must be a non-empty list")
+    else:
+        allowed = set(EXPECTED_SUBTOPICS.get(e.get("domain", ""), []))
+        unknown = [s for s in e["subtopics"] if s not in allowed]
+        if unknown:
+            errs.append(f"entry[{idx}] subtopic tags not in taxonomy for '{e.get('domain')}': {unknown}")
     for k in ("prerequisites", "related"):
         if not isinstance(e[k], list):
             errs.append(f"entry[{idx}] '{k}' must be a list")
@@ -73,6 +78,10 @@ def validate(e, idx):
         errs.append(f"entry[{idx}] why_it_matters empty")
     if not isinstance(e["year"], int) or not (1800 <= e["year"] <= 2035):
         errs.append(f"entry[{idx}] year must be int in 1800..2035")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", e["last_verified"]):
+        errs.append(f"entry[{idx}] last_verified must be YYYY-MM-DD")
+    if any(c.isspace() for c in e["url"]):
+        errs.append(f"entry[{idx}] url contains whitespace")
     return errs
 
 
@@ -105,7 +114,17 @@ def main():
                 print("  -", err)
             sys.exit(1)
         if e["id"] in ids:
-            catalog = [c for c in catalog if c["id"] != e["id"]]
+            # replace in place so re-merges keep entry order stable (no-op on the catalog)
+            for idx, c in enumerate(catalog):
+                if c["id"] == e["id"]:
+                    catalog[idx] = e
+                    # refresh dedup sets so an update that changes url/title doesn't
+                    # leave a stale value that false-positives later fragment entries
+                    urls.discard(c["url"].lower())
+                    titles.discard(c["title"].lower())
+                    urls.add(e["url"].lower())
+                    titles.add(e["title"].lower())
+                    break
             updated += 1
         elif e["url"].lower() in urls:
             print(f"DUPLICATE URL: {e['url']} (id={e['id']})")
@@ -113,8 +132,9 @@ def main():
         elif e["title"].lower() in titles:
             print(f"DUPLICATE TITLE: {e['title']} (id={e['id']})")
             sys.exit(1)
-        catalog.append(e)
-        added += 1
+        else:
+            catalog.append(e)
+            added += 1
 
     # rebuild dedup sets from the merged catalog so stale entries from updates don't linger
     ids = {e["id"] for e in catalog}
@@ -123,6 +143,9 @@ def main():
     if len(urls) != len(catalog) or len(titles) != len(catalog) or len(ids) != len(catalog):
         print("MERGE ERROR: duplicate id/url/title across merged catalog — fix before proceeding")
         sys.exit(1)
+
+    # canonical order so re-merges are byte-stable regardless of merge history
+    catalog.sort(key=lambda e: (e["domain"], e["id"]))
 
     save(catalog, ENTRIES)
     print(f"MERGED: {added} added, {updated} updated -> {len(catalog)} total entries in data/entries.json")

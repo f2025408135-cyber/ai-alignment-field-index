@@ -5,12 +5,11 @@ Usage:
   python scripts/verify_links.py            # dry run: report only
   python scripts/verify_links.py --apply    # write status live/dead back into entries.json
 
-Classification:
+Classification (transient 429/5xx are retried once with backoff):
   HTTP 200-399          -> live
-  HTTP 401/403          -> live-with-caveat (bot-blocked; flagged BLOCKED in report, still live)
+  HTTP 401/403          -> live(blocked): bot-blocked but exists; still live
+  429/5xx after retry   -> unknown: cannot confirm either way; status untouched on --apply
   HTTP 404+ or network  -> dead (status written as dead with --apply)
-
-Use --ua to override the user agent for Cloudflare-heavy sites if needed.
 """
 import argparse
 import json
@@ -18,6 +17,7 @@ import os
 import socket
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -26,9 +26,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, "data", "entries.json")
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+TRANSIENT = {429, 500, 502, 503, 504}
+RETRY_DELAY = 3.0
 
 
-def check(url, timeout=25):
+def _fetch(url, timeout):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -37,6 +39,19 @@ def check(url, timeout=25):
         return e.code, url
     except (urllib.error.URLError, socket.timeout, ssl.SSLError, ConnectionError, OSError) as e:
         return -1, f"{type(e).__name__}: {e}"
+
+
+def check(url, timeout=25):
+    code, note = _fetch(url, timeout)
+    if code == -1 or code in TRANSIENT:
+        # network blips and rate-limit/server errors are retried once before judging dead
+        time.sleep(RETRY_DELAY)
+        code2, note2 = _fetch(url, timeout)
+        if code2 != -1:
+            # retry answered HTTP at all (even transient) => host is up; trust the retry code
+            return code2, f"{note} [retry->{code2}]"
+        return code, f"{note} [retry->-1]"
+    return code, note
 
 
 def main():
@@ -57,7 +72,7 @@ def main():
             code, note = fut.result()
             results[e["id"]] = (code, note)
 
-    live = blocked = dead = 0
+    live = blocked = unknown = dead = 0
     print(f"{'STATUS':<13} {'CODE':<6} ID / URL")
     for e in catalog:
         code, note = results[e["id"]]
@@ -68,17 +83,20 @@ def main():
             live += 1
             st = "live"
         elif code in (401, 403):
-            # bot-blocked: exists but refuses curl/urllib; counted live with a caveat label
             blocked += 1
             live += 1
             st = "live(blocked)"
+        elif code in TRANSIENT:
+            unknown += 1
+            st = "unknown"
         else:
             dead += 1
             st = "DEAD"
         extra = f" -> {note}" if note != e["url"] else ""
         print(f"{st:<13} {code:<6} {e['id']}  {e['url']}{extra}")
 
-    print(f"\nSUMMARY: {len(catalog)} checked, {live} live ({blocked} bot-blocked/401-403), {dead} dead/failed")
+    print(f"\nSUMMARY: {len(catalog)} checked, {live} live ({blocked} bot-blocked/401-403), "
+          f"{unknown} unknown(transient), {dead} dead/failed")
 
     if args.apply:
         from datetime import date
@@ -86,6 +104,8 @@ def main():
         changed = 0
         for e in catalog:
             code, _ = results[e["id"]]
+            if code in TRANSIENT:
+                continue  # cannot confirm either way; leave status and last_verified untouched
             resolved = code not in (-1,) and (code < 400 or code in (401, 403))
             if not resolved:
                 new = "dead"            # paywalled can rot too; keep the record
@@ -107,8 +127,8 @@ def main():
             f.write("\n")
         os.replace(tmp, ENTRIES)
         print(f"APPLIED: updated status on {changed} entries")
-    elif dead > 0:
-        print("NOTE: dead URLs present — fix or mark before committing.")
+    elif dead > 0 or unknown > 0:
+        print("NOTE: dead/unknown URLs present — fix, retry, or mark before committing.")
         sys.exit(1)
 
 
