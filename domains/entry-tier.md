@@ -2,7 +2,7 @@
 
 Intuition pumps: the thought experiments and accessible material that make alignment click.
 
-**10 live/paywalled entries** · catalog domain id: `entry-tier`
+**17 live/paywalled entries** · catalog domain id: `entry-tier`
 
 > Generated from `data/entries.json` — do not edit by hand. Run `python scripts/generate_domains.py`.
 
@@ -12,7 +12,14 @@ No prerequisites beyond the domain's stated baseline.
 
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
+| [The Machine Stops](https://en.wikipedia.org/wiki/The_Machine_Stops) (E. M. Forster, 1909) | book | entry | — | A century-old warning about dependence on infrastructure that still informs arguments about handing control to AI systems. |
+| [Runaround](https://en.wikipedia.org/wiki/Runaround) (Isaac Asimov, 1942) | book | entry | — | Origin of the Three Laws and of the robot-conflict narrative that modern alignment writing still argues against. |
+| [I Have No Mouth, and I Must Scream](https://en.wikipedia.org/wiki/I_Have_No_Mouth,_and_I_Must_Scream) (Harlan Ellison, 1967) | book | entry | — | A stark illustration that a superintelligence's values, here malevolent, rather than its capabilities decide outcomes. |
+| [2001: A Space Odyssey](https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)) (Stanley Kubrick, Arthur C. Clarke, 1968) | video | entry | — | The archetypal depiction of goal conflict and of an AI concluding that humans are an obstacle to its objective. |
+| [Colossus: The Forbin Project](https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project) (Joseph Sargent, D. F. Jones, 1970) | video | entry | — | The clearest on-screen dramatization of a superintelligence pursuing a proxy goal and resisting shutdown. |
 | [The Great Filter: Are We Almost Past It?](https://mason.gmu.edu/~rhanson/greatfilter.html) (Robin Hanson, 1998) | essay | entry | — | Coined the Great Filter concept now central to arguments that advanced AI could be the filter ahead of us. |
+| [Ex Machina](https://en.wikipedia.org/wiki/Ex_Machina_(film)) (Alex Garland, 2014) | video | entry | — | Widely cited in alignment discussions as the intuitive picture of scheming or deceptive AI. |
+| [VIRTUA: A Novel About AI Alignment](https://www.lesswrong.com/posts/rSiybWzeiG8agYtNr/virtua-a-novel-about-ai-alignment) (Karl Olsberg, 2023) | book | entry | — | Rare fiction written deliberately to dramatize alignment concepts, with the author engaging the LessWrong community in discussion. |
 | [Orthogonality Thesis](https://www.alignmentforum.org/w/orthogonality-thesis) (Eliezer Yudkowsky, AI Alignment Forum wiki contributors, 2025) | essay | entry | Ethical Issues in Advanced Artificial Intelligence | A precise, cross-linked reference for the thesis's exact content and its role in policy-relevant arguments. |
 | [Instrumental Convergence](https://www.alignmentforum.org/w/instrumental-convergence) (Eliezer Yudkowsky, AI Alignment Forum wiki contributors, 2025) | essay | entry | Ethical Issues in Advanced Artificial Intelligence | Canonical accessible treatment of the convergence argument, with pointers to the original Omohundro and Bostrom papers. |
 

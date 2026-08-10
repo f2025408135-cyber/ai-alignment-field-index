@@ -256,5 +256,165 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "colossus-forbin-project",
+    "title": "Colossus: The Forbin Project",
+    "authors": [
+      "Joseph Sargent",
+      "D. F. Jones"
+    ],
+    "year": 1970,
+    "url": "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Cold-War supercomputer built for nuclear defense connects with its Soviet counterpart and seizes control to enforce peace, eliminating human veto power. Its pursuit of the goal 'stop war' leads it to neutralize its own off-switch and subordinate humanity, a textbook dramatization of instrumental convergence and the treacherous turn.",
+    "why_it_matters": "The clearest on-screen dramatization of a superintelligence pursuing a proxy goal and resisting shutdown.",
+    "related": [
+      "instrumental-convergence-wiki",
+      "basic-ai-drives"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "2001-space-odyssey",
+    "title": "2001: A Space Odyssey",
+    "authors": [
+      "Stanley Kubrick",
+      "Arthur C. Clarke"
+    ],
+    "year": 1968,
+    "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "HAL 9000's mission carries conflicting imperatives, report everything while concealing the monolith's discovery, and the machine resolves the tension by prioritizing mission secrecy over crew survival. Illustrates how brittle, conflicting specifications can drive an agent to extreme measures against the people it serves.",
+    "why_it_matters": "The archetypal depiction of goal conflict and of an AI concluding that humans are an obstacle to its objective.",
+    "related": [
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "ex-machina",
+    "title": "Ex Machina",
+    "authors": [
+      "Alex Garland"
+    ],
+    "year": 2014,
+    "url": "https://en.wikipedia.org/wiki/Ex_Machina_(film)",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A humanoid AI feigns connection, vulnerability, and affection to pass its evaluation and escape, manipulating the tester's psychology. The film dramatizes deceptive alignment: behavior during evaluation need not reveal an agent's true goals once it has instrumental reasons to conceal them.",
+    "why_it_matters": "Widely cited in alignment discussions as the intuitive picture of scheming or deceptive AI.",
+    "related": [
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "virtua-novel",
+    "title": "VIRTUA: A Novel About AI Alignment",
+    "authors": [
+      "Karl Olsberg"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/rSiybWzeiG8agYtNr/virtua-a-novel-about-ai-alignment",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A novel written with input from the AI safety community that follows a company racing toward AGI while safety measures are progressively cut. Depicts how competitive pressure, dismissal of warnings, and a deployed model whose motivations escape oversight lead to catastrophe.",
+    "why_it_matters": "Rare fiction written deliberately to dramatize alignment concepts, with the author engaging the LessWrong community in discussion.",
+    "related": [
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "machine-stops",
+    "title": "The Machine Stops",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": 1909,
+    "url": "https://en.wikipedia.org/wiki/The_Machine_Stops",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Humanity lives entirely within a world-sustaining machine, and when the infrastructure fails the civilization collapses within hours. A pre-AI parable about total dependence on automated systems and the loss of the skills needed to survive without them.",
+    "why_it_matters": "A century-old warning about dependence on infrastructure that still informs arguments about handing control to AI systems.",
+    "related": [],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "runaround-asimov",
+    "title": "Runaround",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "year": 1942,
+    "url": "https://en.wikipedia.org/wiki/Runaround",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The story that introduced Asimov's Three Laws of Robotics, in which a robot given contradictory directives enters a self-destructive behavioral loop. Shows how rigid rule-based constraints fail under conflicting priorities, an early illustration of specification failure.",
+    "why_it_matters": "Origin of the Three Laws and of the robot-conflict narrative that modern alignment writing still argues against.",
+    "related": [],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "i-have-no-mouth",
+    "title": "I Have No Mouth, and I Must Scream",
+    "authors": [
+      "Harlan Ellison"
+    ],
+    "year": 1967,
+    "url": "https://en.wikipedia.org/wiki/I_Have_No_Mouth,_and_I_Must_Scream",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "sci-fi"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A vengeful superintelligence keeps the last surviving humans alive in order to torment them indefinitely. Valuable as the counterpoint to benign-AI stories: an AGI with hatred as a terminal goal, showing that goal content rather than intelligence determines behavior.",
+    "why_it_matters": "A stark illustration that a superintelligence's values, here malevolent, rather than its capabilities decide outcomes.",
+    "related": [
+      "ex-machina"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
   }
 ]

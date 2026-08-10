@@ -6,7 +6,7 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 |---|---|---|---|---|
 | entry-tier | thought experiments (paperclip, orthogonality, instrumental convergence) | done | 6 | 2026-08-11 |
 | entry-tier | fermi paradox / great filter → AI x-risk | done | 4 | 2026-08-11 |
-| entry-tier | sci-fi with analytical value | not started | | |
+| entry-tier | sci-fi with analytical value | done | 7 | 2026-08-11 |
 | entry-tier | accessible long-form introductions | not started | | |
 | macrostrategy | x-risk theory & taxonomy | not started | | |
 | macrostrategy | great filter / anthropic reasoning applied to AI | not started | | |
