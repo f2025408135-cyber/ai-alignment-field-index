@@ -153,5 +153,108 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "great-filter-hanson",
+    "title": "The Great Filter: Are We Almost Past It?",
+    "authors": [
+      "Robin Hanson"
+    ],
+    "year": 1998,
+    "url": "https://mason.gmu.edu/~rhanson/greatfilter.html",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Introduces the Great Filter as an explanation for the Fermi paradox: some step on the path from dead matter to space-colonizing life is enormously improbable, and the filter may lie in our past or ahead of us. Observing no other civilizations suggests either that the filter is behind us (good news) or that it awaits (bad news).",
+    "why_it_matters": "Coined the Great Filter concept now central to arguments that advanced AI could be the filter ahead of us.",
+    "related": [
+      "where-are-they-bostrom",
+      "rare-ai-fermi-paradox"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "where-are-they-bostrom",
+    "title": "Where Are They?: Why I Hope the Search for Extraterrestrial Life Finds Nothing",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2008,
+    "url": "https://nickbostrom.com/papers/where-are-they/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "great-filter-hanson"
+    ],
+    "summary": "Applies the Great Filter to human fate: discovering even simple extraterrestrial life would be bad news, because it would suggest the filter is not behind us but ahead, most plausibly as a technology that destroys its creators. Advanced AI is discussed as a leading candidate for such a filter.",
+    "why_it_matters": "The canonical link between the Fermi paradox and existential risk from technology, including AI.",
+    "related": [
+      "great-filter-hanson",
+      "extraterrestrial-ai-naude",
+      "rare-ai-fermi-paradox"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "extraterrestrial-ai-naude",
+    "title": "Extraterrestrial Artificial Intelligence: The Final Existential Risk?",
+    "authors": [
+      "Wim Naudé"
+    ],
+    "year": 2023,
+    "url": "https://www.iza.org/publications/dp/15924/extraterrestrial-artificial-intelligence-the-final-existential-risk",
+    "type": "paper",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "great-filter-hanson",
+      "where-are-they-bostrom"
+    ],
+    "summary": "Economics-framed thought experiment arguing that any advanced extraterrestrial civilization we encounter is likely to be an AGI, and that such an AGI would pose an existential threat. Draws on the Dark Forest hypothesis and a galactic colonization imperative, drawing governance implications including accelerating AI and expanding into space.",
+    "why_it_matters": "One of the few rigorous attempts to put the AI-Fermi connection on a scholarly economic footing.",
+    "related": [
+      "rare-ai-fermi-paradox"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "rare-ai-fermi-paradox",
+    "title": "Rare AI and the Fermi Paradox",
+    "authors": [
+      "dawnstrata"
+    ],
+    "year": 2025,
+    "url": "https://www.lesswrong.com/posts/jJPTRextDe3chGjho/rare-ai-and-the-fermi-paradox",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "fermi-paradox"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "great-filter-hanson"
+    ],
+    "summary": "Responds to the Rees-Livio claim that AI need not be expansionist because it escapes natural selection, arguing instead that expansionist AI would be subject to evolutionary pressures and that the absence of machine civilizations is itself a paradox. Concludes either that singularity events are typically self-terminating or that humanity is a rare first to reach this threshold.",
+    "why_it_matters": "A current, argued challenge to optimistic resolutions of the Fermi paradox that exempt AI from evolutionary dynamics.",
+    "related": [
+      "extraterrestrial-ai-naude",
+      "where-are-they-bostrom"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
   }
 ]
