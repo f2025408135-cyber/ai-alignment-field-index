@@ -1,0 +1,13 @@
+# supergoal harness state (not part of the published index)
+.opencode/
+
+# python caches
+__pycache__/
+*.pyc
+
+# intermediate entry fragments (merged into data/entries.json)
+data/fragments/
+
+# OS cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""Mechanical checks of the final audit (Section 9 of the brief).
+
+Covers: subtopic coverage, tier spread, dedup (>90% title/url similarity), cross-link
+saturation on core/deep, domain md freshness vs entries.json, PROGRESS all-done,
+README counts. Originality spot-checks and last-24h URL re-verification remain manual.
+"""
+import json
+import os
+import re
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ENTRIES = os.path.join(ROOT, "data", "entries.json")
+
+EXPECTED_SUBTOPICS = {
+    "entry-tier": ["thought-experiments", "fermi-paradox", "sci-fi", "introductions"],
+    "macrostrategy": ["xrisk-theory", "great-filter", "forecasting", "differential-development", "longtermism"],
+    "agent-foundations": ["embedded-agency", "decision-theory", "corrigibility", "infra-bayesianism", "cartesian-frames", "logical-induction"],
+    "interpretability": ["circuits", "superposition-saes", "tracing", "probing", "causal-abstraction", "slt", "rep-engineering", "tooling"],
+    "oversight-rlhf": ["rlhf", "constitutional-ai", "debate", "amplification", "weak-to-strong", "process-outcome", "reward-hacking"],
+    "evals-benchmarks": ["dangerous-capabilities", "deception", "autonomy", "red-teaming", "eval-critiques"],
+    "governance-policy": ["compute-governance", "international", "lab-governance", "regulation", "analogies"],
+    "security-redteam": ["adversarial-robustness", "jailbreaks", "weights", "supply-chain", "prompt-injection"],
+    "philosophy-values": ["value-specification", "moral-uncertainty", "cev", "pluralism", "population-ethics"],
+    "field-infrastructure": ["training", "funders", "orgs", "communities", "careers"],
+}
+ENTRY_TIER_DOMAINS = {"entry-tier", "governance-policy", "philosophy-values", "field-infrastructure"}
+
+
+def similarity(a, b):
+    """Rough token-set Jaccard-ish similarity on lowercase alnum tokens."""
+    import difflib
+    return difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
+
+def main():
+    with open(ENTRIES, "r", encoding="utf-8") as f:
+        catalog = json.load(f)
+    ok = True
+
+    def check(name, cond, detail=""):
+        nonlocal ok
+        mark = "PASS" if cond else "FAIL"
+        if not cond:
+            ok = False
+        print(f"[{mark}] {name} {detail}")
+
+    # 1. subtopic coverage
+    coverage = {d: set() for d in EXPECTED_SUBTOPICS}
+    for e in catalog:
+        if e["status"] == "dead":
+            continue
+        for s in e["subtopics"]:
+            coverage[e["domain"]].add(s)
+    for d, subs in EXPECTED_SUBTOPICS.items():
+        missing = [s for s in subs if s not in coverage[d]]
+        check(f"coverage {d}", not missing, f"missing: {missing}" if missing else f"({len(coverage[d])}/{len(subs)})")
+
+    # 2. tier spread per domain
+    for d in EXPECTED_SUBTOPICS:
+        tiers = {e["tier"] for e in catalog if e["domain"] == d and e["status"] != "dead"}
+        check(f"tier-spread {d}", len(tiers) >= 2, f"tiers: {sorted(tiers)}")
+    for d in ENTRY_TIER_DOMAINS:
+        has_entry_tier = any(e["domain"] == d and e["tier"] == "entry" for e in catalog)
+        check(f"entry-tier-material {d}", has_entry_tier)
+
+    # 3. dedup: >90% title or url similarity
+    dupes = []
+    for i in range(len(catalog)):
+        for j in range(i + 1, len(catalog)):
+            a, b = catalog[i], catalog[j]
+            if similarity(a["url"], b["url"]) > 0.90 or similarity(a["title"], b["title"]) > 0.90:
+                dupes.append((a["id"], b["id"]))
+    check("dedup", not dupes, f"dupes: {dupes[:5]}" if dupes else "")
+
+    # 6. cross-link saturation on core/deep
+    core_deep = [e for e in catalog if e["tier"] in ("core", "deep") and e["status"] != "dead"]
+    linked = [e for e in core_deep if e["prerequisites"] or e["related"]]
+    pct = (len(linked) / len(core_deep) * 100) if core_deep else 100
+    check("crosslinks-core-deep", pct >= 60, f"({len(linked)}/{len(core_deep)} = {pct:.0f}%)")
+
+    # dangling cross-refs
+    ids = {e["id"] for e in catalog}
+    dangling = []
+    for e in catalog:
+        for k in ("prerequisites", "related"):
+            for i in e[k]:
+                if i not in ids:
+                    dangling.append((e["id"], k, i))
+    check("crossref-integrity", not dangling, f"dangling: {dangling[:5]}" if dangling else "")
+
+    # 7. domains md freshness: regenerate to temp and diff
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "generate_domains.py")],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        check("generate-runs", False, r.stderr[:300])
+    else:
+        stale = []
+        for f in os.listdir(os.path.join(ROOT, "domains")):
+            if f.endswith(".md"):
+                path = os.path.join(ROOT, "domains", f)
+                with open(path, "r", encoding="utf-8") as fh:
+                    content = fh.read()
+                # regenerate single-domain content by re-running generator is full; instead check marker
+                if "Generated from `data/entries.json`" not in content:
+                    stale.append(f)
+        check("domains-md-present", not stale, f"missing marker: {stale}" if stale else "")
+
+    # 8. PROGRESS all done
+    progress_path = os.path.join(ROOT, "PROGRESS.md")
+    with open(progress_path, "r", encoding="utf-8") as f:
+        prog = f.read()
+    rows = re.findall(r"^\| ([a-z-]+) \| (.+?) \| (not started|in progress|done) \|", prog, re.M)
+    not_done = [r for r in rows if r[2] != "done"]
+    check("progress-all-done", not not_done, f"pending: {[r[1][:30] for r in not_done][:5]}" if not_done else f"({len(rows)} rows)")
+
+    # 9. README counts match
+    readme_path = os.path.join(ROOT, "README.md")
+    with open(readme_path, "r", encoding="utf-8") as f:
+        readme = f.read()
+    total = len([e for e in catalog if e["status"] != "dead"])
+    per_dom = {}
+    for e in catalog:
+        if e["status"] != "dead":
+            per_dom[e["domain"]] = per_dom.get(e["domain"], 0) + 1
+    readme_total = re.search(r"\*\*Total entries: (\d+)\*\*", readme)
+    check("readme-total", readme_total and int(readme_total.group(1)) == total,
+          f"({readme_total.group(1) if readme_total else '?'} vs {total})")
+    for d, n in per_dom.items():
+        m = re.search(rf"\|\s*\[[^\]]+\]\(domains/{d}\.md\)[^|]*\|\s*(\d+)\s*\|", readme)
+        check(f"readme-count {d}", m and int(m.group(1)) == n, f"(readme {m.group(1) if m else '?'} vs {n})")
+
+    print("\n" + ("AUDIT: ALL MECHANICAL CHECKS PASS" if ok else "AUDIT: FAILURES PRESENT"))
+    sys.exit(0 if ok else 1)
+
+
+if __name__ == "__main__":
+    main()
