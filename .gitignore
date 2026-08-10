@@ -1,6 +1,9 @@
 # supergoal harness state (not part of the published index)
 .opencode/
 
+# Freebuff desktop session DB (not part of the repo)
+.freebuff/
+
 # python caches
 __pycache__/
 *.pyc
