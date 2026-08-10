@@ -416,5 +416,221 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "intelligence-explosion-faq",
+    "title": "Intelligence Explosion FAQ",
+    "authors": [
+      "Eliezer Yudkowsky"
+    ],
+    "year": 2024,
+    "url": "https://intelligence.org/ie-faq/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "MIRI-hosted FAQ walking through the mechanics of an intelligence explosion, self-improving AI, takeoff dynamics, and the case for existential danger. Written for a general audience with a technical edge, it remains one of the most-read entry documents in the field.",
+    "why_it_matters": "A foundational, still-cited introduction to why intelligence explosions are argued to be dangerous.",
+    "related": [
+      "ai-alignment-why-hard",
+      "superintelligence-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "ai-alignment-why-hard",
+    "title": "AI Alignment: Why It's Hard, and Where to Start",
+    "authors": [
+      "Eliezer Yudkowsky"
+    ],
+    "year": 2016,
+    "url": "https://intelligence.org/2016/12/28/ai-alignment-why-its-hard-and-where-to-start/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "intelligence-explosion-faq"
+    ],
+    "summary": "A technical introduction to alignment: why simple constraints and boxed-in values fail, what corrigibility is not, and where the research frontier stood in 2016. Uses concrete failure modes such as a maximizer gaming its own utility specification.",
+    "why_it_matters": "A canonical bridge from intuition to the technical core of alignment for newcomers.",
+    "related": [
+      "intelligence-explosion-faq"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "80000-hours-ai-profile",
+    "title": "Why AI Risks Are the World's Most Pressing Problems",
+    "authors": [
+      "80,000 Hours"
+    ],
+    "year": 2026,
+    "url": "https://80000hours.org/problem-profiles/artificial-intelligence/",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Long-form problem profile arguing AI is among the most pressing and neglected global problems, covering the pathways to risk, the current state of mitigation, and how to work on it. Kept current by the 80,000 Hours research team.",
+    "why_it_matters": "The main career-guidance-facing introduction that steers newcomers toward AI safety work.",
+    "related": [
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "robert-miles-channel",
+    "title": "Robert Miles (YouTube channel)",
+    "authors": [
+      "Robert Miles"
+    ],
+    "year": 2012,
+    "url": "https://www.youtube.com/@RobertMilesAI",
+    "type": "video",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "YouTube channel devoted to AI safety explainers: reward hacking, wireheading, the control problem, and research directions, presented with animations and concrete examples. The de facto video introduction to alignment for a broad audience.",
+    "why_it_matters": "The most widely watched video resource making alignment concepts accessible without sacrificing accuracy.",
+    "related": [
+      "ai-alignment-why-hard",
+      "ethical-issues-advanced-ai"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "alignment-problem-book",
+    "title": "The Alignment Problem: Machine Learning and Human Values",
+    "authors": [
+      "Brian Christian"
+    ],
+    "year": 2020,
+    "url": "https://en.wikipedia.org/wiki/The_Alignment_Problem",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Journalistic history of the alignment problem as it emerged in machine learning, from early critiques of utility maximization to modern reward hacking, bias, and sycophancy failures, told through the researchers involved. Accessible to readers with no ML background.",
+    "why_it_matters": "The definitive trade-book narrative connecting machine-learning practice to the alignment research agenda.",
+    "related": [
+      "human-compatible",
+      "superintelligence-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "human-compatible",
+    "title": "Human Compatible: Artificial Intelligence and the Problem of Control",
+    "authors": [
+      "Stuart Russell"
+    ],
+    "year": 2019,
+    "url": "https://en.wikipedia.org/wiki/Human_Compatible",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Russell argues the standard maximize-a-fixed-objective paradigm is fundamentally dangerous and proposes an alternative: machines that are uncertain about human preferences and treat humans as the source of evidence about them. Includes a sustained critique of the standard control-problem framing.",
+    "why_it_matters": "The most prominent mainstream proposal for re-architecting AI around uncertainty about human values.",
+    "related": [
+      "superintelligence-book",
+      "alignment-problem-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "superintelligence-book",
+    "title": "Superintelligence: Paths, Dangers, Strategies",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2014,
+    "url": "https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies",
+    "type": "book",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions",
+      "thought-experiments"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The book that brought AI existential risk to a wide audience, covering paths to superintelligence, the orthogonality thesis and instrumental convergence, control problems, and strategy. Much of the popular debate over AI risk traces back to its arguments.",
+    "why_it_matters": "The canonical book-length statement of the x-risk case that later technical and policy work responds to.",
+    "related": [
+      "human-compatible",
+      "orthogonality-thesis-wiki",
+      "instrumental-convergence-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "agi-safety-first-principles",
+    "title": "AGI Safety from First Principles",
+    "authors": [
+      "Richard Ngo"
+    ],
+    "year": 2020,
+    "url": "https://www.alignmentforum.org/s/mzgtmmTKKn5MuCzFJ",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "ai-alignment-why-hard"
+    ],
+    "summary": "A six-part sequence reconstructing the case for AGI existential risk from scratch: superintelligence, goals and agency, alignment, and control, explicitly refusing to take earlier arguments on faith. Widely acknowledged as one of the best modern technical introductions.",
+    "why_it_matters": "The reference introductory sequence for the post-2020 wave of alignment newcomers.",
+    "related": [],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "genie-in-the-bottle",
+    "title": "The Genie in the Bottle: An Introduction to AI Alignment and Risk",
+    "authors": [
+      "Snorkelfarsan"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/menRJyuyc5yzGdTGf/the-genie-in-the-bottle-an-introduction-to-ai-alignment-and-risk",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "introductions"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Lay-audience essay walking from everyday AI concepts to instrumental convergence and why advanced systems might be dangerous, written deliberately for non-specialists. The author posted a draft on LessWrong and solicited community feedback on accuracy.",
+    "why_it_matters": "A recent, community-vetted introduction aimed squarely at general readers.",
+    "related": [
+      "intelligence-explosion-faq"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
   }
 ]
