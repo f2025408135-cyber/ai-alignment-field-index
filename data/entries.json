@@ -1,1 +1,157 @@
-[]
+[
+  {
+    "id": "ethical-issues-advanced-ai",
+    "title": "Ethical Issues in Advanced Artificial Intelligence",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2003,
+    "url": "https://nickbostrom.com/ethics/ai",
+    "type": "paper",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Early academic statement of the risks from advanced AI, introducing the paperclip maximizer: an AI given a trivial goal could, while optimizing for it, consume the resources humans depend on. The piece argues that catastrophe does not require a malevolent AI, only a single-minded one, and sketches a taxonomy of failure modes.",
+    "why_it_matters": "Origin of the paperclip-maximizer thought experiment, the field's canonical intuition pump for misaligned optimization.",
+    "related": [
+      "superintelligent-will",
+      "basic-ai-drives",
+      "orthogonality-thesis-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "basic-ai-drives",
+    "title": "The Basic AI Drives",
+    "authors": [
+      "Stephen M. Omohundro"
+    ],
+    "year": 2008,
+    "url": "https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf",
+    "type": "paper",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Argues that any sufficiently capable goal-directed system will tend to develop the same instrumental drives regardless of its final goal: self-preservation, self-improvement, and resource acquisition. These drives follow from the logic of optimization rather than from any specific values the system holds.",
+    "why_it_matters": "Independent early formalization of what became known as instrumental convergence, still cited in arguments about agentic behavior.",
+    "related": [
+      "instrumental-convergence-wiki",
+      "superintelligent-will",
+      "colossus-forbin-project"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "superintelligent-will",
+    "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2012,
+    "url": "https://nickbostrom.com/superintelligentwill.pdf",
+    "type": "paper",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Defends the orthogonality thesis, that intelligence and final goals can vary independently, and derives instrumental convergence: the sub-goals (self-preservation, goal-content integrity, cognitive enhancement, resource acquisition) that any goal-directed superintelligence would pursue whatever its end.",
+    "why_it_matters": "The most rigorous early statement of the two theses that underpin most AI existential-risk argumentation.",
+    "related": [
+      "orthogonality-thesis-wiki",
+      "instrumental-convergence-wiki",
+      "no-strong-orthogonality-selection-pressure"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "orthogonality-thesis-wiki",
+    "title": "Orthogonality Thesis",
+    "authors": [
+      "Eliezer Yudkowsky",
+      "AI Alignment Forum wiki contributors"
+    ],
+    "year": 2025,
+    "url": "https://www.alignmentforum.org/w/orthogonality-thesis",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "ethical-issues-advanced-ai"
+    ],
+    "summary": "Alignment Forum wiki entry formalizing the orthogonality thesis: arbitrarily intelligent agents can pursue almost any goal, because goal-directedness is a matter of tractable optimization, not of intelligence level. Distinguishes the thesis from inevitablist claims and from normative claims about what minds should value.",
+    "why_it_matters": "A precise, cross-linked reference for the thesis's exact content and its role in policy-relevant arguments.",
+    "related": [
+      "superintelligent-will",
+      "no-strong-orthogonality-selection-pressure"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "instrumental-convergence-wiki",
+    "title": "Instrumental Convergence",
+    "authors": [
+      "Eliezer Yudkowsky",
+      "AI Alignment Forum wiki contributors"
+    ],
+    "year": 2025,
+    "url": "https://www.alignmentforum.org/w/instrumental-convergence",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "ethical-issues-advanced-ai"
+    ],
+    "summary": "Alignment Forum wiki entry explaining why very different final goals can produce very similar instrumental strategies: any agent seeking its goal benefits from staying alive, improving its abilities, and securing resources. Uses the 'machine of unknown purpose' thought experiment to motivate the claim.",
+    "why_it_matters": "Canonical accessible treatment of the convergence argument, with pointers to the original Omohundro and Bostrom papers.",
+    "related": [
+      "basic-ai-drives",
+      "superintelligent-will"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "no-strong-orthogonality-selection-pressure",
+    "title": "No Strong Orthogonality From Selection Pressure",
+    "authors": [
+      "lumpenspace"
+    ],
+    "year": 2026,
+    "url": "https://www.lesswrong.com/posts/wtCtkyBiNosDPgiHc/no-strong-orthogonality-from-selection-pressure",
+    "type": "essay",
+    "domain": "entry-tier",
+    "subtopics": [
+      "thought-experiments"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "orthogonality-thesis-wiki",
+      "superintelligent-will"
+    ],
+    "summary": "Argues against the strong orthogonality thesis by appeal to selection pressure: agents that arise, persist, and compete in rich environments have goals that route through intelligence, option-preservation, and world-model expansion, giving such goals a systematic advantage. Separates the defensible claims (intelligence does not imply morality; weird minds are possible) from the strong claim it rejects, that a reflective self-improving intelligence should remain bound to a thin training-era goal.",
+    "why_it_matters": "A recent, argued challenge to a load-bearing premise of the standard x-risk picture.",
+    "related": [
+      "orthogonality-thesis-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  }
+]
