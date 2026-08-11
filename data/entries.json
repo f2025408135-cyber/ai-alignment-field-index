@@ -1719,6 +1719,37 @@
     "status": "live"
   },
   {
+    "id": "contrastive-activation-addition",
+    "title": "Steering Llama 2 via Contrastive Activation Addition",
+    "authors": [
+      "Nina Panickssery",
+      "Nick Gabrieli",
+      "Julian Schulz",
+      "Meg Tong",
+      "Evan Hubinger",
+      "Alexander Matt Turner"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.06681",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "steering-gpt2-xl-activation-vector"
+    ],
+    "summary": "Formalizes Contrastive Activation Addition (CAA): averaging activation differences over many contrast pairs (truthful vs. sycophantic responses) to build robust steering vectors, then adding them at inference to steer Llama 2 Chat toward truthfulness and away from sycophancy, comparing favorably to few-shot prompting and fine-tuning on targeted metrics.",
+    "why_it_matters": "The systematic, scalable formulation of activation steering that became the standard recipe, including evidence on how steering interacts with chain-of-thought.",
+    "related": [
+      "steering-gpt2-xl-activation-vector",
+      "sober-look-at-steering-vectors"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "criticism-of-singular-learning-theory",
     "title": "My Criticism of Singular Learning Theory",
     "authors": [
@@ -1995,6 +2026,36 @@
     "status": "live"
   },
   {
+    "id": "inference-time-intervention",
+    "title": "Inference-Time Intervention: Eliciting Truthful Answers from a Language Model",
+    "authors": [
+      "Kenneth Li",
+      "Oam Patel",
+      "Fernanda Viégas",
+      "Hanspeter Pfister",
+      "Martin Wattenberg"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2306.03341",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "representation-engineering"
+    ],
+    "summary": "Identifies truthfulness-correlated directions with linear probes on model activations, then shifts activations along these directions during inference (Inference-Time Intervention, ITI), substantially improving truthfulness on TruthfulQA across LLaMA and Alpaca without any fine-tuning, while showing the shifts correspond to sparse sets of attention heads.",
+    "why_it_matters": "Showed that probe-found concept directions can be used to intervene and change behavior at inference time, connecting probing and steering into one pipeline.",
+    "related": [
+      "representation-engineering",
+      "contrastive-activation-addition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "interpretability-in-the-wild-ioi",
     "title": "Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small",
     "authors": [
@@ -2187,6 +2248,79 @@
     "status": "live"
   },
   {
+    "id": "refusal-single-direction",
+    "title": "Refusal in Language Models Is Mediated by a Single Direction",
+    "authors": [
+      "Andy Arditi",
+      "Oscar Obeso",
+      "Aaquib Syed",
+      "Daniel Paleka",
+      "Nina Panickssery",
+      "Wes Gurnee",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.11717",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "representation-engineering"
+    ],
+    "summary": "Shows across 13 open-weight chat models that refusal behavior is mediated by a single direction in the residual stream: erasing it disables refusals on harmful prompts with minimal capability loss, adding it induces refusals on benign prompts, and many jailbreaks work by suppressing this refusal direction.",
+    "why_it_matters": "The clearest demonstration that a safety-relevant behavior is controlled by a single internal direction, and a cautionary result about how brittle instruction-following safety can be.",
+    "related": [
+      "representation-engineering",
+      "steering-gpt2-xl-activation-vector"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "representation-engineering",
+    "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+    "authors": [
+      "Andy Zou",
+      "Long Phan",
+      "Sarah Chen",
+      "James Campbell",
+      "Phillip Guo",
+      "Richard Ren",
+      "Alexander Pan",
+      "Xuwang Yin",
+      "Maziar Boroujerdi",
+      "Diana Lee Low",
+      "Joanne Xu",
+      "Xin Luna Dong",
+      "Reiner Pope",
+      "Yulie Wu",
+      "Alex Tamkin",
+      "Dan Hendrycks"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.01405",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "Proposes Representation Engineering (RepE): a top-down approach that reads and controls high-level concepts in neural network representations using linear probes, activation differences, and steering, demonstrating monitoring and control of honesty, harmlessness, and power-seeking in large language models without fine-tuning, drawing an analogy to cognitive neuroscience's population-level analyses.",
+    "why_it_matters": "The founding paper of representation engineering, framing internal concept representations as both the object of study and the interface for controlling model behavior.",
+    "related": [
+      "refusal-single-direction",
+      "steering-gpt2-xl-activation-vector"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "scaling-evaluating-sparse-autoencoders",
     "title": "Scaling and evaluating sparse autoencoders",
     "authors": [
@@ -2269,6 +2403,37 @@
     "status": "live"
   },
   {
+    "id": "sober-look-at-steering-vectors",
+    "title": "A Sober Look at Steering Vectors for LLMs",
+    "authors": [
+      "Joschka Braun",
+      "Dmitrii Krasheninnikov",
+      "Usman Anwar",
+      "Robert Kirk",
+      "Daniel Tan",
+      "David Scott Krueger"
+    ],
+    "year": 2024,
+    "url": "https://www.lesswrong.com/posts/QQP4nq7TXg89CJGBh/a-sober-look-at-steering-vectors-for-llms",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "contrastive-activation-addition"
+    ],
+    "summary": "Systematic critique of activation steering: on open-ended tasks rather than carefully matched MCQA-style settings, steering vectors are often unreliable or even 'anti-steerable', degrade model fluency and general capabilities substantially, and the effects depend heavily on the task distribution used to construct the vectors.",
+    "why_it_matters": "The key sobering evaluation of steering's robustness, tempering claims that activation steering is a general-purpose, cheap control method.",
+    "related": [
+      "contrastive-activation-addition",
+      "steering-gpt2-xl-activation-vector"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "sparse-autoencoders-find-interpretable-features",
     "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
     "authors": [
@@ -2294,6 +2459,36 @@
     "related": [
       "towards-monosemanticity",
       "interpretability-in-the-wild-ioi"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "steering-gpt2-xl-activation-vector",
+    "title": "Steering GPT-2-XL by adding an activation vector",
+    "authors": [
+      "Alexander Matt Turner",
+      "Lisa Thiergart",
+      "Gavin Leech",
+      "David Udell",
+      "Alex J. Vazquez",
+      "Ulisse Mini",
+      "Maco Maci"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-gpt-2-xl-by-adding-an-activation-vector",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "rep-engineering"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The original activation addition (ActAdd) demonstration: computing a direction as the difference in activations between contrasting prompt pairs (e.g., 'love' vs 'hate') and adding it to the residual stream at inference time steers GPT-2-XL's behavior (persona, sentiment) without any gradient updates, weight changes, or prompts.",
+    "why_it_matters": "The paper that launched activation steering as a practical technique, showing model behavior can be controlled by simple vector arithmetic on activations.",
+    "related": [
+      "representation-engineering",
+      "contrastive-activation-addition"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
