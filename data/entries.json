@@ -1457,6 +1457,120 @@
     "status": "live"
   },
   {
+    "id": "attribution-patching-industrial-scale",
+    "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
+    "authors": [
+      "János Kramár",
+      "Tom Lieberum",
+      "Rohin Shah",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.00745",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "best-practices-activation-patching"
+    ],
+    "summary": "Introduces Attribution Patching (AtP) and its refinement AtP*, which approximate the effect of activation patching using gradients, reducing an exhaustive per-component sweep to a small number of forward and backward passes and making circuit localization tractable on large frontier models, while correcting first-order approximation errors with a targeted second-order correction.",
+    "why_it_matters": "Scaled circuit localization to production-scale models; the technique behind Google DeepMind's internal interpretability work on LLM component attribution.",
+    "related": [
+      "best-practices-activation-patching",
+      "automated-circuit-discovery"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "attribution-patching-outperforms-acdc",
+    "title": "Attribution Patching Outperforms Automated Circuit Discovery",
+    "authors": [
+      "Aaquib Syed",
+      "Can Rager",
+      "Arthur Conmy"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.10348",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "automated-circuit-discovery"
+    ],
+    "summary": "Benchmarks edge-scoring circuit discovery methods, showing that gradient-based attribution patching (integrated gradients over activations) recovers task circuits with higher fidelity and far less compute than the ACDC pruning algorithm, establishing attribution as the default cheap circuit-finding tool.",
+    "why_it_matters": "Resolved the early 'how do we find circuits' question in favor of cheap gradient-based attribution, shaping the standard pipeline for automated circuit discovery.",
+    "related": [
+      "automated-circuit-discovery",
+      "attribution-patching-industrial-scale"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "automated-circuit-discovery",
+    "title": "Towards Automated Circuit Discovery for Mechanistic Interpretability",
+    "authors": [
+      "Arthur Conmy",
+      "Augustine N. Mavor-Parker",
+      "Aengus Lynch",
+      "Stefan Heimersheim",
+      "Adrià Garriga-Alonso"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2304.14997",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "best-practices-activation-patching"
+    ],
+    "summary": "Introduces ACDC (Automatic Circuit Discovery), an algorithm that starts from the full computational graph and iteratively prunes edges that do not matter for a task via interventions, recovering task-relevant subcircuits automatically rather than through manual hypothesis and patching.",
+    "why_it_matters": "The first systematic automated circuit discovery method, opening the path from hand-crafted circuit analysis to scalable, algorithmic circuit finding.",
+    "related": [
+      "attribution-patching-outperforms-acdc",
+      "causal-scrubbing"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "best-practices-activation-patching",
+    "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+    "authors": [
+      "Fred Zhang",
+      "Neel Nanda"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2309.16042",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "interpretability-in-the-wild-ioi"
+    ],
+    "summary": "Systematically examines the methodological choices in activation patching — metric selection, corruption methods, and denoising versus noising directions — showing these choices can change interpretability conclusions, and distills a set of best practices (with worked examples) for running and reporting patching experiments.",
+    "why_it_matters": "The methodological standard for activation patching; established that patching results are only meaningful when the experimental protocol is specified and validated.",
+    "related": [
+      "interpretability-in-the-wild-ioi",
+      "attribution-patching-industrial-scale"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "comprehensive-mechanistic-interpretability-explainer",
     "title": "A Comprehensive Mechanistic Interpretability Explainer & Glossary",
     "authors": [
@@ -1509,6 +1623,33 @@
     "status": "live"
   },
   {
+    "id": "how-to-use-and-interpret-activation-patching",
+    "title": "How to use and interpret activation patching",
+    "authors": [
+      "Stefan Heimersheim",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2404.15255",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "A practical tutorial on activation patching for beginners: explains the method with worked examples, covers different patch granularities (residual stream, attention heads, MLPs), common pitfalls in interpreting patching results, and how to avoid drawing false causal conclusions from patching experiments.",
+    "why_it_matters": "The most accessible introduction to patching methodology, widely used as the entry point for new interpretability researchers.",
+    "related": [
+      "best-practices-activation-patching",
+      "transformerlens"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "induction-heads-in-context-learning",
     "title": "In-context Learning and Induction Heads",
     "authors": [
@@ -1554,6 +1695,37 @@
     "related": [
       "interpretability-in-the-wild-ioi",
       "mathematical-framework-transformer-circuits"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "interpretability-in-the-wild-ioi",
+    "title": "Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small",
+    "authors": [
+      "Kevin Wang",
+      "Alexandre Variengien",
+      "Arthur Conmy",
+      "Buck Shlegeris",
+      "Jacob Steinhardt"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.00593",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "tracing"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "mathematical-framework-transformer-circuits",
+      "induction-heads-in-context-learning"
+    ],
+    "summary": "Fully reverse-engineers the circuit behind Indirect Object Identification (IOI) in GPT-2 small, mapping a 26-head circuit organized into functional classes (duplicate token heads, induction heads, name mover heads) and validating the explanation with path patching, showing that a natural behavior of a production-scale model can be explained circuit-by-circuit.",
+    "why_it_matters": "The flagship demonstration that full circuit-level explanation of a real model behavior is possible, and the paper whose methodology (path patching, head classes) defined subsequent tracing work.",
+    "related": [
+      "induction-heads-in-context-learning",
+      "best-practices-activation-patching"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
