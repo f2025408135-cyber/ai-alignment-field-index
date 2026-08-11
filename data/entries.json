@@ -53,6 +53,35 @@
     "status": "live"
   },
   {
+    "id": "corrigibility-paper",
+    "title": "Corrigibility",
+    "authors": [
+      "Nate Soares",
+      "Benja Fallenstein",
+      "Eliezer Yudkowsky",
+      "Stuart Armstrong"
+    ],
+    "year": 2015,
+    "url": "https://intelligence.org/files/Corrigibility.pdf",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "corrigibility"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The foundational formal treatment of corrigibility: why utility-maximizing agents resist shutdown, modification, and other interventions, and what behavioral desiderata a corrigible agent should satisfy. Proposes explicit reward-shaping and design principles intended to make an agent defer to its operators without incentive to prevent corrections.",
+    "why_it_matters": "The paper that defined corrigibility as a distinct research problem and shaped all subsequent formal work on shutdown and amendment.",
+    "related": [
+      "ai-alignment-why-hard",
+      "safely-interruptible-agents",
+      "off-switch-game",
+      "shutdown-problem-three-theorems"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "embedded-agency-paper",
     "title": "Embedded Agency",
     "authors": [
@@ -182,6 +211,36 @@
     "status": "live"
   },
   {
+    "id": "off-switch-game",
+    "title": "The Off-Switch Game",
+    "authors": [
+      "Dylan Hadfield-Menell",
+      "Anca Dragan",
+      "Pieter Abbeel",
+      "Stuart Russell"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1611.08219",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "corrigibility"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "corrigibility-paper"
+    ],
+    "summary": "Models the shutdown problem as a two-player game between a robot and a human, showing that a robot which is uncertain about the human's preferences will defer to the human and allow itself to be switched off. Argues that allowing the robot to press the off switch itself (assistance) preserves corrigibility under reasonable assumptions.",
+    "why_it_matters": "A canonical game-theoretic treatment connecting corrigibility to the assistance-game framework of human-compatible AI.",
+    "related": [
+      "shutdown-problem-three-theorems",
+      "shutdown-problem-proposal",
+      "safely-interruptible-agents"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "reflective-oracles",
     "title": "Reflective Oracles: A Foundation for Classical Game Theory",
     "authors": [
@@ -234,6 +293,87 @@
     "why_it_matters": "Introduced the mesa-optimization / inner alignment framing that much subsequent empirical and theoretical alignment work engages with.",
     "related": [
       "embedded-agency-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "safely-interruptible-agents",
+    "title": "Safely Interruptible Agents",
+    "authors": [
+      "Laurent Orseau",
+      "Stuart Armstrong"
+    ],
+    "year": 2016,
+    "url": "https://www.auai.org/uai2016/proceedings/papers/68.pdf",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "corrigibility"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "corrigibility-paper"
+    ],
+    "summary": "Formalizes the shutdown problem in a reinforcement learning setting and shows that a naive reward structure incentivizes the agent to disable or avoid its interrupt button. Proposes a Q-learning variant that is provably safely interruptible, meaning the agent never learns to prevent or seek interruption.",
+    "why_it_matters": "The first rigorous RL formulation of safe interruption, widely cited as evidence that corrigibility is achievable in principle.",
+    "related": [
+      "off-switch-game",
+      "corrigibility-paper"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "shutdown-problem-proposal",
+    "title": "A Shutdown Problem Proposal",
+    "authors": [
+      "John Wentworth",
+      "David Lorell"
+    ],
+    "year": 2024,
+    "url": "https://www.alignmentforum.org/posts/PhTBDHu9PKJFmvb4p/a-shutdown-problem-proposal",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "corrigibility"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "shutdown-problem-three-theorems"
+    ],
+    "summary": "Proposes an architecture in which a base agent negotiates with subagents that are causally upstream of its own choices, giving the subagents incentives to allow shutdown without letting the base agent 'wish away' its preferences. Uses causal counterfactuals to avoid the veto problem that blocks simpler proposals.",
+    "why_it_matters": "One of the most concrete recent proposals for engineering shutdown-capable agents, engaging directly with the theorem results.",
+    "related": [
+      "shutdown-problem-three-theorems",
+      "off-switch-game"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "shutdown-problem-three-theorems",
+    "title": "The Shutdown Problem: An AI Engineering Puzzle for Decision Theorists",
+    "authors": [
+      "Elliott Thornley"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/8GWLRMnp55iFZDBbm/the-shutdown-problem-three-theorems",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "corrigibility"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "off-switch-game"
+    ],
+    "summary": "Proves three theorems establishing that standard decision-theoretic agents cannot simultaneously be indifferent to being shut down and avoid incentives to prevent shutdown, given natural assumptions about their preferences. Frames the shutdown problem as a live engineering puzzle and motivates novel solution strategies.",
+    "why_it_matters": "A rigorous negative result that reframed the shutdown problem and prompted a wave of proposed solutions.",
+    "related": [
+      "shutdown-problem-proposal",
+      "off-switch-game",
+      "corrigibility-paper"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
