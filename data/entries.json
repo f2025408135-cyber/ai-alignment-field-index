@@ -1483,6 +1483,32 @@
     "status": "live"
   },
   {
+    "id": "do-sparse-autoencoders-find-true-features",
+    "title": "Do Sparse Autoencoders Find \"True Features\"?",
+    "authors": [
+      "Demian Till"
+    ],
+    "year": 2024,
+    "url": "https://www.lesswrong.com/posts/QoR8noAB3Mp2KBA4B/do-sparse-autoencoders-find-true-features",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "sparse-autoencoders-find-interpretable-features"
+    ],
+    "summary": "Argues that the L1 sparsity penalty incentivizes SAEs to learn common combinations of features rather than atomic 'true' features: when features co-occur frequently, the SAE can save sparsity budget by dedicating one neuron to the combination, so apparent feature hierarchies and splitting may be artifacts of the optimization rather than discoveries of ground-truth structure.",
+    "why_it_matters": "A central epistemic critique of SAE-based interpretability, raising the question of what SAE features actually are before safety conclusions are drawn from them.",
+    "related": [
+      "sparse-autoencoders-find-interpretable-features",
+      "towards-monosemanticity"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "induction-heads-in-context-learning",
     "title": "In-context Learning and Induction Heads",
     "authors": [
@@ -1578,6 +1604,212 @@
     "related": [
       "induction-heads-in-context-learning",
       "toy-models-superposition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "scaling-evaluating-sparse-autoencoders",
+    "title": "Scaling and evaluating sparse autoencoders",
+    "authors": [
+      "Leo Gao",
+      "Tom Dupré la Tour",
+      "Henk Tillman",
+      "Gabriel Goh",
+      "Rajan Troll",
+      "Alec Radford",
+      "Ilya Sutskever",
+      "Jan Leike",
+      "Jeffrey Wu"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.04093",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "sparse-autoencoders-find-interpretable-features"
+    ],
+    "summary": "OpenAI's engineering and evaluation study of SAEs: introduces k-sparse autoencoders to directly control sparsity and avoid dead latents, establishes scaling laws for SAE quality versus model and SAE size, trains a 16-million-feature SAE on GPT-4 activations, and proposes new evaluation metrics for feature recovery and interpretability.",
+    "why_it_matters": "The reference work for how to train and evaluate SAEs at scale, including the dead-latent problem and its solutions that community tooling now standardizes on.",
+    "related": [
+      "scaling-monosemanticity",
+      "saelens"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "scaling-monosemanticity",
+    "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+    "authors": [
+      "Adly Templeton",
+      "Tom Conerly",
+      "Jonathan Marcus",
+      "Jack Lindsey",
+      "Trenton Bricken",
+      "Brian Chen",
+      "Adam Pearce",
+      "Craig Citro",
+      "Emmanuel Ameisen",
+      "Andy Jones",
+      "Hoagy Cunningham",
+      "Nicholas L. Turner",
+      "Callum McDougall",
+      "Monte MacDiarmid",
+      "Alex Tamkin",
+      "Esin Durmus",
+      "Joshua Batson",
+      "Samuel Colbaugh",
+      "Shauna Kravec",
+      "Tom Henighan",
+      "Jared Kaplan",
+      "Dario Amodei",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "towards-monosemanticity"
+    ],
+    "summary": "Scales dictionary learning to a frontier production model (Claude 3 Sonnet), extracting tens of millions of features across the model's layers, demonstrating that SAE interpretability transfers to far larger and more capable models, and surfacing safety-relevant features such as those tracking dangerous code, biosecurity content, and deception-adjacent concepts.",
+    "why_it_matters": "Proof that SAE-based interpretability scales to frontier models, and the clearest public demonstration of safety-relevant features being extractable from a production system.",
+    "related": [
+      "towards-monosemanticity",
+      "neuronpedia"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "sparse-autoencoders-find-interpretable-features",
+    "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+    "authors": [
+      "Hoagy Cunningham",
+      "Aidan Ewart",
+      "Logan Riggs",
+      "Robert Huben",
+      "Lee Sharkey"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2309.08600",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "towards-monosemanticity"
+    ],
+    "summary": "Independently shows that unsupervised sparse autoencoders recover interpretable, monosemantic features in real language models (Pythia variants), with automated interpretability metrics confirming SAE features beat neurons, PCA, and ICA directions, and causal interventions showing SAE features control behavior on tasks like indirect object identification.",
+    "why_it_matters": "Brought SAEs into the mainstream as a practical tool with rigorous evaluation, showing feature-level interventions genuinely affect model outputs.",
+    "related": [
+      "towards-monosemanticity",
+      "interpretability-in-the-wild-ioi"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "towards-monosemanticity",
+    "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+    "authors": [
+      "Trenton Bricken",
+      "Adly Templeton",
+      "Joshua Batson",
+      "Brian Chen",
+      "Adam Jermyn",
+      "Tom Conerly",
+      "Nick Turner",
+      "Cem Anil",
+      "Carson Denison",
+      "Amanda Askell",
+      "Robert Lasenby",
+      "Yifan Wu",
+      "Shauna Kravec",
+      "Nicholas Schiefer",
+      "Tim Maxwell",
+      "Nicholas Joseph",
+      "Zac Hatfield-Dodds",
+      "Alex Tamkin",
+      "Karina Nguyen",
+      "Brayden McLean",
+      "Josiah Perkinson",
+      "Jackson Dascondio",
+      "Sam McCandlish",
+      "Tom Henighan",
+      "Jared Kaplan",
+      "Dario Amodei",
+      "Christopher Olah"
+    ],
+    "year": 2023,
+    "url": "https://transformer-circuits.pub/2023/monosemantic-features/",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "toy-models-superposition"
+    ],
+    "summary": "Applies sparse autoencoders (dictionary learning) to a one-layer transformer, decomposing polysemantic neurons into millions of interpretable monosemantic features — including context-specific features for safety, coding, and specialized text — and documents 'feature splitting' as dictionary size grows.",
+    "why_it_matters": "The first convincing demonstration that dictionary learning resolves superposition in real language models, launching the SAE research program that dominates interpretability from 2023 on.",
+    "related": [
+      "sparse-autoencoders-find-interpretable-features",
+      "toy-models-superposition",
+      "saelens"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "toy-models-superposition",
+    "title": "Toy Models of Superposition",
+    "authors": [
+      "Nelson Elhage",
+      "Tristan Hume",
+      "Catherine Olsson",
+      "Nicholas Schiefer",
+      "Tom Henighan",
+      "Shauna Kravec",
+      "Zac Hatfield-Dodds",
+      "Robert Lasenby",
+      "Dawn Drain",
+      "Carol Chen",
+      "Roger Grosse",
+      "Sam McCandlish",
+      "Jared Kaplan",
+      "Dario Amodei",
+      "Michael Nielsen",
+      "Chris Olah"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2209.10652",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "superposition-saes"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "mathematical-framework-transformer-circuits"
+    ],
+    "summary": "Shows that neural networks can represent more features than they have dimensions by storing them in 'superposition' as sparse, nearly orthogonal directions in activation space, and characterizes the phase changes that govern when models use superposition, connecting the phenomenon to polytope geometry and to the origin of adversarial examples.",
+    "why_it_matters": "The theoretical foundation for why dictionary learning is needed: superposition explains polysemanticity, and sparse autoencoders are the field's main attempt to disentangle the superposed features.",
+    "related": [
+      "towards-monosemanticity",
+      "mathematical-framework-transformer-circuits"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
