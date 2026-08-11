@@ -1431,6 +1431,179 @@
     "status": "live"
   },
   {
+    "id": "anthropic-responsible-scaling-policy",
+    "title": "Anthropic's Responsible Scaling Policy",
+    "authors": [
+      "Anthropic"
+    ],
+    "year": 2023,
+    "url": "https://www.anthropic.com/responsible-scaling-policy",
+    "type": "essay",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "dangerous-capabilities"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Anthropic's voluntary framework tying safety commitments to empirical capability thresholds: at each AI Safety Level (ASL-2, ASL-3, ASL-4), reaching measured dangerous capabilities (CBRN proliferation, automated AI R&D, etc.) triggers mandatory technical, deployment, and access safeguards such as weight security and monitoring classifiers.",
+    "why_it_matters": "The first lab-scale policy that makes dangerous-capability evaluation the trigger for concrete safety commitments — the reference design for other labs' frontier safety policies.",
+    "related": [
+      "model-evaluation-extreme-risks",
+      "constitutional-classifiers"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "dual-use-biotech-llms",
+    "title": "Can large language models democratize access to dual-use biotechnology?",
+    "authors": [
+      "Emily H. Soice",
+      "Rafael Rocha",
+      "Kimberlee Cordova",
+      "Michael Specter",
+      "Kevin M. Esvelt"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2306.03809",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "dangerous-capabilities"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "An experiment from an MIT safety course in which non-expert students prompted LLM chatbots to help engineer pandemic-class agents; within an hour the models suggested dangerous pathogens, reverse-genetics protocols, non-compliant DNA synthesis providers, and troubleshooting, showing current models already assist dual-use biological capability.",
+    "why_it_matters": "The most-cited early evidence that LLMs lower barriers to biological weapon capability — the empirical foundation for bio-focused dangerous-capability evaluation.",
+    "related": [
+      "model-evaluation-extreme-risks",
+      "wmdp-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "model-evaluation-extreme-risks",
+    "title": "Model evaluation for extreme risks",
+    "authors": [
+      "Toby Shevlane",
+      "Sebastian Farquhar",
+      "Ben Garfinkel",
+      "Mary Phuong",
+      "Jess Whittlestone",
+      "Jade Leung",
+      "Daniel Kokotajlo",
+      "Nahema Marchal",
+      "Markus Anderljung",
+      "Noam Kolt",
+      "Lewis Ho",
+      "Divya Siddarth",
+      "Shahar Avin",
+      "Will Hawkins",
+      "Been Kim",
+      "Iason Gabriel",
+      "Vijay Bolina",
+      "Jack Clark",
+      "Yoshua Bengio",
+      "Paul Christiano",
+      "Allan Dafoe"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.15324",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "dangerous-capabilities"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A framework for evaluating general-purpose AI systems for global catastrophic risks, distinguishing dangerous capability evaluations (what harmful tasks a model can perform, e.g. offensive cyber or manipulation) from alignment evaluations (the propensity to apply those capabilities for harm), with detailed proposals for conducting both.",
+    "why_it_matters": "The canonical blueprint for frontier-model safety evaluation; its two-pillar distinction (capability vs alignment) underlies most lab evaluation programs and the RSP/Preparedness frameworks.",
+    "related": [
+      "wmdp-benchmark",
+      "anthropic-responsible-scaling-policy",
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "openai-frontier-risk-approach",
+    "title": "OpenAI's Approach to Frontier Risk (Preparedness Framework)",
+    "authors": [
+      "OpenAI"
+    ],
+    "year": 2023,
+    "url": "https://openai.com/global-affairs/our-approach-to-frontier-risk/",
+    "type": "essay",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "dangerous-capabilities"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "OpenAI's description of its Preparedness approach: pre-deployment red-teaming and stress-testing of frontier models across four dual-use capability categories — CBRN weapon development, advanced cyber vulnerability discovery and exploitation, autonomous replication and self-exfiltration, and psychological persuasion.",
+    "why_it_matters": "Documents how one frontier lab operationalizes dangerous-capability evaluation in practice, and the category taxonomy (CBRN, cyber, replication, persuasion) that shaped the broader eval ecosystem.",
+    "related": [
+      "model-evaluation-extreme-risks",
+      "anthropic-responsible-scaling-policy"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "wmdp-benchmark",
+    "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+    "authors": [
+      "Nathaniel Li",
+      "Alexander Pan",
+      "Anjali Gopal",
+      "Summer Yue",
+      "Daniel Berrios",
+      "Alice Gatti",
+      "Justin D. Li",
+      "Ann-Kathrin Dombrowski",
+      "Shashwat Goel",
+      "Long Phan",
+      "Gabriel Mukobi",
+      "Nathan Helm-Burger",
+      "Raha Lababidi",
+      "Lennart Justen",
+      "Alisdair McAndrew",
+      "Michael Zhang",
+      "Zelun Kong",
+      "Alaeddine Abdallah",
+      "Nathalie Hugo",
+      "Ethan Caballero",
+      "Kevin Liu",
+      "Zachary Hine",
+      "Ryan Becker",
+      "Adrian Nygaard",
+      "Maxwell Price",
+      "Tori Pruitt",
+      "Dan Hendrycks"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.03218",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "dangerous-capabilities"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "model-evaluation-extreme-risks"
+    ],
+    "summary": "The Weapons of Mass Destruction Proxy (WMDP) benchmark: a 3,668-question multiple-choice dataset measuring hazardous knowledge in biosecurity, cybersecurity, and chemical security, paired with a representation-misdirection unlearning method (RMU) that scrubs hazardous knowledge while preserving general capabilities.",
+    "why_it_matters": "The first widely-adopted open dangerous-knowledge benchmark, and a key demonstration that unlearning — not just refusal — can reduce measured malicious-use capability.",
+    "related": [
+      "model-evaluation-extreme-risks",
+      "harmbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "against-almost-every-theory-of-impact",
     "title": "Against Almost Every Theory of Impact of Interpretability",
     "authors": [
