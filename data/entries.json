@@ -1623,6 +1623,66 @@
     "status": "live"
   },
   {
+    "id": "emergent-world-representations",
+    "title": "Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task",
+    "authors": [
+      "Kenneth Li",
+      "Aspen K. Hopkins",
+      "David Bau",
+      "Fernanda Viégas",
+      "Hanspeter Pfister",
+      "Martin Wattenberg"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2210.13382",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "probing"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Trains a GPT-style model on synthetic Othello transcripts and shows via linear probes and causal interventions that the network has built an emergent internal world model — a nonlinear representation of the board state — that genuinely drives its predictions, not merely surface statistics of move sequences.",
+    "why_it_matters": "The canonical demonstration that models can learn genuine internal world models, and a milestone for probing methodology: probes plus interventions established the representation was causal.",
+    "related": [
+      "language-models-represent-space-time",
+      "tcav-concept-activation-vectors"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "finding-neurons-in-a-haystack",
+    "title": "Finding Neurons in a Haystack: Case Studies with Sparse Probing",
+    "authors": [
+      "Wes Gurnee",
+      "Neel Nanda",
+      "Matthew Pauly",
+      "Katherine Harvey",
+      "Dmitrii Troitskii",
+      "Dimitris Bertsimas"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.01610",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "probing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "emergent-world-representations"
+    ],
+    "summary": "Trains k-sparse linear probes to localize high-level concepts in LLM activations, showing that sparsity of concept representation increases with scale, early layers represent features superposedly across many neurons while middle layers concentrate context-specific features in few dedicated neurons, and that sparse probing reveals where in the network a feature lives.",
+    "why_it_matters": "Bridged probing and circuit analysis by localizing concepts to specific neurons, and its finding that sparsity grows with scale bears directly on how far SAE-style decomposition can go.",
+    "related": [
+      "language-models-represent-space-time",
+      "sparse-autoencoders-find-interpretable-features"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "how-to-use-and-interpret-activation-patching",
     "title": "How to use and interpret activation patching",
     "authors": [
@@ -1731,6 +1791,33 @@
     "status": "live"
   },
   {
+    "id": "language-models-represent-space-time",
+    "title": "Language Models Represent Space and Time",
+    "authors": [
+      "Wes Gurnee",
+      "Max Tegmark"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.02207",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "probing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "emergent-world-representations"
+    ],
+    "summary": "Uses linear probes on Llama-2 family models to show that LLMs learn robust, multi-scale linear representations of geographic space and of time (dates, historical figures, news headlines), including identifiable 'space neurons' and 'time neurons', with spatial representations interpretable as world coordinates across model scales.",
+    "why_it_matters": "A landmark positive probing result showing that frontier LLMs encode structured, human-interpretable world geometry linearly, informing the linear representation hypothesis debates.",
+    "related": [
+      "emergent-world-representations",
+      "finding-neurons-in-a-haystack"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "mathematical-framework-transformer-circuits",
     "title": "A Mathematical Framework for Transformer Circuits",
     "authors": [
@@ -1776,6 +1863,32 @@
     "related": [
       "induction-heads-in-context-learning",
       "toy-models-superposition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "probing-classifiers-promises-shortcomings",
+    "title": "Probing Classifiers: Promises, Shortcomings, and Advances",
+    "authors": [
+      "Yonatan Belinkov"
+    ],
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2102.12452",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "probing"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "tcav-concept-activation-vectors"
+    ],
+    "summary": "Survey and critique of the probing framework: high probe accuracy does not establish that the model uses the probed information (the probe may learn the task itself or exploit dataset artifacts), simple linear probes underestimate nonlinear encodings while complex probes risk memorizing labels, and conclusions from probes therefore require careful control experiments.",
+    "why_it_matters": "The authoritative statement of probing's methodological limitations — the paper every probing result is measured against, and the reason probe findings require causal confirmation.",
+    "related": [
+      "emergent-world-representations",
+      "tcav-concept-activation-vectors"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -1888,6 +2001,36 @@
     "related": [
       "towards-monosemanticity",
       "interpretability-in-the-wild-ioi"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "tcav-concept-activation-vectors",
+    "title": "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)",
+    "authors": [
+      "Been Kim",
+      "Martin Wattenberg",
+      "Justin Gilmer",
+      "Carrie Cai",
+      "James Wexler",
+      "Fernanda Viegas",
+      "Rory Sayres"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1711.11279",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "probing"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduces Concept Activation Vectors (TCAV): instead of attributing predictions to pixels or features, train a linear classifier in activation space to separate examples of a human-defined concept (stripes, gender, medical diagnosis), then measure how sensitive the model's output is to movement along the concept direction, giving quantitative, global concept-level explanations.",
+    "why_it_matters": "A foundational method for concept-level probing of what internal representations encode, influential across the later linear-probing and representation analysis literature.",
+    "related": [
+      "language-models-represent-space-time",
+      "emergent-world-representations"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
