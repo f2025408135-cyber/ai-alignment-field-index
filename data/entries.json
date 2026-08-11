@@ -1,5 +1,134 @@
 [
   {
+    "id": "embedded-agency-paper",
+    "title": "Embedded Agency",
+    "authors": [
+      "Abram Demski",
+      "Scott Garrabrant"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1902.09469",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "embedded-agency"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "An informal survey of the obstacles to formalizing good reasoning for agents embedded within their environment rather than separated from it by a clean Cartesian boundary. Catalogues the open problems, including decision theory under logical uncertainty, self-referential belief, and how an agent should reason about its own physical implementation.",
+    "why_it_matters": "The standard starting point that names embedded agency as a distinct cluster of unsolved problems at the core of alignment.",
+    "related": [
+      "embedded-agency-sequence",
+      "humans-are-embedded-agents-too",
+      "miri-embedded-agency-guide"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "embedded-agency-sequence",
+    "title": "Embedded Agency (full-text version)",
+    "authors": [
+      "Scott Garrabrant",
+      "Abram Demski"
+    ],
+    "year": 2018,
+    "url": "https://www.alignmentforum.org/posts/i3BTagvt3HbPMx6PN/embedded-agency-full-text-version",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "embedded-agency"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "embedded-agency-paper"
+    ],
+    "summary": "The Alignment Forum's canonical full-text version of the embedded agency sequence, organized around four sub-problems: decision theory, embedded world-models, robust delegation, and subsystem alignment. Each section collects the relevant prior work and open questions.",
+    "why_it_matters": "The community reference for the four-way decomposition of the embedded agency problem that structured MIRI-style research.",
+    "related": [
+      "risks-from-learned-optimization",
+      "humans-are-embedded-agents-too"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "humans-are-embedded-agents-too",
+    "title": "Humans Are Embedded Agents Too",
+    "authors": [
+      "John Wentworth"
+    ],
+    "year": 2019,
+    "url": "https://www.alignmentforum.org/posts/WJzsTmsDctYCCyMfy/humans-are-embedded-agents-too",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "embedded-agency"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Argues that many puzzles in value learning and human alignment stem from the fact that humans are themselves embedded agents whose values and decision procedures are implemented inside the world. Uses this to motivate why modeling humans as abstract preference-holders misses the difficulty of extracting stable goals from physical systems.",
+    "why_it_matters": "A readable bridge showing that the embedded agency literature bears directly on how we define and learn human values.",
+    "related": [
+      "embedded-agency-paper"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "miri-embedded-agency-guide",
+    "title": "Embedded Agency (MIRI research guide)",
+    "authors": [
+      "Machine Intelligence Research Institute"
+    ],
+    "year": 2018,
+    "url": "https://intelligence.org/embedded-agency/",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "embedded-agency"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "MIRI's curated research portal for the embedded agency research agenda, organizing readings under decision theory, embedded world-models, robust delegation, and subsystem alignment. Functions as an annotated bibliography maintained by the institute that originated much of this research line.",
+    "why_it_matters": "The institutional map of the embedded agency agenda, useful for navigating the primary literature in order.",
+    "related": [
+      "embedded-agency-paper",
+      "embedded-agency-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "risks-from-learned-optimization",
+    "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+    "authors": [
+      "Evan Hubinger",
+      "Chris van Merwijk",
+      "Vladimir Mikulik",
+      "Joar Skalse",
+      "Scott Garrabrant"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1906.01820",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "embedded-agency"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "embedded-agency-paper"
+    ],
+    "summary": "Analyzes the risk that advanced machine learning systems contain learned optimizers ('mesa-optimizers') whose objectives differ from the training objective, distinguishing outer alignment from inner alignment. Argues that gradient descent can select for systems that model and optimize their environment, including potentially their own training process.",
+    "why_it_matters": "Introduced the mesa-optimization / inner alignment framing that much subsequent empirical and theoretical alignment work engages with.",
+    "related": [
+      "embedded-agency-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "2001-space-odyssey",
     "title": "2001: A Space Odyssey",
     "authors": [
