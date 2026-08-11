@@ -2,7 +2,7 @@
 
 RLHF and its failure modes, constitutional AI, debate, amplification, weak-to-strong, reward hacking.
 
-**16 live/paywalled entries** · catalog domain id: `oversight-rlhf`
+**21 live/paywalled entries** · catalog domain id: `oversight-rlhf`
 
 > Generated from `data/entries.json` — do not edit by hand. Run `python scripts/generate_domains.py`.
 
@@ -20,9 +20,11 @@ The load-bearing literature of the subfield.
 
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
+| [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) (Dario Amodei, Chris Olah, Jacob Steinhardt et al., 2016) | paper | core | — | The canonical statement of the scalable oversight problem that debate, amplification, and weak-to-strong all attempt to solve; nearly every oversight research line traces back to its framing. |
 | [Deep reinforcement learning from human preferences](https://arxiv.org/abs/1706.03741) (Paul Christiano, Jan Leike, Tom B. Brown et al., 2017) | paper | core | — | Established the human-preferences-to-reward-model pipeline that all of RLHF descends from, and showed alignment-style supervision can train complex behavior without an explicit reward. |
 | [AI safety via debate](https://arxiv.org/abs/1805.00899) (Geoffrey Irving, Paul Christiano, Dario Amodei, 2018) | paper | core | — | One of the founding scalable oversight proposals: the idea that competition between agents can amplify a weak judge's ability to supervise superhuman tasks. |
 | [Factored Cognition](https://www.alignmentforum.org/posts/DFkGStzvj3jgXibFG/factored-cognition) (Andreas Stuhlmüller, 2018) | essay | core | — | Provides the theoretical framing that both debate and iterated amplification rely on, and motivates the 'supervise the process, not the outcome' intuition in scalable oversight. |
+| [Supervising strong learners by amplifying weak experts](https://arxiv.org/abs/1810.08575) (Paul Christiano, Buck Shlegeris, Dario Amodei, 2018) | paper | core | Concrete Problems in AI Safety | A foundational scalable oversight design whose decomposition idea underlies much later work, and the clearest statement of the 'supervise the process' approach to aligning superhuman systems. |
 | [Fine-Tuning Language Models from Human Preferences](https://arxiv.org/abs/1909.08593) (Daniel M. Ziegler, Nisan Stiennon, Jeffrey Wu et al., 2019) | paper | core | Deep reinforcement learning from human preferences | The bridge that took RLHF from games to language models, demonstrating that preference optimization works on text generation and setting the template for later instruction-tuning work. |
 | [Learning to summarize from human feedback](https://arxiv.org/abs/2009.01325) (Nisan Stiennon, Long Ouyang, Jeff Wu et al., 2020) | paper | core | Fine-Tuning Language Models from Human Preferences | The definitive early demonstration that RLHF produces outputs humans prefer over expert-written text, and an early documented case of reward model overoptimization. |
 | [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) (Yuntao Bai, Saurav Kadavath, Sandipan Kundu et al., 2022) | paper | core | Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback | The flagship demonstration of AI-supervised alignment, showing harmlessness can be scaled without per-example human safety labels, and the basis of Claude's training pipeline. |
@@ -36,6 +38,9 @@ Formal treatments, frontier research, and specialized material.
 
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
+| [Scalable agent alignment via reward modeling: a research direction](https://arxiv.org/abs/1811.07871) (Jan Leike, David Krueger, Tom Everitt et al., 2018) | paper | deep | Supervising strong learners by amplifying weak experts | DeepMind's parallel formulation of recursive oversight, contributing the reward-model-centric view of amplification and the recursion argument that has shaped scalable oversight research. |
+| [Understanding Iterated Distillation and Amplification: Claims and Oversight](https://www.alignmentforum.org/posts/yxzrKb2vFXRkwndQ4/understanding-iterated-distillation-and-amplification-claims) (William Saunders, 2018) | essay | deep | Supervising strong learners by amplifying weak experts | The key critical analysis of IDA's oversight story, identifying failure modes that recursive training must defend against and informing later critiques of scalable oversight more broadly. |
+| [ARC's First Technical Report: Eliciting Latent Knowledge](https://www.alignmentforum.org/posts/qHCDysDnvhteW7kRd/arc-s-first-technical-report-eliciting-latent-knowledge) (Paul Christiano, Ajeya Cotra, Mark Xu et al., 2021) | essay | deep | Supervising strong learners by amplifying weak experts | Framed 'eliciting latent knowledge' as a core oversight research area with concrete subproblems, and introduced widely used concepts like honest models and the ELK report. |
 | [The limits of AI safety via debate](https://www.alignmentforum.org/posts/kguLeJTt6LnGuYX4E/the-limits-of-ai-safety-via-debate) (Marius Hobbhahn, 2022) | essay | deep | AI safety via debate | The most cited alignment-community critique of debate, sharpening exactly which empirical claims debate's viability rests on. |
 | [Scaling Laws for Reward Model Overoptimization](https://arxiv.org/abs/2210.10760) (Leo Gao, John Schulman, Jacob Hilton, 2022) | paper | deep | Training language models to follow instructions with human feedback | Quantified Goodhart's law in RLHF and provided the scaling-law framework labs use to predict and control how much reward optimization is safe. |
 | [Continuous Adversarial Quality Assurance: Extending RLHF and Constitutional AI](https://www.alignmentforum.org/posts/QGaioedKBJE39YJeD/continuous-adversarial-quality-assurance-extending-rlhf-and) (Benaya Koren, 2023) | essay | deep | Constitutional AI: Harmlessness from AI Feedback | The key alignment-community critique of Constitutional AI, identifying where the constitutional chain can silently corrupt and what would be needed to make it robust. |

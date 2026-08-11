@@ -3637,6 +3637,36 @@
     "status": "live"
   },
   {
+    "id": "concrete-problems-ai-safety",
+    "title": "Concrete Problems in AI Safety",
+    "authors": [
+      "Dario Amodei",
+      "Chris Olah",
+      "Jacob Steinhardt",
+      "Paul Christiano",
+      "John Schulman",
+      "Dan Mané"
+    ],
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1606.06565",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "amplification"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The paper that defined the modern AI safety research agenda, cataloguing concrete problems including safe exploration, robust reward specification, and the oversight problem — how to train and monitor systems that are smarter than their supervisors — alongside research directions such as verification, interpretability, and interruptibility.",
+    "why_it_matters": "The canonical statement of the scalable oversight problem that debate, amplification, and weak-to-strong all attempt to solve; nearly every oversight research line traces back to its framing.",
+    "related": [
+      "iterated-distillation-amplification",
+      "recursive-reward-modeling",
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "constitutional-ai",
     "title": "Constitutional AI: Harmlessness from AI Feedback",
     "authors": [
@@ -3793,6 +3823,48 @@
     "related": [
       "fine-tuning-lms-human-preferences",
       "learning-to-summarize-human-feedback"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "eliciting-latent-knowledge",
+    "title": "ARC's First Technical Report: Eliciting Latent Knowledge",
+    "authors": [
+      "Paul Christiano",
+      "Ajeya Cotra",
+      "Mark Xu",
+      "William Saunders",
+      "Jan Brauner",
+      "Evan Hubinger",
+      "Colin Burns",
+      "Alex Ray",
+      "Francis Chen",
+      "Victoria Krakovna",
+      "Jason Wei",
+      "Alicia Vidmar",
+      "Dewey Murdick",
+      "Ross Nordby",
+      "Eli Lifland",
+      "Peter Barnett",
+      "Catherine Olsson"
+    ],
+    "year": 2021,
+    "url": "https://www.alignmentforum.org/posts/qHCDysDnvhteW7kRd/arc-s-first-technical-report-eliciting-latent-knowledge",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "amplification"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "iterated-distillation-amplification"
+    ],
+    "summary": "ARC's research report on eliciting latent knowledge: the problem of extracting what a model genuinely believes rather than what its training signal incentivized it to report, surveying candidate approaches (from debate to anomaly detection and 'report' conditioning) and arguing this is a key bottleneck for scalable oversight of superhuman systems.",
+    "why_it_matters": "Framed 'eliciting latent knowledge' as a core oversight research area with concrete subproblems, and introduced widely used concepts like honest models and the ELK report.",
+    "related": [
+      "recursive-reward-modeling",
+      "weak-to-strong-generalization"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -3957,6 +4029,35 @@
     "status": "live"
   },
   {
+    "id": "iterated-distillation-amplification",
+    "title": "Supervising strong learners by amplifying weak experts",
+    "authors": [
+      "Paul Christiano",
+      "Buck Shlegeris",
+      "Dario Amodei"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1810.08575",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "amplification"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "concrete-problems-ai-safety"
+    ],
+    "summary": "The Iterated Distillation and Amplification (IDA) proposal: alternate amplifying a weak expert by letting it consult copies of the current model to solve tasks beyond its individual capacity (HCH — Humans Consulting HCH), then distill the amplified behavior into a new model, iterating toward a superhuman agent whose behavior is auditable at every step.",
+    "why_it_matters": "A foundational scalable oversight design whose decomposition idea underlies much later work, and the clearest statement of the 'supervise the process' approach to aligning superhuman systems.",
+    "related": [
+      "concrete-problems-ai-safety",
+      "recursive-reward-modeling",
+      "understanding-ida-claims"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "learning-to-summarize-human-feedback",
     "title": "Learning to summarize from human feedback",
     "authors": [
@@ -4114,6 +4215,37 @@
     "status": "live"
   },
   {
+    "id": "recursive-reward-modeling",
+    "title": "Scalable agent alignment via reward modeling: a research direction",
+    "authors": [
+      "Jan Leike",
+      "David Krueger",
+      "Tom Everitt",
+      "Miljan Martic",
+      "Vishal Maini",
+      "Shane Legg"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1811.07871",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "amplification"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "iterated-distillation-amplification"
+    ],
+    "summary": "Proposes Recursive Reward Modeling (RRM): apply reward modeling hierarchically, with reward models trained using human feedback and assisted by weaker agents to evaluate the behavior of stronger agents, so supervision can be scaled recursively as capabilities grow.",
+    "why_it_matters": "DeepMind's parallel formulation of recursive oversight, contributing the reward-model-centric view of amplification and the recursion argument that has shaped scalable oversight research.",
+    "related": [
+      "iterated-distillation-amplification",
+      "eliciting-latent-knowledge"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "rlaif-ai-feedback",
     "title": "RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback",
     "authors": [
@@ -4172,6 +4304,31 @@
     "related": [
       "instructgpt",
       "defining-characterizing-reward-hacking"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "understanding-ida-claims",
+    "title": "Understanding Iterated Distillation and Amplification: Claims and Oversight",
+    "authors": [
+      "William Saunders"
+    ],
+    "year": 2018,
+    "url": "https://www.alignmentforum.org/posts/yxzrKb2vFXRkwndQ4/understanding-iterated-distillation-and-amplification-claims",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "amplification"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "iterated-distillation-amplification"
+    ],
+    "summary": "A careful analysis of IDA's implicit claims about oversight: distinguishing the claim that amplified processes can be supervised from the claim that their outputs can be audited, and arguing that IDA-style oversight is vulnerable to adversarial examples and corruption that can spread across recursive copies of the model.",
+    "why_it_matters": "The key critical analysis of IDA's oversight story, identifying failure modes that recursive training must defend against and informing later critiques of scalable oversight more broadly.",
+    "related": [
+      "iterated-distillation-amplification"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
