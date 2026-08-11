@@ -3587,6 +3587,33 @@
     "status": "live"
   },
   {
+    "id": "ai-safety-via-debate",
+    "title": "AI safety via debate",
+    "authors": [
+      "Geoffrey Irving",
+      "Paul Christiano",
+      "Dario Amodei"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1805.00899",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "debate"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The original scalable-oversight proposal: train agents via a zero-sum debate game in which two copies argue over the answer to a question and a human judge picks the more truthful argument, with the theoretical result that under optimal play debate can answer any PSPACE question with polynomial-time human judges (where direct judging is limited to NP), plus an MNIST proof-of-concept.",
+    "why_it_matters": "One of the founding scalable oversight proposals: the idea that competition between agents can amplify a weak judge's ability to supervise superhuman tasks.",
+    "related": [
+      "multiagent-debate",
+      "limits-of-ai-safety-via-debate",
+      "factored-cognition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "claudes-constitution",
     "title": "Claude's Constitution",
     "authors": [
@@ -3771,6 +3798,30 @@
     "status": "live"
   },
   {
+    "id": "factored-cognition",
+    "title": "Factored Cognition",
+    "authors": [
+      "Andreas Stuhlmüller"
+    ],
+    "year": 2018,
+    "url": "https://www.alignmentforum.org/posts/DFkGStzvj3jgXibFG/factored-cognition",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "debate"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The research agenda behind debate and amplification: hard cognitive work can be decomposed into smaller, individually checkable sub-questions, and human oversight can scale if supervision is factored into pieces a human can reliably verify — the conceptual foundation of the factored cognition program at Ought.",
+    "why_it_matters": "Provides the theoretical framing that both debate and iterated amplification rely on, and motivates the 'supervise the process, not the outcome' intuition in scalable oversight.",
+    "related": [
+      "ai-safety-via-debate",
+      "iterated-distillation-amplification"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "fine-tuning-lms-human-preferences",
     "title": "Fine-Tuning Language Models from Human Preferences",
     "authors": [
@@ -3940,6 +3991,31 @@
     "status": "live"
   },
   {
+    "id": "limits-of-ai-safety-via-debate",
+    "title": "The limits of AI safety via debate",
+    "authors": [
+      "Marius Hobbhahn"
+    ],
+    "year": 2022,
+    "url": "https://www.alignmentforum.org/posts/kguLeJTt6LnGuYX4E/the-limits-of-ai-safety-via-debate",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "debate"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "ai-safety-via-debate"
+    ],
+    "summary": "A critical assessment of the assumptions behind AI safety via debate: the feasibility of debate turns on whether it is harder to lie than to refute a lie, and on assumptions about concept complexity, human cognitive limits, verifier bias, and the risk of strategic collusion or deception between debaters.",
+    "why_it_matters": "The most cited alignment-community critique of debate, sharpening exactly which empirical claims debate's viability rests on.",
+    "related": [
+      "ai-safety-via-debate"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "model-written-evaluations",
     "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
     "authors": [
@@ -4004,6 +4080,35 @@
     "related": [
       "constitutional-ai",
       "towards-understanding-sycophancy"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "multiagent-debate",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "authors": [
+      "Yilun Du",
+      "Shuang Li",
+      "Antonio Torralba",
+      "Joshua B. Tenenbaum",
+      "Igor Mordatch"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.14325",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "debate"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "ai-safety-via-debate"
+    ],
+    "summary": "Applies a multi-agent debate framework to modern LLMs: multiple model instances propose answers and critique each other's reasoning over several rounds before converging, substantially improving factuality and mathematical/strategic reasoning on benchmarks like GSM8K and reducing hallucination relative to single-model inference.",
+    "why_it_matters": "The main empirical instantiation of debate ideas on contemporary LLMs, showing cross-examination between models improves truthfulness even without a trained judge.",
+    "related": [
+      "ai-safety-via-debate"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
