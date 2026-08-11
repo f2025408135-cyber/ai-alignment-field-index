@@ -1457,6 +1457,30 @@
     "status": "live"
   },
   {
+    "id": "algebraic-geometry-statistical-learning-theory",
+    "title": "Algebraic Geometry and Statistical Learning Theory",
+    "authors": [
+      "Sumio Watanabe"
+    ],
+    "year": 2009,
+    "url": "https://www.cambridge.org/core/books/algebraic-geometry-and-statistical-learning-theory/9C8FD1BDC817E2FC79117C7F41544A3A",
+    "type": "book",
+    "domain": "interpretability",
+    "subtopics": [
+      "slt"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "The foundational monograph of singular learning theory: shows that hierarchical models such as neural networks are 'singular' (their Fisher information matrices are non-invertible), so classical asymptotic statistics breaks down, and develops exact asymptotic formulas for the Bayesian free energy and generalization error using algebraic geometry, Hironaka's resolution of singularities, and the real log canonical threshold.",
+    "why_it_matters": "The mathematical bedrock of the SLT research program; its free energy and RLCT formalism underlies the modern claims about phase transitions, learning coefficient, and developmental interpretability.",
+    "related": [
+      "deep-learning-is-singular",
+      "dslt-distilling-singular-learning-theory"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "attribution-patching-industrial-scale",
     "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
     "authors": [
@@ -1695,6 +1719,32 @@
     "status": "live"
   },
   {
+    "id": "criticism-of-singular-learning-theory",
+    "title": "My Criticism of Singular Learning Theory",
+    "authors": [
+      "Joar Skalse"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/ALJYj4PpkqyseL7kZ/my-criticism-of-singular-learning-theory",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "slt"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "dslt-distilling-singular-learning-theory"
+    ],
+    "summary": "Argues that SLT's relevance to real neural network generalization is overstated: the framework abstracts away critical details of the parameter-function map and prior, low learning coefficients do not reliably track low function complexity or better generalization in small-data regimes, and real non-analytic architectures complicate the asymptotic assumptions the theory's core theorems require.",
+    "why_it_matters": "The most prominent published critique of SLT-for-alignment, forcing proponents to defend exactly which SLT claims transfer to practical deep learning.",
+    "related": [
+      "dslt-distilling-singular-learning-theory",
+      "towards-developmental-interpretability"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "das-distributed-alignment-search",
     "title": "Finding Alignments Between Interpretable Causal Variables and Distributed Neural Representations",
     "authors": [
@@ -1725,6 +1775,37 @@
     "status": "live"
   },
   {
+    "id": "deep-learning-is-singular",
+    "title": "Deep Learning is Singular, and That's Good",
+    "authors": [
+      "Daniel Murfet",
+      "Susan Wei",
+      "Mingming Gong",
+      "Hui Li",
+      "Jesse Gell-Redman",
+      "Thomas Quella"
+    ],
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2010.11560",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "slt"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "algebraic-geometry-statistical-learning-theory"
+    ],
+    "summary": "An accessible bridge paper arguing that singularities in the loss landscape of neural networks are not pathologies but the very feature that makes deep learning work, using SLT to explain why overparameterized networks generalize and framing the learning coefficient and free energy as the natural quantities for describing neural network training.",
+    "why_it_matters": "The key paper that introduced the alignment community to SLT as a framework for understanding deep learning, catalyzing the SLT-for-alignment research program.",
+    "related": [
+      "algebraic-geometry-statistical-learning-theory",
+      "dslt-distilling-singular-learning-theory"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "do-sparse-autoencoders-find-true-features",
     "title": "Do Sparse Autoencoders Find \"True Features\"?",
     "authors": [
@@ -1746,6 +1827,32 @@
     "related": [
       "sparse-autoencoders-find-interpretable-features",
       "towards-monosemanticity"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "dslt-distilling-singular-learning-theory",
+    "title": "Distilling Singular Learning Theory (sequence)",
+    "authors": [
+      "Liam Carroll"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/xRWsfGfvDAjRWXcnG/dslt-0-distilling-singular-learning-theory",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "slt"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "deep-learning-is-singular"
+    ],
+    "summary": "A multi-part pedagogical sequence that distills Watanabe's singular learning theory for the alignment community: explaining the free energy formula, the real log canonical threshold, the role of symmetries and degeneracy in neural networks (with worked examples like 2-layer ReLU networks), and what SLT implies about learning, generalization, and the loss landscape.",
+    "why_it_matters": "The community-canonical introduction to SLT for alignment researchers, making Watanabe's deep mathematics accessible enough to be used in interpretability work.",
+    "related": [
+      "algebraic-geometry-statistical-learning-theory",
+      "towards-developmental-interpretability"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -2217,6 +2324,35 @@
     "related": [
       "language-models-represent-space-time",
       "emergent-world-representations"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "towards-developmental-interpretability",
+    "title": "Towards Developmental Interpretability",
+    "authors": [
+      "Jesse Hoogland",
+      "Alexander Gietelink Oldenziel",
+      "Daniel Murfet",
+      "Stan van Wingerden"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/TjaeCWvLZtEDAS5Ex/towards-developmental-interpretability",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "slt"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "dslt-distilling-singular-learning-theory"
+    ],
+    "summary": "The manifesto for developmental interpretability: rather than reverse-engineering a fully trained model, study how internal structure emerges over the course of training, using SLT's phase transitions and learning coefficients as the macroscopic observables that mark when models acquire new abilities, analogous to developmental biology.",
+    "why_it_matters": "Defines the research agenda connecting SLT to interpretability, including the hope of detecting when models acquire dangerous capabilities mid-training.",
+    "related": [
+      "dslt-distilling-singular-learning-theory",
+      "criticism-of-singular-learning-theory"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
