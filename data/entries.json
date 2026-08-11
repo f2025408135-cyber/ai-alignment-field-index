@@ -1431,6 +1431,187 @@
     "status": "live"
   },
   {
+    "id": "against-almost-every-theory-of-impact",
+    "title": "Against Almost Every Theory of Impact of Interpretability",
+    "authors": [
+      "Charbel-Raphaël"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/LNA8mubrByG7SFacm/against-almost-every-theory-of-impact-of-interpretability-1",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "circuits"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "Skeptical essay arguing that most stories about why interpretability helps AI safety are incoherent: 'enumerative safety' (auditing every feature/circuit) is intractable and conceptually mis-specified, post-hoc circuit discovery offers little predictive power for future models, and interpreting circuits like IOI does not scale to detecting deception or scheming in advanced systems.",
+    "why_it_matters": "The most-cited critique of interpretability's safety value; forces the field to articulate concrete, non-enumerative mechanisms by which interpretability could matter.",
+    "related": [
+      "interpretability-in-the-wild-ioi",
+      "towards-monosemanticity"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "comprehensive-mechanistic-interpretability-explainer",
+    "title": "A Comprehensive Mechanistic Interpretability Explainer & Glossary",
+    "authors": [
+      "Neel Nanda"
+    ],
+    "year": 2022,
+    "url": "https://www.lesswrong.com/posts/vnocLyeWXcAxtdDnP/a-comprehensive-mechanistic-interpretability-explainer-and",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "circuits"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Neel Nanda's field-map essay defining mechanistic interpretability as reverse-engineering neural networks, laying out the core concepts (residual stream, circuits, superposition, patching), the research program's internalized safety motivation, and a glossary of terms plus recommended learning paths.",
+    "why_it_matters": "The community-canonical orientation text for newcomers; its conceptual framing and vocabulary are the de facto standard for how the field talks about circuits.",
+    "related": [
+      "zoom-in-circuits",
+      "mathematical-framework-transformer-circuits",
+      "transformerlens",
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "induction-heads-in-context-learning",
+    "title": "In-context Learning and Induction Heads",
+    "authors": [
+      "Catherine Olsson",
+      "Nelson Elhage",
+      "Neel Nanda",
+      "Nicholas Schiefer",
+      "Tom Henighan",
+      "Amanda Askell",
+      "Ben Mann",
+      "Arthur Conmy",
+      "Dawn Drain",
+      "Yuntao Bai",
+      "Deep Ganguli",
+      "Tom Conerly",
+      "Zac Hatfield-Dodds",
+      "Danny Hernandez",
+      "Scott Johnston",
+      "Andy Jones",
+      "Jackson Kernion",
+      "Liane Lovitt",
+      "Kamal Ndousse",
+      "Amado D. Hernandez",
+      "Jack Clark",
+      "Jared Kaplan",
+      "Sam McCandlish",
+      "Dario Amodei",
+      "Chris Olah"
+    ],
+    "year": 2022,
+    "url": "https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "circuits"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "mathematical-framework-transformer-circuits"
+    ],
+    "summary": "Identifies induction heads — two-head attention circuits that implement pattern-copying ('[A][B]...[A] → [B]') — and marshals six lines of converging evidence (ablation, loss curves, induction metrics, attention pattern analysis, reverse-engineering, and cross-task generalization) that they are the mechanistic driver of in-context learning in transformers.",
+    "why_it_matters": "A landmark demonstration that a general capability (in-context learning) can be traced to a specific, nameable circuit — the template for capability-level mechanistic explanation.",
+    "related": [
+      "interpretability-in-the-wild-ioi",
+      "mathematical-framework-transformer-circuits"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "mathematical-framework-transformer-circuits",
+    "title": "A Mathematical Framework for Transformer Circuits",
+    "authors": [
+      "Nelson Elhage",
+      "Neel Nanda",
+      "Catherine Olsson",
+      "Tom Henighan",
+      "Nicholas Joseph",
+      "Ben Mann",
+      "Amanda Askell",
+      "Yuntao Bai",
+      "Anna Chen",
+      "Tom Conerly",
+      "Nova DasSarma",
+      "Dawn Drain",
+      "Deep Ganguli",
+      "Zac Hatfield-Dodds",
+      "Danny Hernandez",
+      "Andy Jones",
+      "Jackson Kernion",
+      "Liane Lovitt",
+      "Kamal Ndousse",
+      "Dario Amodei",
+      "Tom Brown",
+      "Jack Clark",
+      "Jared Kaplan",
+      "Sam McCandlish",
+      "Chris Olah"
+    ],
+    "year": 2021,
+    "url": "https://transformer-circuits.pub/2021/framework/index.html",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "circuits"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "zoom-in-circuits"
+    ],
+    "summary": "Anthropic's mathematical formalization of attention-only transformer circuits, introducing the residual stream as a shared vector space through which layers add linear updates, and decomposing attention heads into QK (query-key) and OV (output-value) circuits with a composition algebra for reasoning about how heads interact.",
+    "why_it_matters": "The canonical formalism for analyzing transformers mechanistically; nearly all subsequent circuit analysis (induction heads, SAE-based tracing) uses its residual-stream and QK/OV vocabulary.",
+    "related": [
+      "induction-heads-in-context-learning",
+      "toy-models-superposition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "zoom-in-circuits",
+    "title": "Zoom In: An Introduction to Circuits",
+    "authors": [
+      "Chris Olah",
+      "Nick Cammarata",
+      "Ludwig Schubert",
+      "Gabriel Goh",
+      "Michael Petrov",
+      "Shan Carter"
+    ],
+    "year": 2020,
+    "url": "https://distill.pub/2020/circuits/zoom-in",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "circuits"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Distill article establishing the circuits research program: neural networks can be understood as compositions of human-understandable features and subnetworks ('circuits'), using low-level feature visualizations of convolutional vision models to argue that interpretability of the network's internal computation is achievable and worthwhile.",
+    "why_it_matters": "The founding statement of the circuits paradigm that mechanistic interpretability builds on, defining the research question of decomposing networks into understandable units.",
+    "related": [
+      "mathematical-framework-transformer-circuits",
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "anthropic-shadow-cirkovic",
     "title": "Anthropic Shadow: Observation Selection Effects and Human Extinction Risks",
     "authors": [
