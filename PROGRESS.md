@@ -13,6 +13,8 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | macrostrategy | timeline forecasting methodologies | done | 5 | 2026-08-11 |
 | macrostrategy | differential technological development | done | 4 | 2026-08-11 |
 | macrostrategy | longtermism & its critiques | done | 8 | 2026-08-11 |
+
+> **Note:** the catalog's cross-references are only fully consistent after all fragments of a domain are merged (e.g. macrostrategy's `ord-the-precipice` links forward to longtermism entries). Audit `crossref-integrity` is run on the end state, not per-subtopic. If resuming mid-domain, finish the remaining subtopics before auditing.
 | agent-foundations | embedded agency | not started | | |
 | agent-foundations | decision theory variants (CDT/EDT/UDT/FDT) | not started | | |
 | agent-foundations | corrigibility — formal treatments | not started | | |
