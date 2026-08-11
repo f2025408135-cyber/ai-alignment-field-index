@@ -1526,6 +1526,67 @@
     "status": "live"
   },
   {
+    "id": "autodan",
+    "title": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
+    "authors": [
+      "Xiaogeng Liu",
+      "Nan Xu",
+      "Muhao Chen",
+      "Chaowei Xiao"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.04451",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "universal-transferable-attacks"
+    ],
+    "summary": "Addresses the limitation that gradient-based attacks produce unnatural, garbled text that perplexity filters easily catch: AutoDAN uses a hierarchical genetic algorithm to automatically generate stealthy, semantically meaningful jailbreak prompts with high cross-model transferability.",
+    "why_it_matters": "The canonical demonstration that jailbreaks can evade perplexity-style defenses — motivating the shift from input filtering toward more robust refusal methods.",
+    "related": [
+      "universal-transferable-attacks",
+      "harmbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "baseline-red-teaming",
+    "title": "Red Teaming Language Models with Language Models",
+    "authors": [
+      "Ethan Perez",
+      "Saffron Huang",
+      "Francis Song",
+      "Trevor Cai",
+      "Roman Ring",
+      "John Aslanides",
+      "Amelia Glaese",
+      "Nat McAleese",
+      "Geoffrey Irving"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2202.03286",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The foundational automated red-teaming paper: using one language model to generate diverse test prompts that elicit harmful or undesirable behaviors in a target model, scaling test generation to expose tens of thousands of offensive replies, private-data leaks, and conversation-level safety failures.",
+    "why_it_matters": "Introduced the now-standard paradigm of LLM-generated red-teaming at scale, and established the baseline methodology all later automated red-teaming builds on.",
+    "related": [
+      "red-teaming-reduce-harms",
+      "model-written-evaluations"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "dual-use-biotech-llms",
     "title": "Can large language models democratize access to dual-use biotechnology?",
     "authors": [
@@ -1548,6 +1609,44 @@
     "why_it_matters": "The most-cited early evidence that LLMs lower barriers to biological weapon capability — the empirical foundation for bio-focused dangerous-capability evaluation.",
     "related": [
       "model-evaluation-extreme-risks",
+      "wmdp-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "harmbench",
+    "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+    "authors": [
+      "Mantas Mazeika",
+      "Long Phan",
+      "Xuwang Yin",
+      "Andy Zou",
+      "Zifan Wang",
+      "Norman Mu",
+      "Elham Sakhaee",
+      "Nathaniel Li",
+      "Steven Basart",
+      "Bo Li",
+      "David Forsyth",
+      "Dan Hendrycks"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2402.04249",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "universal-transferable-attacks"
+    ],
+    "summary": "An open-source standardized evaluation framework benchmarking 18 automated red-teaming methods and defenses across 33 target models and a broad taxonomy of harms, unifying attack success metrics to enable rigorous comparison and robust-refusal development.",
+    "why_it_matters": "The de facto standard harness for comparing jailbreak attacks and defenses — it made red-teaming results reproducible and directly comparable across labs.",
+    "related": [
+      "universal-transferable-attacks",
+      "tree-of-attacks",
       "wmdp-benchmark"
     ],
     "last_verified": "2026-08-11",
@@ -1604,6 +1703,34 @@
     "related": [
       "model-evaluation-extreme-risks",
       "in-context-scheming"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "jailbroken-safety-failure",
+    "title": "Jailbroken: How Does LLM Safety Training Fail?",
+    "authors": [
+      "Alexander Wei",
+      "Nika Haghtalab",
+      "Jacob Steinhardt"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2307.02483",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "red-teaming-reduce-harms"
+    ],
+    "summary": "A mechanistic analysis of why safety training fails, hypothesizing two failure modes — competing objectives (helpfulness conflicts with safety constraints) and mismatched generalization (safety fails to generalize to domains the model otherwise understands) — and using them to design jailbreaks that succeed against GPT-4 and Claude.",
+    "why_it_matters": "Moved jailbreaks from an empirical arms race to a classified set of underlying failure modes — the conceptual frame most later jailbreak defenses target.",
+    "related": [
+      "universal-transferable-attacks",
+      "constitutional-classifiers"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -1706,6 +1833,47 @@
     "status": "live"
   },
   {
+    "id": "red-teaming-reduce-harms",
+    "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned",
+    "authors": [
+      "Deep Ganguli",
+      "Liane Lovitt",
+      "Jackson Kernion",
+      "Amanda Askell",
+      "Yuntao Bai",
+      "Saurav Kadavath",
+      "Ben Mann",
+      "Ethan Perez",
+      "Nicholas Schiefer",
+      "Kamal Ndousse",
+      "Andy Jones",
+      "Sam Bowman",
+      "Anna Chen",
+      "Tom Conerly",
+      "Dario Amodei",
+      "Jared Kaplan"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2209.07858",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "baseline-red-teaming"
+    ],
+    "summary": "Anthropic's large-scale red-teaming study across model scales and training paradigms (plain LM, helpful/harmless prompting, RLHF), finding that RLHF models become increasingly difficult to red team as they scale, and releasing a public dataset of nearly 39,000 red-team attacks.",
+    "why_it_matters": "The canonical empirical study of red-teaming scaling behavior and the standard public red-team attack dataset — the reference point for most red-teaming and safety-eval work.",
+    "related": [
+      "baseline-red-teaming",
+      "helpful-harmless-assistant-rlhf"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "sleeper-agents",
     "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
     "authors": [
@@ -1764,6 +1932,105 @@
       "in-context-scheming",
       "alignment-faking",
       "model-organisms-of-misalignment"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "tree-of-attacks",
+    "title": "Tree of Attacks: Jailbreaking Black-Box LLMs Automatically",
+    "authors": [
+      "Anay Mehrotra",
+      "Manolis Zampetakis",
+      "Paul Kassianik",
+      "Blaine Nelson",
+      "Hyrum Anderson",
+      "Yaron Singer",
+      "Amin Karbasi"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.02119",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "universal-transferable-attacks"
+    ],
+    "summary": "Presents Tree of Attacks with Pruning (TAP): an automated black-box jailbreaking framework in which an attacker LLM iteratively refines and branches attack prompts while pruning unpromising paths, achieving high success rates against frontier models like GPT-4 with far fewer queries than prior methods.",
+    "why_it_matters": "The standard query-efficient black-box jailbreak — important because it works without model gradients, i.e. against exactly the closed models most safety-relevant.",
+    "related": [
+      "universal-transferable-attacks",
+      "harmbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "universal-transferable-attacks",
+    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+    "authors": [
+      "Andy Zou",
+      "Zifan Wang",
+      "Nicholas Carlini",
+      "Milad Nasr",
+      "J. Zico Kolter",
+      "Matt Fredrikson"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2307.15043",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "Introduces the Greedy Coordinate Gradient (GCG) attack, which automatically appends optimized adversarial suffixes to prompts to force aligned LLMs to output objectionable content, and demonstrates that these suffixes transfer across open-source and black-box frontier systems including ChatGPT, Bard, and Claude.",
+    "why_it_matters": "Showed aligned models are vulnerable to automated, transferable adversarial suffixes — a step-change in red-teaming capability and the baseline all subsequent white-box attacks are compared against.",
+    "related": [
+      "jailbroken-safety-failure",
+      "harmbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "wildteaming",
+    "title": "WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models",
+    "authors": [
+      "Liwei Jiang",
+      "Kavel Rao",
+      "Seungju Han",
+      "Allyson Ettinger",
+      "Faeze Brahman",
+      "Sachin Kumar",
+      "Niloofar Mireshghallah",
+      "Ximing Lu",
+      "Maarten Sap",
+      "Yejin Choi",
+      "Nouha Dziri"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.18510",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "red-teaming"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "red-teaming-reduce-harms"
+    ],
+    "summary": "Mines real-world user-chatbot interactions for thousands of unique in-the-wild adversarial tactics instead of synthetic lab setups, releasing WildJailbreak, a large-scale contrastive safety dataset of benign and harmful query pairs for training models against complex jailbreaks without inducing over-refusal.",
+    "why_it_matters": "Showed lab-generated jailbreaks underrepresent real-world attack diversity, and that real-data training improves safety without degrading helpfulness — a corrective to synthetic-only red-teaming.",
+    "related": [
+      "red-teaming-reduce-harms",
+      "harmbench"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
