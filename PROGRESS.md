@@ -38,11 +38,11 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | oversight-rlhf | weak-to-strong generalization | done | 4 | 2026-08-11 |
 | oversight-rlhf | process vs outcome supervision | done | 4 | 2026-08-11 |
 | oversight-rlhf | reward hacking & sycophancy | done | 4 | 2026-08-11 |
-| evals-benchmarks | dangerous-capability evals | not started | | |
-| evals-benchmarks | deception/scheming evals & model organisms | not started | | |
-| evals-benchmarks | autonomy/agentic-task evals | not started | | |
-| evals-benchmarks | red-teaming frameworks & adversarial suites | not started | | |
-| evals-benchmarks | critiques of eval validity/gameability | not started | | |
+| evals-benchmarks | dangerous-capability evals | done | 2026-08-11 | 5 | model-evaluation-extreme-risks, wmdp-benchmark, dual-use-biotech-llms, anthropic-responsible-scaling-policy, openai-frontier-risk-approach |
+| evals-benchmarks | deception/scheming evals & model organisms | done | 2026-08-11 | 6 | sleeper-agents, in-context-scheming, alignment-faking, ai-deception-survey, model-organisms-of-misalignment, introduction-to-ai-sandbagging |
+| evals-benchmarks | autonomy/agentic-task evals | done | 2026-08-11 | 8 | swe-bench, mle-bench, webarena, osworld, gaia-benchmark, agentbench, cybench, arc-agi |
+| evals-benchmarks | red-teaming frameworks & adversarial suites | done | 2026-08-11 | 8 | baseline-red-teaming, red-teaming-reduce-harms, jailbroken-safety-failure, universal-transferable-attacks, autodan, tree-of-attacks, harmbench, wildteaming |
+| evals-benchmarks | critiques of eval validity/gameability | done | 2026-08-11 | 5 | safe-harbor-ai-evaluation, emergent-abilities-mirage, nlp-evaluation-trouble, leakage-reproducibility-crisis, task-contamination |
 | governance-policy | compute governance | not started | | |
 | governance-policy | international coordination mechanisms | not started | | |
 | governance-policy | lab-level governance (RSPs) | not started | | |
