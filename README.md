@@ -19,7 +19,7 @@ Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dum
 |---|---|---|
 | [Entry Tier](domains/entry-tier.md) | Paperclip maximizer, orthogonality, Fermi/Great Filter, analytical sci-fi, accessible intros | 26 |
 | [Macrostrategy & X-Risk](domains/macrostrategy.md) | X-risk theory, timeline forecasting, differential development, longtermism ± critiques | 26 |
-| [Agent Foundations & Decision Theory](domains/agent-foundations.md) | Embedded agency, CDT/EDT/UDT/FDT, corrigibility, infra-Bayesianism, Cartesian frames, logical induction | 0 |
+| [Agent Foundations & Decision Theory](domains/agent-foundations.md) | Embedded agency, CDT/EDT/UDT/FDT, corrigibility, infra-Bayesianism, Cartesian frames, logical induction | 30 |
 | [Interpretability](domains/interpretability.md) | Circuits, superposition/SAEs, tracing, probing, causal scrubbing, SLT, rep engineering, tooling | 0 |
 | [Scalable Oversight & RLHF](domains/oversight-rlhf.md) | RLHF failure modes, CAI/RLAIF, debate, amplification, weak-to-strong, reward hacking, sycophancy | 0 |
 | [Evals & Benchmarks](domains/evals-benchmarks.md) | Dangerous capabilities, deception/scheming, autonomy, red-teaming suites, eval critiques | 0 |
@@ -28,7 +28,7 @@ Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dum
 | [Philosophy & Value Alignment](domains/philosophy-values.md) | Value specification, moral uncertainty, CEV ± critiques, pluralistic alignment, population ethics | 0 |
 | [Field Infrastructure](domains/field-infrastructure.md) | Training programs, funders, research orgs, communities, career pathways | 0 |
 
-**Total entries: 52**
+**Total entries: 82**
 
 ## Data
 

@@ -15,12 +15,12 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | macrostrategy | longtermism & its critiques | done | 8 | 2026-08-11 |
 
 > **Note:** the catalog's cross-references are only fully consistent after all fragments of a domain are merged (e.g. macrostrategy's `ord-the-precipice` links forward to longtermism entries). Audit `crossref-integrity` is run on the end state, not per-subtopic. If resuming mid-domain, finish the remaining subtopics before auditing.
-| agent-foundations | embedded agency | not started | | |
-| agent-foundations | decision theory variants (CDT/EDT/UDT/FDT) | not started | | |
-| agent-foundations | corrigibility — formal treatments | not started | | |
-| agent-foundations | infra-Bayesianism | not started | | |
-| agent-foundations | cartesian frames | not started | | |
-| agent-foundations | logical induction / naturalized induction | not started | | |
+| agent-foundations | embedded agency | done | 5 | 2026-08-11 |
+| agent-foundations | decision theory variants (CDT/EDT/UDT/FDT) | done | 6 | 2026-08-11 |
+| agent-foundations | corrigibility — formal treatments | done | 5 | 2026-08-11 |
+| agent-foundations | infra-Bayesianism | done | 5 | 2026-08-11 |
+| agent-foundations | cartesian frames | done | 4 | 2026-08-11 |
+| agent-foundations | logical induction / naturalized induction | done | 5 | 2026-08-11 |
 | interpretability | circuits & residual-stream framework | not started | | |
 | interpretability | superposition & dictionary learning / SAEs | not started | | |
 | interpretability | circuit tracing / attribution graphs | not started | | |
