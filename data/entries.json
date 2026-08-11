@@ -1,5 +1,58 @@
 [
   {
+    "id": "causal-decision-theory-sep",
+    "title": "Causal Decision Theory (Stanford Encyclopedia of Philosophy)",
+    "authors": [
+      "Paul Weirich"
+    ],
+    "year": 2008,
+    "url": "https://plato.stanford.edu/entries/decision-causal/",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The Stanford Encyclopedia entry for causal decision theory (CDT), which evaluates an act's utility by its causal consequences rather than merely its evidential import. Reviews the theory's history, its divergence from evidential decision theory on cases like Newcomb's problem, and the main philosophical objections to it.",
+    "why_it_matters": "The canonical neutral reference for CDT, the theory that functional and updateless decision theory position themselves against.",
+    "related": [
+      "fdt-yudkowsky-soares",
+      "cheating-death-in-damascus",
+      "updateless-decision-theory-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "cheating-death-in-damascus",
+    "title": "Cheating Death in Damascus",
+    "authors": [
+      "Benjamin A. Levinstein",
+      "Nate Soares"
+    ],
+    "year": 2020,
+    "url": "https://intelligence.org/files/DeathInDamascus.pdf",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "fdt-yudkowsky-soares"
+    ],
+    "summary": "A Journal of Philosophy paper introducing new counterexamples to evidential and causal decision theories, including cases where the intuitively correct action is causally dominated. Argues that only by respecting logical and subjunctive dependencies between decisions, as functional decision theory does, can these cases be handled.",
+    "why_it_matters": "Brought the FDT/UDT research program to a mainstream philosophy journal and sharpened the divergence arguments against CDT and EDT.",
+    "related": [
+      "updateless-decision-theory-wiki",
+      "fdt-yudkowsky-soares",
+      "causal-decision-theory-sep"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "embedded-agency-paper",
     "title": "Embedded Agency",
     "authors": [
@@ -53,6 +106,35 @@
     "status": "live"
   },
   {
+    "id": "fdt-yudkowsky-soares",
+    "title": "Functional Decision Theory: A New Theory of Instrumental Rationality",
+    "authors": [
+      "Eliezer Yudkowsky",
+      "Nate Soares"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1710.05060",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduces functional decision theory (FDT), which evaluates a decision by asking which output of the agent's decision algorithm would yield the best outcome, taking into account logical correlations between the agent's computation and the computations of other agents or predictors. Argues FDT resolves Newcomb-style problems and coordination dilemmas where evidential and causal decision theories diverge.",
+    "why_it_matters": "The canonical statement of FDT, the decision theory most closely tied to MIRI-style alignment research on logical correlation.",
+    "related": [
+      "cheating-death-in-damascus",
+      "toward-idealized-decision-theory",
+      "reflective-oracles",
+      "updateless-decision-theory-wiki",
+      "causal-decision-theory-sep",
+      "superintelligent-will"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "humans-are-embedded-agents-too",
     "title": "Humans Are Embedded Agents Too",
     "authors": [
@@ -100,6 +182,34 @@
     "status": "live"
   },
   {
+    "id": "reflective-oracles",
+    "title": "Reflective Oracles: A Foundation for Classical Game Theory",
+    "authors": [
+      "Benja Fallenstein",
+      "Jessica Taylor",
+      "Paul F. Christiano"
+    ],
+    "year": 2015,
+    "url": "https://arxiv.org/abs/1508.04145",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "toward-idealized-decision-theory"
+    ],
+    "summary": "Constructs probabilistic reflective oracles that agents can query to obtain beliefs about their own behavior and the behavior of other agents, yielding a foundation for game theory in which self-reference does not break down. Shows how such oracles support Nash equilibria even when agents model each other's algorithms.",
+    "why_it_matters": "A key technical tool for handling self-reference in decision theory and multi-agent reasoning without paradox.",
+    "related": [
+      "fdt-yudkowsky-soares",
+      "toward-idealized-decision-theory"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "risks-from-learned-optimization",
     "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
     "authors": [
@@ -124,6 +234,58 @@
     "why_it_matters": "Introduced the mesa-optimization / inner alignment framing that much subsequent empirical and theoretical alignment work engages with.",
     "related": [
       "embedded-agency-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "toward-idealized-decision-theory",
+    "title": "Toward Idealized Decision Theory",
+    "authors": [
+      "Nate Soares",
+      "Benja Fallenstein"
+    ],
+    "year": 2015,
+    "url": "https://arxiv.org/abs/1507.01986",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "fdt-yudkowsky-soares"
+    ],
+    "summary": "A MIRI technical report diagnosing the shortcomings of classical decision theories for agents that face logical uncertainty, self-referential reasoning, and counterfactuals about their own computations. Outlines desiderata for an idealized decision theory and surveys candidate approaches including policy selection and logical counterfactuals.",
+    "why_it_matters": "Mapped the design space for AI-facing decision theory and set the technical agenda FDT and related work later filled.",
+    "related": [
+      "reflective-oracles",
+      "fdt-yudkowsky-soares"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "updateless-decision-theory-wiki",
+    "title": "Updateless Decision Theory",
+    "authors": [
+      "Wei Dai",
+      "LessWrong wiki contributors"
+    ],
+    "year": 2025,
+    "url": "https://www.lesswrong.com/w/updateless-decision-theory",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "decision-theory"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A LessWrong wiki entry explaining updateless decision theory (UDT), which evaluates a global policy from a prior standpoint rather than updating on observations, avoiding dynamic inconsistency and resolving cases like counterfactual mugging and twin prisoner's dilemmas. Notes the theory's origin with Wei Dai and its relation to successor approaches.",
+    "why_it_matters": "The accessible reference for UDT, the direct intellectual ancestor of functional decision theory.",
+    "related": [
+      "fdt-yudkowsky-soares",
+      "cheating-death-in-damascus"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
