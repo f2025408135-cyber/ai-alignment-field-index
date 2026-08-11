@@ -4092,6 +4092,42 @@
     "status": "live"
   },
   {
+    "id": "lets-verify-step-by-step",
+    "title": "Let's Verify Step by Step",
+    "authors": [
+      "Hunter Lightman",
+      "Vineet Kosaraju",
+      "Yura Burda",
+      "Harri Edwards",
+      "Bowen Baker",
+      "Teddy Lee",
+      "Jan Leike",
+      "John Schulman",
+      "Ilya Sutskever",
+      "Karl Cobbe"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.20050",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "process-outcome"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "training-verifiers-math"
+    ],
+    "summary": "OpenAI's comparison of process versus outcome supervision on the MATH dataset: process reward models that score each intermediate reasoning step outperform outcome models on final-answer accuracy, with test-time computation scaling better, and the release of PRM800K, an 800,000-step human-labeled process supervision dataset.",
+    "why_it_matters": "The flagship empirical case for process supervision — the 'alignment tax is negative' result showing step-level feedback both improves correctness and reduces reward hacking.",
+    "related": [
+      "training-verifiers-math",
+      "process-outcome-based-feedback",
+      "prm-uncertainty-calibration"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "limits-of-ai-safety-via-debate",
     "title": "The limits of AI safety via debate",
     "authors": [
@@ -4210,6 +4246,69 @@
     "why_it_matters": "The main empirical instantiation of debate ideas on contemporary LLMs, showing cross-examination between models improves truthfulness even without a trained judge.",
     "related": [
       "ai-safety-via-debate"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "prm-uncertainty-calibration",
+    "title": "Know What You Don't Know: Uncertainty Calibration of Process Reward Models",
+    "authors": [
+      "Young-Jin Park",
+      "Kristjan Greenewald",
+      "Kaveh Alim",
+      "Hao Wang",
+      "Navid Azizan"
+    ],
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2506.09338",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "process-outcome"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "lets-verify-step-by-step"
+    ],
+    "summary": "Shows that off-the-shelf process reward models are systematically miscalibrated, overestimating the success probability of partial reasoning steps especially for out-of-distribution problems and weaker completion models, and proposes calibration methods to make PRM scores reliable.",
+    "why_it_matters": "A central reliability critique of process supervision: if PRM step scores are miscalibrated, search and selection procedures built on them inherit the error.",
+    "related": [
+      "lets-verify-step-by-step"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "process-outcome-based-feedback",
+    "title": "Solving math word problems with process- and outcome-based feedback",
+    "authors": [
+      "Jonathan Uesato",
+      "Nate Kushman",
+      "Ramana Kumar",
+      "Francis Song",
+      "Noah Siegel",
+      "Lisa Wang",
+      "Antonia Creswell",
+      "Geoffrey Irving",
+      "Irina Higgins"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.14275",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "process-outcome"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "training-verifiers-math"
+    ],
+    "summary": "DeepMind's controlled comparison of process- and outcome-based feedback on GSM8K: outcome supervision can match final-answer error rates with fewer labels, but process-based feedback is essential for substantially reducing reasoning errors among solutions that reach the correct final answer.",
+    "why_it_matters": "The key nuance in the process-vs-outcome debate — outcome supervision is label-efficient but process supervision fixes reasoning — informing how labs combine both signals.",
+    "related": [
+      "lets-verify-step-by-step",
+      "training-verifiers-math"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -4334,6 +4433,40 @@
     "related": [
       "instructgpt",
       "defining-characterizing-reward-hacking"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "training-verifiers-math",
+    "title": "Training Verifiers to Solve Math Word Problems",
+    "authors": [
+      "Karl Cobbe",
+      "Vineet Kosaraju",
+      "Mohammad Bavarian",
+      "Mark Chen",
+      "Heewoo Jun",
+      "Lukasz Kaiser",
+      "Matthias Plappert",
+      "Jerry Tworek",
+      "Jacob Hilton",
+      "Reiichiro Nakano",
+      "Christopher Hesse",
+      "John Schulman"
+    ],
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2110.14168",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "process-outcome"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduces GSM8K, a dataset of grade-school math word problems, and shows that training a verifier to judge the correctness of candidate solutions and selecting the highest-ranked completion at test time scales far better with data than fine-tuning the generator directly.",
+    "why_it_matters": "The paper that made verification-based supervision a standard method for reasoning tasks, and the source of the GSM8K benchmark used across subsequent process-supervision work.",
+    "related": [
+      "lets-verify-step-by-step"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
