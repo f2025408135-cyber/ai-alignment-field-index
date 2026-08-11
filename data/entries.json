@@ -1571,6 +1571,104 @@
     "status": "live"
   },
   {
+    "id": "causal-abstraction-theoretical-foundation",
+    "title": "Causal Abstraction: A Theoretical Foundation for Mechanistic Interpretability",
+    "authors": [
+      "Atticus Geiger",
+      "Duligur Ibeling",
+      "Amir Zur",
+      "Maheep Chaudhary",
+      "Sonakshi Chauhan",
+      "Jing Huang",
+      "Aryaman Arora",
+      "Zhengxuan Wu",
+      "Noah Goodman",
+      "Christopher Potts",
+      "Thomas Icard"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2301.04709",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "causal-abstractions-of-neural-networks"
+    ],
+    "summary": "Develops a general theory of causal abstraction via mechanism transformations, showing that seemingly disparate interpretability methods — path patching, causal tracing, causal scrubbing, sparse autoencoders, steering, and circuit analysis — are instances of a single underlying abstraction framework, with a universal alignment procedure and generalization bounds.",
+    "why_it_matters": "Unified the interpretability method zoo under one theory, giving the field shared formalism and a foundation for principled comparisons between methods.",
+    "related": [
+      "causal-abstractions-of-neural-networks",
+      "das-distributed-alignment-search",
+      "non-linear-representation-dilemma"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "causal-abstractions-of-neural-networks",
+    "title": "Causal Abstractions of Neural Networks",
+    "authors": [
+      "Atticus Geiger",
+      "Hanson Lu",
+      "Thomas Icard",
+      "Christopher Potts"
+    ],
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2106.02997",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "Formalizes neural network interpretability in Pearl's structural causal model framework: a high-level causal model is an abstraction of a network when interventions (interchange interventions) on aligned internal variables produce the counterfactual effects the high-level model predicts, providing a principled notion of when a hypothesized explanation matches the network's actual computation.",
+    "why_it_matters": "The theoretical bridge between causal reasoning and interpretability, establishing the vocabulary (abstraction, alignment, interchange interventions) that later causal abstraction work builds on.",
+    "related": [
+      "das-distributed-alignment-search",
+      "causal-abstraction-theoretical-foundation"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "causal-scrubbing",
+    "title": "Causal Scrubbing: A Method For Rigorously Testing Mechanistic Interpretability Hypotheses",
+    "authors": [
+      "Lawrence Chan",
+      "Adrià Garriga-Alonso",
+      "Nicholas Goldowsky-Dill",
+      "Ryan Greenblatt",
+      "Ansh Radhakrishnan",
+      "Buck Shlegeris",
+      "Nate Thomas"
+    ],
+    "year": 2022,
+    "url": "https://www.alignmentforum.org/posts/JvZhhzycHu2Yd57RN/causal-scrubbing-a-method-for-rigorously-testing",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "Redwood Research's method for rigorously testing interpretability hypotheses: given a hypothesized algorithm mapped onto the model's computational graph, resample activations in ways the hypothesis says are irrelevant (maximum-entropy ablations over a dataset) and check whether the model's behavior is preserved; the hypothesis is adequate exactly when scrubbed computation still reproduces the behavior.",
+    "why_it_matters": "Turned 'is this circuit really the explanation?' into a falsifiable, quantitative test, and became the methodological backbone for verifying circuit hypotheses in the interpretability community.",
+    "related": [
+      "automated-circuit-discovery",
+      "practical-pitfalls-of-causal-scrubbing"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "comprehensive-mechanistic-interpretability-explainer",
     "title": "A Comprehensive Mechanistic Interpretability Explainer & Glossary",
     "authors": [
@@ -1592,6 +1690,36 @@
       "mathematical-framework-transformer-circuits",
       "transformerlens",
       "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "das-distributed-alignment-search",
+    "title": "Finding Alignments Between Interpretable Causal Variables and Distributed Neural Representations",
+    "authors": [
+      "Atticus Geiger",
+      "Zhengxuan Wu",
+      "Christopher Potts",
+      "Thomas Icard",
+      "Noah D. Goodman"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2303.02536",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "causal-abstractions-of-neural-networks"
+    ],
+    "summary": "Introduces Distributed Alignment Search (DAS), which uses gradient descent to find rotations of a model's activation space under which interchange interventions on the rotated coordinates match a hypothesized high-level causal model, overcoming the earlier limitation that variables had to map to disjoint neuron subsets.",
+    "why_it_matters": "Made causal abstraction tractable for distributed representations (where a concept is spread across many overlapping directions), enabling causal tests of hypotheses about real transformer internals.",
+    "related": [
+      "causal-abstractions-of-neural-networks",
+      "causal-abstraction-theoretical-foundation"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -1863,6 +1991,64 @@
     "related": [
       "induction-heads-in-context-learning",
       "toy-models-superposition"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "non-linear-representation-dilemma",
+    "title": "The Non-Linear Representation Dilemma: Is Causal Abstraction Enough for Mechanistic Interpretability?",
+    "authors": [
+      "Denis Sutter",
+      "Julian Minder",
+      "Thomas Hofmann",
+      "Tiago Pimentel"
+    ],
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2507.08802",
+    "type": "paper",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "das-distributed-alignment-search"
+    ],
+    "summary": "Shows that if alignment maps are unconstrained or nonlinear, almost any model can be mapped to almost any algorithm — even randomly initialized models can achieve perfect interchange-intervention accuracy on tasks like IOI — proving that causal abstraction is vacuous without explicit structural assumptions like the linear representation hypothesis.",
+    "why_it_matters": "A sharp theoretical critique that forces causal abstraction research to state and justify representational assumptions, and reframes what interchange-intervention results can actually establish.",
+    "related": [
+      "das-distributed-alignment-search",
+      "causal-abstraction-theoretical-foundation"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "practical-pitfalls-of-causal-scrubbing",
+    "title": "Practical Pitfalls of Causal Scrubbing",
+    "authors": [
+      "Jérémy Scheurer",
+      "Phil",
+      "tony",
+      "jacquesthibs",
+      "David Lindner"
+    ],
+    "year": 2023,
+    "url": "https://www.alignmentforum.org/posts/DFarDnQjMnjsKvW8s/practical-pitfalls-of-causal-scrubbing",
+    "type": "essay",
+    "domain": "interpretability",
+    "subtopics": [
+      "causal-abstraction"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "causal-scrubbing"
+    ],
+    "summary": "Documents failure modes of causal scrubbing in practice: cancellation effects where a wrong hypothesis accidentally passes because errors across inputs cancel, the difficulty of distinguishing extensionally equivalent hypotheses from the true one, and guidance on when scrubbing results should and should not be trusted.",
+    "why_it_matters": "The key methodological caveat literature for causal scrubbing, ensuring practitioners know when a passing scrubbing test is misleading.",
+    "related": [
+      "causal-scrubbing"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
