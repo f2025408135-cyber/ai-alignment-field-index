@@ -21,14 +21,16 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | agent-foundations | infra-Bayesianism | done | 5 | 2026-08-11 |
 | agent-foundations | cartesian frames | done | 4 | 2026-08-11 |
 | agent-foundations | logical induction / naturalized induction | done | 5 | 2026-08-11 |
-| interpretability | circuits & residual-stream framework | not started | | |
-| interpretability | superposition & dictionary learning / SAEs | not started | | |
-| interpretability | circuit tracing / attribution graphs | not started | | |
-| interpretability | probing classifiers & limitations | not started | | |
-| interpretability | causal scrubbing / causal abstraction | not started | | |
-| interpretability | developmental interpretability (SLT) | not started | | |
-| interpretability | representation engineering / activation steering | not started | | |
-| interpretability | open-source tooling | not started | | |
+| interpretability | circuits & residual-stream framework | done | 5 | 2026-08-11 |
+| interpretability | superposition & dictionary learning / SAEs | done | 6 | 2026-08-11 |
+| interpretability | circuit tracing / attribution graphs | done | 6 | 2026-08-11 |
+| interpretability | probing classifiers & limitations | done | 5 | 2026-08-11 |
+| interpretability | causal scrubbing / causal abstraction | done | 6 | 2026-08-11 |
+| interpretability | developmental interpretability (SLT) | done | 5 | 2026-08-11 |
+| interpretability | representation engineering / activation steering | done | 6 | 2026-08-11 |
+| interpretability | open-source tooling | done | 7 | 2026-08-11 |
+
+> **Note:** `algebraic-geometry-statistical-learning-theory` uses the Cambridge Core publisher page (the other books in the catalog use Wikipedia) — kept because it is the canonical publisher source and was fetch-verified 200 on 2026-08-11.
 | oversight-rlhf | RLHF foundations & failure modes | not started | | |
 | oversight-rlhf | constitutional AI / RLAIF | not started | | |
 | oversight-rlhf | debate as oversight | not started | | |
