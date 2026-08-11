@@ -9,10 +9,10 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | entry-tier | sci-fi with analytical value | done | 7 | 2026-08-11 |
 | entry-tier | accessible long-form introductions | done | 9 | 2026-08-11 |
 | macrostrategy | x-risk theory & taxonomy | done | 5 | 2026-08-11 |
-| macrostrategy | great filter / anthropic reasoning applied to AI | not started | | |
-| macrostrategy | timeline forecasting methodologies | not started | | |
-| macrostrategy | differential technological development | not started | | |
-| macrostrategy | longtermism & its critiques | not started | | |
+| macrostrategy | great filter / anthropic reasoning applied to AI | done | 4 | 2026-08-11 |
+| macrostrategy | timeline forecasting methodologies | done | 5 | 2026-08-11 |
+| macrostrategy | differential technological development | done | 4 | 2026-08-11 |
+| macrostrategy | longtermism & its critiques | done | 8 | 2026-08-11 |
 | agent-foundations | embedded agency | not started | | |
 | agent-foundations | decision theory variants (CDT/EDT/UDT/FDT) | not started | | |
 | agent-foundations | corrigibility — formal treatments | not started | | |

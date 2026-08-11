@@ -634,6 +634,60 @@
     "status": "live"
   },
   {
+    "id": "anthropic-shadow-cirkovic",
+    "title": "Anthropic Shadow: Observation Selection Effects and Human Extinction Risks",
+    "authors": [
+      "Milan M. Ćirković",
+      "Anders Sandberg",
+      "Nick Bostrom"
+    ],
+    "year": 2010,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20626690/",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "great-filter"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "bostrom-anthropic-bias",
+      "great-filter-hanson"
+    ],
+    "summary": "Formalizes the anthropic shadow: because no catastrophe that destroys observers can be observed, the observed frequency of such catastrophes systematically underestimates their true rate. Applies the argument to asteroid impacts, supervolcanoes, and other extinction-scale events, with direct implications for how seriously we take existential risks including AI.",
+    "why_it_matters": "The canonical formal statement of why we should expect to have under-evidence for the exact risks that matter most.",
+    "related": [
+      "meta-anthropic-argument",
+      "where-are-they-bostrom"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "bostrom-anthropic-bias",
+    "title": "Anthropic Bias: Observation Selection Effects in Science and Philosophy",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2002,
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/anthropic-bias-observation-selection-effects-in-science-and-philosophy",
+    "type": "book",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "great-filter"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A book-length treatment of observation selection effects: how the fact that we are observers who exist at a particular place and time biases what evidence we can gather. Works through the self-sampling assumption, the doomsday argument, and anthropic shadow, providing the formal tools later applied to existential risk and AI timelines.",
+    "why_it_matters": "The foundational systematic treatment of anthropic reasoning that subsequent applications to AI risk build on.",
+    "related": [
+      "anthropic-shadow-cirkovic",
+      "meta-anthropic-argument",
+      "prediction-markets-anthropic-bias"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "bostrom-existential-risks-2002",
     "title": "Existential Risks: Analyzing Human Extinction Scenarios and Related Hazards",
     "authors": [
@@ -712,6 +766,32 @@
     "status": "live"
   },
   {
+    "id": "meta-anthropic-argument",
+    "title": "The Meta-Anthropic Argument",
+    "authors": [
+      "RogerDearnaley"
+    ],
+    "year": 2026,
+    "url": "https://www.lesswrong.com/posts/SgxkGoT8tvxREszoA/the-meta-anthropic-argument",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "great-filter"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "bostrom-anthropic-bias"
+    ],
+    "summary": "An argument that the strongest anthropic considerations apply one level up: our world's distribution of risks may itself be an observation selection effect, because observer-rich branches of the multiverse are the ones where apparently-risky technologies turned out manageable. Discusses what the meta-argument would and would not license about AI risk specifically.",
+    "why_it_matters": "A recent attempt to push anthropic reasoning past naive forms and see whether it undermines or reinforces the AI risk case.",
+    "related": [
+      "anthropic-shadow-cirkovic",
+      "prediction-markets-anthropic-bias"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "ord-the-precipice",
     "title": "The Precipice: Existential Risk and the Future of Humanity",
     "authors": [
@@ -735,6 +815,32 @@
       "global-catastrophic-risks-book",
       "greaves-macaskill-strong-longtermism",
       "bostrom-astronomical-waste"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "prediction-markets-anthropic-bias",
+    "title": "Prediction Markets Have an Anthropic Bias to Deal With",
+    "authors": [
+      "ar-sht"
+    ],
+    "year": 2025,
+    "url": "https://www.lesswrong.com/posts/QbmZuCBE2uWS7j28R/prediction-markets-have-an-anthropic-bias-to-deal-with",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "great-filter"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "bostrom-anthropic-bias"
+    ],
+    "summary": "Applies the anthropic shadow to the specific methodology of prediction markets used to forecast AI milestones: markets only exist in worlds where catastrophic outcomes did not already occur, so their prices systematically discount the most dangerous branch. Argues market-derived AI timelines are therefore biased in a distinctive, non-obvious way.",
+    "why_it_matters": "Connects anthropic reasoning to the concrete forecasting tools the field actually uses, with an actionable critique of their outputs.",
+    "related": [
+      "meta-anthropic-argument",
+      "anthropic-shadow-cirkovic"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
