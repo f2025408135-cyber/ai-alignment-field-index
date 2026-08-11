@@ -4471,7 +4471,8 @@
     "summary": "Directly compares Reinforcement Learning from AI Feedback (RLAIF) with RLHF on summarization and dialogue, showing RLAIF achieves performance on par with human-feedback RLHF while removing the human annotation bottleneck, and introduces direct-RLAIF which queries a pretrained LLM as the reward source without training a separate reward model.",
     "why_it_matters": "The controlled study that established AI feedback as a practical, cost-effective replacement for human labels, central to the scalable-oversight debate.",
     "related": [
-      "constitutional-ai"
+      "constitutional-ai",
+      "continuous-adversarial-quality-assurance"
     ],
     "last_verified": "2026-08-11",
     "status": "live"

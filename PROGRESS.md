@@ -31,13 +31,13 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | interpretability | open-source tooling | done | 7 | 2026-08-11 |
 
 > **Note:** `algebraic-geometry-statistical-learning-theory` uses the Cambridge Core publisher page (the other books in the catalog use Wikipedia) — kept because it is the canonical publisher source and was fetch-verified 200 on 2026-08-11.
-| oversight-rlhf | RLHF foundations & failure modes | not started | | |
-| oversight-rlhf | constitutional AI / RLAIF | not started | | |
-| oversight-rlhf | debate as oversight | not started | | |
-| oversight-rlhf | iterated amplification | not started | | |
-| oversight-rlhf | weak-to-strong generalization | not started | | |
-| oversight-rlhf | process vs outcome supervision | not started | | |
-| oversight-rlhf | reward hacking & sycophancy | not started | | |
+| oversight-rlhf | RLHF foundations & failure modes | done | 6 | 2026-08-11 |
+| oversight-rlhf | constitutional AI / RLAIF | done | 6 | 2026-08-11 |
+| oversight-rlhf | debate as oversight | done | 4 | 2026-08-11 |
+| oversight-rlhf | iterated amplification | done | 5 | 2026-08-11 |
+| oversight-rlhf | weak-to-strong generalization | done | 4 | 2026-08-11 |
+| oversight-rlhf | process vs outcome supervision | done | 4 | 2026-08-11 |
+| oversight-rlhf | reward hacking & sycophancy | done | 4 | 2026-08-11 |
 | evals-benchmarks | dangerous-capability evals | not started | | |
 | evals-benchmarks | deception/scheming evals & model organisms | not started | | |
 | evals-benchmarks | autonomy/agentic-task evals | not started | | |
