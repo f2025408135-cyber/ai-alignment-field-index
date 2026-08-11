@@ -663,6 +663,33 @@
     "status": "live"
   },
   {
+    "id": "barak-why-i-am-not-a-longtermist",
+    "title": "Why I am not a longtermist (May 2022)",
+    "authors": [
+      "Boaz Barak"
+    ],
+    "year": 2022,
+    "url": "https://www.lesswrong.com/posts/2bCFBcrqB7ohE2feE/why-i-am-not-a-longtermist-may-2022",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "greaves-macaskill-strong-longtermism"
+    ],
+    "summary": "A widely discussed essay arguing against longtermism from an evidence and decision-theoretic standpoint: longtermist conclusions multiply small speculative probabilities into sweeping policy recommendations, and attempts to compute utility for enormous numbers of hypothetical future people are not robustly tractable. Focuses on the risks of an ends-justify-the-means mindset in AI and other domains.",
+    "why_it_matters": "One of the most-cited technical critiques of longtermism, representing the epistemically skeptical wing of the opposition.",
+    "related": [
+      "torres-a-harmful-idea",
+      "macaskill-what-we-owe-the-future",
+      "greaves-macaskill-strong-longtermism"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "bostrom-anthropic-bias",
     "title": "Anthropic Bias: Observation Selection Effects in Science and Philosophy",
     "authors": [
@@ -683,6 +710,30 @@
       "anthropic-shadow-cirkovic",
       "meta-anthropic-argument",
       "prediction-markets-anthropic-bias"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "bostrom-astronomical-waste",
+    "title": "Astronomical Waste: The Opportunity Cost of Delayed Technological Development",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2003,
+    "url": "https://nickbostrom.com/papers/astronomical-waste/",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Argues that the potential value of the far future is astronomically large, so that any delay in reaching full technological maturity has an enormous opportunity cost measured in lost future welfare. Uses this to argue the timing and pace of development matter morally, an early and influential statement of longtermist reasoning.",
+    "why_it_matters": "One of the founding texts of longtermism, establishing the 'astronomical waste' framing used throughout the literature.",
+    "related": [
+      "greaves-macaskill-strong-longtermism",
+      "macaskill-what-we-owe-the-future"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -762,6 +813,33 @@
       "davidson-takeoff-speeds",
       "semi-informative-priors",
       "sevilla-compute-trends"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "cremer-kemp-democratising-risk",
+    "title": "Democratising Risk: In Search of a Methodology to Study Existential Risk",
+    "authors": [
+      "Carla Zoe Cremer",
+      "Luke Kemp"
+    ],
+    "year": 2021,
+    "url": "https://books.openbookpublishers.com/10.11647/obp.0360/ch2.xhtml",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "greaves-macaskill-strong-longtermism"
+    ],
+    "summary": "A scholarly chapter critiquing the dominant 'techno-utopian' approach to existential risk studies, which it associates with total utilitarianism, transhumanism, and strong longtermism. Argues this paradigm is philosophically unrepresentative, methodologically fragile, and risks recommending policies that serve elite interests, proposing a more democratically grounded methodology instead.",
+    "why_it_matters": "A substantive academic critique that challenges longtermism's framing of existential risk from a political-theory perspective.",
+    "related": [
+      "greaves-macaskill-strong-longtermism",
+      "torres-a-harmful-idea"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -899,6 +977,63 @@
     "status": "live"
   },
   {
+    "id": "greaves-macaskill-strong-longtermism",
+    "title": "The Case for Strong Longtermism",
+    "authors": [
+      "Hilary Greaves",
+      "William MacAskill"
+    ],
+    "year": 2021,
+    "url": "https://www.globalprioritiesinstitute.org/wp-content/uploads/The-Case-for-Strong-Longtermism-GPI-Working-Paper-June-2021-2-2.pdf",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "bostrom-astronomical-waste",
+      "parfit-reasons-and-persons"
+    ],
+    "summary": "A rigorous philosophical defense of strong longtermism: the view that positively influencing the long-run future is the key moral priority of our time. Distinguishes strong from weak longtermism, addresses objections about uncertainty, risk aversion, and the repugnant conclusion, and argues existential risk reduction dominates other present-day concerns.",
+    "why_it_matters": "The definitive academic statement of strong longtermism that critics and defenders both orient their arguments around.",
+    "related": [
+      "macaskill-what-we-owe-the-future",
+      "barak-why-i-am-not-a-longtermist",
+      "cremer-kemp-democratising-risk",
+      "oheigeartaigh-response-torres"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "macaskill-what-we-owe-the-future",
+    "title": "What We Owe the Future",
+    "authors": [
+      "William MacAskill"
+    ],
+    "year": 2022,
+    "url": "https://whatweowethefuture.com/",
+    "type": "book",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "greaves-macaskill-strong-longtermism"
+    ],
+    "summary": "A popular book making the longtermist case for a general audience: future people matter morally, there could be vast numbers of them, and our actions today can shape how well their lives go. Argues for a set of priorities from AI safety and pandemic prevention to the value of moral progress and technological flourishing.",
+    "why_it_matters": "The mass-market articulation of longtermism that brought the view into mainstream public debate.",
+    "related": [
+      "barak-why-i-am-not-a-longtermist",
+      "bostrom-astronomical-waste",
+      "parfit-reasons-and-persons"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "meta-anthropic-argument",
     "title": "The Meta-Anthropic Argument",
     "authors": [
@@ -925,6 +1060,32 @@
     "status": "live"
   },
   {
+    "id": "oheigeartaigh-response-torres",
+    "title": "Response to Torres' 'The Case Against Longtermism'",
+    "authors": [
+      "Seán Ó hÉigeartaigh"
+    ],
+    "year": 2021,
+    "url": "https://forum.effectivealtruism.org/posts/xtKRPkoMSLTiPNXhM/response-to-torres-the-case-against-longtermism",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "torres-a-harmful-idea"
+    ],
+    "summary": "A response post in which the co-director of Cambridge's Centre for the Study of Existential Risk engages with Émile Torres' minibook critiquing longtermism, addressing both the philosophical substance and the conduct of the resulting debate. Defends the legitimacy of longtermist research while acknowledging the validity of some criticisms and the problems of adversarial engagement.",
+    "why_it_matters": "The rebuttal half of a documented critique-and-response exchange, illustrating how the field processes fundamental challenges to its priorities.",
+    "related": [
+      "greaves-macaskill-strong-longtermism",
+      "cremer-kemp-democratising-risk"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "ord-the-precipice",
     "title": "The Precipice: Existential Risk and the Future of Humanity",
     "authors": [
@@ -946,6 +1107,30 @@
     "why_it_matters": "The most widely read accessible statement of the case that we live at a uniquely dangerous and important moment.",
     "related": [
       "global-catastrophic-risks-book",
+      "greaves-macaskill-strong-longtermism",
+      "bostrom-astronomical-waste"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "parfit-reasons-and-persons",
+    "title": "Reasons and Persons",
+    "authors": [
+      "Derek Parfit"
+    ],
+    "year": 1984,
+    "url": "https://en.wikipedia.org/wiki/Reasons_and_Persons",
+    "type": "book",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "The philosophical classic that established the population-ethics problems at the core of longtermism, including the repugnant conclusion, the non-identity problem, and arguments about how we should weigh the welfare of future people. Its treatment of future generations underlies the moral arithmetic longtermist arguments depend on.",
+    "why_it_matters": "Supplied the population-ethics machinery that makes the 'vast numbers of future people' premise of longtermism philosophically consequential.",
+    "related": [
       "greaves-macaskill-strong-longtermism",
       "bostrom-astronomical-waste"
     ],
@@ -1087,6 +1272,33 @@
     "related": [
       "differential-intellectual-progress-wiki",
       "sandbrink-dtd-2022"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "torres-a-harmful-idea",
+    "title": "A Harmful Idea",
+    "authors": [
+      "Phil Torres"
+    ],
+    "year": 2022,
+    "url": "https://www.lesswrong.com/posts/7WxH7fAq76Mvkx5YC/a-harmful-idea",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "longtermism"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "greaves-macaskill-strong-longtermism"
+    ],
+    "summary": "A polemical essay in which the author defends his earlier critiques of longtermism against a response from a Future of Humanity Institute researcher, reproducing and annotating the target text to argue his objections were mischaracterized. Combines substantive claims about the philosophy of longtermism with sharp criticism of the incentive structures around EA funding.",
+    "why_it_matters": "Represents the ideologically critical strand of anti-longtermist writing and the often-heated debate culture around it.",
+    "related": [
+      "barak-why-i-am-not-a-longtermist",
+      "oheigeartaigh-response-torres",
+      "cremer-kemp-democratising-risk"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
