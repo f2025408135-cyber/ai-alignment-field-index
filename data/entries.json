@@ -1,5 +1,81 @@
 [
   {
+    "id": "cartesian-frames-explainer",
+    "title": "[AN #127]: Rethinking agency: Cartesian frames as a formalization of ways to carve up the world into an agent and its environment",
+    "authors": [
+      "Rohin Shah"
+    ],
+    "year": 2020,
+    "url": "https://www.alignmentforum.org/posts/ZZDHoqpHmChxEYMme/an-127-rethinking-agency-cartesian-frames-as-a-formalization",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "cartesian-frames"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A detailed, readable summary of the Cartesian frames sequence by the Alignment Newsletter author, explaining controllables, observables, externalization, and subagent decomposition with concrete examples. Serves as the most approachable introduction to the framework for readers new to category-theoretic agency.",
+    "why_it_matters": "The standard accessible explainer for Cartesian frames, recommended to newcomers before the primary sequence.",
+    "related": [
+      "cartesian-frames-sequence",
+      "cartesian-frames-paper"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "cartesian-frames-paper",
+    "title": "Cartesian Frames",
+    "authors": [
+      "Scott Garrabrant",
+      "Daniel A. Herrmann",
+      "Josiah Lopez-Wild"
+    ],
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2109.10996",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "cartesian-frames"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "cartesian-frames-sequence"
+    ],
+    "summary": "The rigorous academic formalization of Cartesian frames in the language of Chu spaces and category theory, presenting the full act calculus with morphisms and operations. Provides the mathematical backbone for comparing agents across levels of description and formalizing what it means for one agent to be a subagent of another.",
+    "why_it_matters": "Brings the Cartesian frames program into a formal, citable mathematical form usable outside the forum context.",
+    "related": [
+      "cartesian-frames-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "cartesian-frames-sequence",
+    "title": "Cartesian Frames (Alignment Forum sequence)",
+    "authors": [
+      "Scott Garrabrant"
+    ],
+    "year": 2020,
+    "url": "https://www.alignmentforum.org/s/2A7rrZ4ySx6R8mfoT",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "cartesian-frames"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The Alignment Forum sequence introducing Cartesian frames, a mathematical structure for modeling an agent's options, its environment's options, and the worlds their interaction produces, without presupposing a fixed boundary between agent and environment. Develops operations like externalization, internalization, and subagent decomposition for composing and comparing frames.",
+    "why_it_matters": "The primary source for Garrabrant's framework for representing embedded agency and carving the world into agents and environments.",
+    "related": [
+      "cartesian-frames-paper",
+      "cartesian-frames-explainer",
+      "pitfalls-of-the-agent-model"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "causal-decision-theory-sep",
     "title": "Causal Decision Theory (Stanford Encyclopedia of Philosophy)",
     "authors": [
@@ -367,6 +443,32 @@
       "shutdown-problem-three-theorems",
       "shutdown-problem-proposal",
       "safely-interruptible-agents"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "pitfalls-of-the-agent-model",
+    "title": "Pitfalls of the agent model",
+    "authors": [
+      "Alex Flint"
+    ],
+    "year": 2021,
+    "url": "https://www.alignmentforum.org/posts/8HWGXhnCfAPgJYa9D/pitfalls-of-the-agent-model",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "cartesian-frames"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "cartesian-frames-sequence"
+    ],
+    "summary": "Argues that modeling the world in terms of a single fixed agent with a policy can systematically mislead us about systems that are better described at multiple levels or as continuously self-modifying. Serves as a critique of agent-centric formalisms including aspects of the Cartesian frames program.",
+    "why_it_matters": "A widely cited caution against over-relying on the agent-environment abstraction that underlies much of agent foundations.",
+    "related": [
+      "embedded-agency-paper",
+      "cartesian-frames-sequence"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
