@@ -2,7 +2,7 @@
 
 RLHF and its failure modes, constitutional AI, debate, amplification, weak-to-strong, reward hacking.
 
-**21 live/paywalled entries** · catalog domain id: `oversight-rlhf`
+**25 live/paywalled entries** · catalog domain id: `oversight-rlhf`
 
 > Generated from `data/entries.json` — do not edit by hand. Run `python scripts/generate_domains.py`.
 
@@ -13,6 +13,7 @@ No prerequisites beyond the domain's stated baseline.
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
 | [Claude's Constitution](https://www.anthropic.com/constitution) (Anthropic, 2023) | essay | entry | — | The public artifact that makes the constitutional approach concrete and auditable, and a living example of how a lab codifies value priorities. |
+| [Weak-to-strong generalization (OpenAI blog)](https://openai.com/index/weak-to-strong-generalization/) (OpenAI Superalignment Team, 2023) | essay | entry | — | The accessible statement of the superalignment thesis and the weak-to-strong research program that shaped a large share of 2024-2025 alignment funding and work. |
 
 ## Core
 
@@ -31,6 +32,7 @@ The load-bearing literature of the subfield.
 | [Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2204.05862) (Yuntao Bai, Andy Jones, Kamal Ndousse et al., 2022) | paper | core | Training language models to follow instructions with human feedback | The reference for how safety-relevant RLHF was done at scale, including the HHH framing that defined the safety target for assistant alignment and the tension between helpfulness and harmlessness. |
 | [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155) (Long Ouyang, Jeff Wu, Xu Jiang et al., 2022) | paper | core | Learning to summarize from human feedback | The recipe every commercial assistant training pipeline follows, and the paper that made RLHF the default alignment method for production language models. |
 | [Discovering Language Model Behaviors with Model-Written Evaluations](https://arxiv.org/abs/2212.09251) (Ethan Perez, Sam Ringer, Kamilė Lukošiūtė et al., 2022) | paper | core | Constitutional AI: Harmlessness from AI Feedback | Established the model-generated evaluation methodology that underlies modern behavioral evals, and documented that RLHF-style training can worsen some failure modes even as it fixes others. |
+| [Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision](https://arxiv.org/abs/2312.09390) (Collin Burns, Pavel Izmailov, Jan Hendrik Kirchner et al., 2023) | paper | core | Concrete Problems in AI Safety | Established weak-to-strong generalization as the leading empirical research program for the superalignment problem, framing the central question of how weak supervisors can control stronger systems. |
 
 ## Deep
 
@@ -46,4 +48,6 @@ Formal treatments, frontier research, and specialized material.
 | [Continuous Adversarial Quality Assurance: Extending RLHF and Constitutional AI](https://www.alignmentforum.org/posts/QGaioedKBJE39YJeD/continuous-adversarial-quality-assurance-extending-rlhf-and) (Benaya Koren, 2023) | essay | deep | Constitutional AI: Harmlessness from AI Feedback | The key alignment-community critique of Constitutional AI, identifying where the constitutional chain can silently corrupt and what would be needed to make it robust. |
 | [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) (Yilun Du, Shuang Li, Antonio Torralba et al., 2023) | paper | deep | AI safety via debate | The main empirical instantiation of debate ideas on contemporary LLMs, showing cross-examination between models improves truthfulness even without a trained judge. |
 | [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) (Harrison Lee, Samrat Phatale, Hassan Mansoor et al., 2023) | paper | deep | Constitutional AI: Harmlessness from AI Feedback | The controlled study that established AI feedback as a practical, cost-effective replacement for human labels, central to the scalable-oversight debate. |
+| [Scalable Oversight and Weak-to-Strong Generalization: Compatible approaches to the same problem](https://www.lesswrong.com/posts/hw2tGSsvLLyjFoLFS/scalable-oversight-and-weak-to-strong-generalization) (Ansh Radhakrishnan, Buck Shlegeris, Ryan Greenblatt et al., 2023) | essay | deep | Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision | The key community analysis situating weak-to-strong within the scalable oversight landscape and clarifying what it can and cannot establish about superhuman supervision. |
+| [Weak-to-Strong Generalization Through the Data-Centric Lens](https://arxiv.org/abs/2412.03881) (Changho Shin, John Cooper, Frederic Sala, 2024) | paper | deep | Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision | Moved the weak-to-strong discussion from architectures to data, explaining why and when the phenomenon occurs and how to engineer datasets to exploit it. |
 | [Constitutional Classifiers: Defending against Universal Jailbreaks across Thousands of Hours of Red Teaming](https://arxiv.org/abs/2501.18837) (Mrinank Sharma, Meg Tong, Jesse Mu et al., 2025) | paper | deep | Constitutional AI: Harmlessness from AI Feedback | The most prominent large-scale application of the constitutional approach to defensive filtering, and the strongest public data point on whether such filters hold against determined attackers. |

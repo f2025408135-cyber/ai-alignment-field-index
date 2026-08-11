@@ -4281,6 +4281,36 @@
     "status": "live"
   },
   {
+    "id": "scalable-oversight-and-weak-to-strong",
+    "title": "Scalable Oversight and Weak-to-Strong Generalization: Compatible approaches to the same problem",
+    "authors": [
+      "Ansh Radhakrishnan",
+      "Buck Shlegeris",
+      "Ryan Greenblatt",
+      "Fabien Roger"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/hw2tGSsvLLyjFoLFS/scalable-oversight-and-weak-to-strong-generalization",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "weak-to-strong"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "weak-to-strong-generalization"
+    ],
+    "summary": "Analysis arguing that scalable oversight and weak-to-strong generalization are compatible approaches to the same supervision problem, and that under 'no-scheming' assumptions sandwich-style experiments can measure progress while under 'scheming' assumptions adversarial protocols are needed — so robust safety cases should combine both research directions.",
+    "why_it_matters": "The key community analysis situating weak-to-strong within the scalable oversight landscape and clarifying what it can and cannot establish about superhuman supervision.",
+    "related": [
+      "weak-to-strong-generalization",
+      "iterated-distillation-amplification",
+      "ai-safety-via-debate"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "scaling-laws-reward-overoptimization",
     "title": "Scaling Laws for Reward Model Overoptimization",
     "authors": [
@@ -4329,6 +4359,94 @@
     "why_it_matters": "The key critical analysis of IDA's oversight story, identifying failure modes that recursive training must defend against and informing later critiques of scalable oversight more broadly.",
     "related": [
       "iterated-distillation-amplification"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "weak-to-strong-data-centric-lens",
+    "title": "Weak-to-Strong Generalization Through the Data-Centric Lens",
+    "authors": [
+      "Changho Shin",
+      "John Cooper",
+      "Frederic Sala"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2412.03881",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "weak-to-strong"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "weak-to-strong-generalization"
+    ],
+    "summary": "Analyzes which structural properties of data enable successful weak-to-strong transfer, introducing 'overlap density' — the degree to which data points contain both patterns learnable by weak models and patterns requiring strong models — and designing practical overlap-detection algorithms that improve data selection for weak-to-strong training.",
+    "why_it_matters": "Moved the weak-to-strong discussion from architectures to data, explaining why and when the phenomenon occurs and how to engineer datasets to exploit it.",
+    "related": [
+      "weak-to-strong-generalization"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "weak-to-strong-generalization",
+    "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision",
+    "authors": [
+      "Collin Burns",
+      "Pavel Izmailov",
+      "Jan Hendrik Kirchner",
+      "Bowen Baker",
+      "Leo Gao",
+      "Leopold Aschenbrenner",
+      "Yining Chen",
+      "Adrien Ecoffet",
+      "Manas Joglekar",
+      "Jan Leike",
+      "Ilya Sutskever",
+      "Jeff Wu"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.09390",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "weak-to-strong"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "concrete-problems-ai-safety"
+    ],
+    "summary": "OpenAI's superalignment paper: uses weak models (GPT-2-level) to supervise strong models (GPT-4-level) as an empirical proxy for how humans might supervise superhuman AI. Strong students consistently outperform their weak teachers, and a simple auxiliary confidence loss — letting the strong model disagree confidently with the teacher — recovers a large fraction of the performance gap.",
+    "why_it_matters": "Established weak-to-strong generalization as the leading empirical research program for the superalignment problem, framing the central question of how weak supervisors can control stronger systems.",
+    "related": [
+      "weak-to-strong-openai-blog",
+      "weak-to-strong-data-centric-lens",
+      "scalable-oversight-and-weak-to-strong"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "weak-to-strong-openai-blog",
+    "title": "Weak-to-strong generalization (OpenAI blog)",
+    "authors": [
+      "OpenAI Superalignment Team"
+    ],
+    "year": 2023,
+    "url": "https://openai.com/index/weak-to-strong-generalization/",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "weak-to-strong"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The launch post for OpenAI's Superalignment initiative: explains the weak-to-strong framing for a general audience, announces the open-source training code and a grants program, and lays out the roadmap for scaling the approach toward superhuman model alignment.",
+    "why_it_matters": "The accessible statement of the superalignment thesis and the weak-to-strong research program that shaped a large share of 2024-2025 alignment funding and work.",
+    "related": [
+      "weak-to-strong-generalization"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
