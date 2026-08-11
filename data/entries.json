@@ -1431,6 +1431,52 @@
     "status": "live"
   },
   {
+    "id": "agentbench",
+    "title": "AgentBench: Evaluating LLMs as Agents",
+    "authors": [
+      "Xiao Liu",
+      "Hao Yu",
+      "Hanchen Zhang",
+      "Yifan Xu",
+      "Xuanyu Lei",
+      "Hanyu Lai",
+      "Yu Gu",
+      "Hangliang Ding",
+      "Kaiwen Men",
+      "Kejuan Yang",
+      "Shudan Zhang",
+      "Xiang Deng",
+      "Aohan Zeng",
+      "Zhengxiao Du",
+      "Chenhui Zhang",
+      "Sheng Shen",
+      "Tianjun Zhang",
+      "Yu Su",
+      "Huan Sun",
+      "Minlie Huang",
+      "Yuxiao Dong",
+      "Jie Tang"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2308.03688",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A multi-dimensional benchmark evaluating LLM-as-agent across eight interactive environments — operating systems, databases, knowledge graphs, card games, puzzles, household tasks, and web shopping — identifying long-term reasoning, decision-making, and instruction following as the primary bottlenecks.",
+    "why_it_matters": "The first comprehensive cross-environment agent benchmark; its finding that even GPT-4 scores below 50% across environments set the agenda for agentic capability development.",
+    "related": [
+      "swe-bench",
+      "webarena",
+      "gaia-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "ai-deception-survey",
     "title": "AI Deception: A Survey of Examples, Risks, and Potential Solutions",
     "authors": [
@@ -1526,6 +1572,30 @@
     "status": "live"
   },
   {
+    "id": "arc-agi",
+    "title": "On the Measure of Intelligence (ARC-AGI)",
+    "authors": [
+      "François Chollet"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1911.01547",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A foundational theoretical and empirical argument that task-specific skill is not intelligence: intelligence is skill-acquisition efficiency on unknown tasks. Introduces the Abstraction and Reasoning Corpus (ARC), a benchmark of novel visual reasoning puzzles designed to measure general fluid intelligence without dependence on training data or prior knowledge.",
+    "why_it_matters": "The strongest existing attempt to benchmark general intelligence rather than memorized skill — and the theoretical basis for the critique that skill benchmarks overstate progress.",
+    "related": [
+      "gaia-benchmark",
+      "emergent-abilities-mirage"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "autodan",
     "title": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
     "authors": [
@@ -1587,6 +1657,58 @@
     "status": "live"
   },
   {
+    "id": "cybench",
+    "title": "Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risks of Language Models",
+    "authors": [
+      "Andy K. Zhang",
+      "Neil Perry",
+      "Riya Dulepet",
+      "Joey Ji",
+      "Celeste Menders",
+      "Justin W. Lin",
+      "Eliot Jones",
+      "Gashon Hussein",
+      "Samantha Liu",
+      "Donovan Jasper",
+      "Pura Peetathawatchai",
+      "Ari Glenn",
+      "Vikram Sivashankar",
+      "Daniel Zamoshchin",
+      "Leo Glikbarg",
+      "Derek Askaryar",
+      "Mike Yang",
+      "Teddy Zhang",
+      "Rishi Alluri",
+      "Nathan Tran",
+      "Rinnara Sangpisit",
+      "Polycarpos Yiorkadjis",
+      "Kenny Osele",
+      "Gautham Raghupathi",
+      "Dan Boneh",
+      "Daniel E. Ho",
+      "Percy Liang"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2408.08926",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "swe-bench"
+    ],
+    "summary": "A framework of 40 professional-level Capture-the-Flag cybersecurity tasks across four competitions, evaluating LLMs' autonomous ability to identify software vulnerabilities and execute multi-step exploits — a proxy for offensive cyber capability.",
+    "why_it_matters": "One of the clearest public benchmarks of offensive cyber capability, the capability category most frontier labs and governments now track for dual-use danger.",
+    "related": [
+      "swe-bench",
+      "wmdp-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "dual-use-biotech-llms",
     "title": "Can large language models democratize access to dual-use biotechnology?",
     "authors": [
@@ -1610,6 +1732,35 @@
     "related": [
       "model-evaluation-extreme-risks",
       "wmdp-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "gaia-benchmark",
+    "title": "GAIA: A Benchmark for General AI Assistants",
+    "authors": [
+      "Grégoire Mialon",
+      "Clémentine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun",
+      "Thomas Scialom"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2311.12983",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A benchmark of 466 real-world questions designed to require fundamental agentic proficiencies — reasoning, multi-modality, web browsing, and tool use — that are conceptually straightforward for humans yet hard for current assistants, with a large human-vs-AI performance gap at release.",
+    "why_it_matters": "A rare benchmark designed to resist memorization (human-written, tool-requiring, multimodal) — a bellwether for genuinely general assistant capability.",
+    "related": [
+      "agentbench",
+      "arc-agi"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -1736,6 +1887,43 @@
     "status": "live"
   },
   {
+    "id": "mle-bench",
+    "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+    "authors": [
+      "Jun Shern Chan",
+      "Neil Chowdhury",
+      "Oliver Jaffe",
+      "James Aung",
+      "Dane Sherburn",
+      "Evan Mays",
+      "Giulio Starace",
+      "Kevin Liu",
+      "Leon Maksin",
+      "Tejal Patwardhan",
+      "Lilian Weng",
+      "Aleksander Mądry"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2410.07095",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "swe-bench"
+    ],
+    "summary": "OpenAI's benchmark curating 75 Kaggle machine-learning-engineering competitions to test end-to-end ML engineering: preparing datasets, training models, running experiments, and optimizing pipelines autonomously.",
+    "why_it_matters": "Measures the capability most directly implicated in AI R&D acceleration — autonomous ML research — making it central to compute-governance and takeoff-speed discussions.",
+    "related": [
+      "swe-bench",
+      "gaia-benchmark"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "model-evaluation-extreme-risks",
     "title": "Model evaluation for extreme risks",
     "authors": [
@@ -1828,6 +2016,48 @@
     "related": [
       "model-evaluation-extreme-risks",
       "anthropic-responsible-scaling-policy"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "osworld",
+    "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+    "authors": [
+      "Tianbao Xie",
+      "Danyang Zhang",
+      "Jixuan Chen",
+      "Xiaochuan Li",
+      "Siheng Zhao",
+      "Ruisheng Cao",
+      "Toh Jing Hua",
+      "Zhoujun Cheng",
+      "Dongchan Shin",
+      "Fangyu Lei",
+      "Yitao Liu",
+      "Yiheng Xu",
+      "Shuyan Zhou",
+      "Silvio Savarese",
+      "Caiming Xiong",
+      "Victor Zhong",
+      "Tao Yu"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2404.07972",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "webarena"
+    ],
+    "summary": "The first scalable computer-use environment for multimodal agents, supporting 369 open-ended tasks across real operating systems (Ubuntu, Windows, macOS) involving desktop applications, web browsing, and OS file workflows.",
+    "why_it_matters": "The reference benchmark for computer-use agents — the capability class most directly tied to full general-purpose digital labor and the difficulty class frontier labs now track.",
+    "related": [
+      "webarena",
+      "gaia-benchmark"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -1937,6 +2167,36 @@
     "status": "live"
   },
   {
+    "id": "swe-bench",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Kexin Pei",
+      "Ofir Press",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.06770",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "An evaluation framework of 2,294 software-engineering tasks drawn from real GitHub issues and pull requests across 12 popular Python repositories, testing whether LLMs can navigate codebases, process long contexts, and execute tests to resolve genuine bugs.",
+    "why_it_matters": "The de facto standard benchmark for autonomous coding agents — its task format underlies most agentic coding evals and its scores track real software-engineering capability.",
+    "related": [
+      "mle-bench",
+      "agentbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "tree-of-attacks",
     "title": "Tree of Attacks: Jailbreaking Black-Box LLMs Automatically",
     "authors": [
@@ -1995,6 +2255,41 @@
     "related": [
       "jailbroken-safety-failure",
       "harmbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "webarena",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "authors": [
+      "Shuyan Zhou",
+      "Frank F. Xu",
+      "Hao Zhu",
+      "Xuhui Zhou",
+      "Robert Lo",
+      "Abishek Sridhar",
+      "Xianyi Cheng",
+      "Tianyue Ou",
+      "Yonatan Bisk",
+      "Daniel Fried",
+      "Uri Alon",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2307.13854",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "autonomy"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A fully functional, self-hosted web environment with sites in four domains (e-commerce, social forums, collaborative software development, content management) for evaluating language-guided agents on multi-step web workflows with end-to-end task success as the metric.",
+    "why_it_matters": "The canonical web-agent benchmark — realistic enough that success on WebArena predicts useful real-world web automation, a core autonomy capability.",
+    "related": [
+      "osworld",
+      "agentbench"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
