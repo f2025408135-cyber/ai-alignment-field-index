@@ -740,6 +740,60 @@
     "status": "live"
   },
   {
+    "id": "cotra-biological-anchors",
+    "title": "Forecasting Transformative AI with Biological Anchors",
+    "authors": [
+      "Ajeya Cotra"
+    ],
+    "year": 2020,
+    "url": "https://docs.google.com/document/d/1IJ6Sr-gPeXdSJugFulwIpvavc0atjHGM82QjIfUSBGQ/edit",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "forecasting"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "sevilla-compute-trends"
+    ],
+    "summary": "A draft report commissioned by Open Philanthropy that anchors AI timelines to biology: it estimates when algorithmic efficiency and available compute could plausibly match the human brain at a given cost, producing a probability distribution over transformative AI arrival. The method became known as the 'biological anchors' approach and is a central input to many later forecasts.",
+    "why_it_matters": "Introduced the most influential bottom-up methodology for AI timeline estimation in the field.",
+    "related": [
+      "davidson-takeoff-speeds",
+      "semi-informative-priors",
+      "sevilla-compute-trends"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "davidson-takeoff-speeds",
+    "title": "What a Compute-Centric Framework Says About Takeoff Speeds",
+    "authors": [
+      "Tom Davidson"
+    ],
+    "year": 2023,
+    "url": "https://www.lesswrong.com/posts/Gc9FGtdXhK9sCSEYu/what-a-compute-centric-framework-says-about-takeoff-speeds",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "forecasting"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "cotra-biological-anchors",
+      "sevilla-compute-trends"
+    ],
+    "summary": "Lays out a framework in which the speed of AI takeoff is governed by how quickly compute can be bought and redirected once it becomes economical to run transformative-scale models. Argues from compute economics that a fast but not instantaneous takeoff is plausible and discusses what this implies for preparedness.",
+    "why_it_matters": "A central statement of the compute-centric school of takeoff modeling that much later timeline debate engages with.",
+    "related": [
+      "cotra-biological-anchors",
+      "semi-informative-priors"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "global-catastrophic-risks-book",
     "title": "Global Catastrophic Risks",
     "authors": [
@@ -761,6 +815,35 @@
     "why_it_matters": "The standard multi-author reference establishing the comparative study of global catastrophic risks as a scholarly field.",
     "related": [
       "ord-the-precipice"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "grace-ai-expert-survey",
+    "title": "When Will AI Exceed Human Performance? Evidence from AI Experts",
+    "authors": [
+      "Katja Grace",
+      "John Salvatier",
+      "Allan Dafoe",
+      "Baobao Zhang",
+      "Owain Evans"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1705.08807",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "forecasting"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A large expert-elicitation survey asking hundreds of AI researchers when they expect AI to outperform humans on a battery of tasks, from translating languages to writing best-selling books to working as a high-level machine intelligence researcher. Finds median predictions of high-level machine intelligence within a few decades and significant disagreement across subfields.",
+    "why_it_matters": "The most widely cited expert-survey estimate of AI timelines, the empirical backbone of aggregate expert opinion on AGI timing.",
+    "related": [
+      "semi-informative-priors",
+      "davidson-takeoff-speeds",
+      "sevilla-compute-trends"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -841,6 +924,63 @@
     "related": [
       "meta-anthropic-argument",
       "anthropic-shadow-cirkovic"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "semi-informative-priors",
+    "title": "Report on Semi-informative Priors for AI Timelines (Open Philanthropy)",
+    "authors": [
+      "Holden Karnofsky"
+    ],
+    "year": 2020,
+    "url": "https://forum.effectivealtruism.org/posts/FPXFtBQHhkDDHBSt6/report-on-semi-informative-priors-for-ai-timelines-open",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "forecasting"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "grace-ai-expert-survey"
+    ],
+    "summary": "The EA Forum linkpost of an Open Philanthropy report proposing a middle path between full-fledged quantitative forecasting and pure intuition: a 'semi-informative prior' built from reference classes like other transformative technologies and from early AI development history. Argues such priors are better calibrated than either extreme and demonstrates the method on timelines for AGI.",
+    "why_it_matters": "A key methodological intervention that shaped how the community thinks about mixing priors with expert judgment in AI forecasts.",
+    "related": [
+      "cotra-biological-anchors",
+      "davidson-takeoff-speeds",
+      "grace-ai-expert-survey"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "sevilla-compute-trends",
+    "title": "Compute Trends Across Three Eras of Machine Learning",
+    "authors": [
+      "Jaime Sevilla",
+      "Lennart Heim",
+      "Anson Ho",
+      "Tamay Besiroglu",
+      "Marius Hobbhahn",
+      "Pablo Villalobos"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2202.05924",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "forecasting"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Measures the growth of compute used in notable machine learning systems across three eras, finding an exponential trend in the total compute deployed. Estimates roughly a doubling of compute every six months in the deep learning era and extrapolates what hardware limits would mean for continued growth.",
+    "why_it_matters": "The standard empirical anchor for compute-based forecasts of AI capability growth and takeoff speeds.",
+    "related": [
+      "cotra-biological-anchors",
+      "davidson-takeoff-speeds",
+      "grace-ai-expert-survey"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
