@@ -794,6 +794,56 @@
     "status": "live"
   },
   {
+    "id": "differential-intellectual-progress-wiki",
+    "title": "Differential Intellectual Progress",
+    "authors": [
+      "Luke Muehlhauser",
+      "Anna Salamon"
+    ],
+    "year": 2020,
+    "url": "https://www.lesswrong.com/w/differential-intellectual-progress",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "differential-development"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A LessWrong wiki entry explaining the broader concept of differential intellectual progress: prioritizing risk-reducing over risk-increasing intellectual progress, of which differential technological development is one special case. Discusses which categories of AI progress increase versus reduce risk and how to steer research accordingly.",
+    "why_it_matters": "The accessible reference for the umbrella concept behind differential development and its intellectual-history roots.",
+    "related": [
+      "givewell-dtd-early-thinking",
+      "so8res-note-dtd"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "givewell-dtd-early-thinking",
+    "title": "Differential Technological Development: Some Early Thinking",
+    "authors": [
+      "Nick Beckstead"
+    ],
+    "year": 2015,
+    "url": "https://blog.givewell.org/2015/09/30/differential-technological-development-some-early-thinking/",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "differential-development"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "An early institutional exploration of differential technological development by the Open Philanthropy Project: the idea that what matters is not the absolute pace of progress but the relative timing of risk-increasing versus risk-decreasing technologies. Discusses which areas of science philanthropy might be worth accelerating and the limits of planning for unknown future risks.",
+    "why_it_matters": "Brought the concept of differential development into the practical strategy of a major AI-risk funder.",
+    "related": [
+      "so8res-note-dtd",
+      "sandbrink-dtd-2022",
+      "differential-intellectual-progress-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "global-catastrophic-risks-book",
     "title": "Global Catastrophic Risks",
     "authors": [
@@ -929,6 +979,36 @@
     "status": "live"
   },
   {
+    "id": "sandbrink-dtd-2022",
+    "title": "Differential Technology Development: A Responsible Innovation Principle for Navigating Technology Risks",
+    "authors": [
+      "J. Sandbrink",
+      "H. Hobbs",
+      "J. Swett",
+      "A. Dafoe",
+      "A. Sandberg"
+    ],
+    "year": 2022,
+    "url": "https://ora.ox.ac.uk/objects/uuid:b481e9ad-bc27-4550-87ca-f414354aeb35",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "differential-development"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "givewell-dtd-early-thinking"
+    ],
+    "summary": "A scholarly formalization of differential technology development as a responsible innovation principle: deliberately shape the relative timing of technologies so that risk-reducing or substitute technologies arrive before risk-increasing ones. Analyzes when such intervention is feasible, including late in a harmful technology's diffusion, and applies the principle to synthetic biology and artificial intelligence.",
+    "why_it_matters": "The most rigorous academic treatment of differential development, connecting it to the responsible innovation and governance literatures.",
+    "related": [
+      "so8res-note-dtd",
+      "differential-intellectual-progress-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "semi-informative-priors",
     "title": "Report on Semi-informative Priors for AI Timelines (Open Philanthropy)",
     "authors": [
@@ -981,6 +1061,32 @@
       "cotra-biological-anchors",
       "davidson-takeoff-speeds",
       "grace-ai-expert-survey"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "so8res-note-dtd",
+    "title": "A Note About Differential Technological Development",
+    "authors": [
+      "So8res"
+    ],
+    "year": 2022,
+    "url": "https://www.lesswrong.com/posts/vQNJrJqebXEWjJfnz/a-note-about-differential-technological-development",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "differential-development"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "givewell-dtd-early-thinking"
+    ],
+    "summary": "Argues against the common 'my research advances capabilities but advances alignment more, so it's net good' framing by modeling alignment work as including a small number of long serial-time chunks that cannot be parallelized. On this model, accelerating capabilities while shortening timelines can be a death sentence even if parallelizable alignment work is also sped up.",
+    "why_it_matters": "A sharp, influential critique of loose appeals to differential technological development in everyday research prioritization.",
+    "related": [
+      "differential-intellectual-progress-wiki",
+      "sandbrink-dtd-2022"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
