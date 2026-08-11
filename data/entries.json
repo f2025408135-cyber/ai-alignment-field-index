@@ -1568,6 +1568,30 @@
     "status": "live"
   },
   {
+    "id": "bertviz",
+    "title": "A Multiscale Visualization of Attention in the Transformer Model",
+    "authors": [
+      "Jesse Vig"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1906.05714",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "BertViz: an interactive tool for visualizing attention in transformer models at multiple scales — neuron-level (individual attention patterns), head-level (aggregate patterns), and model-level (attention flow across layers) — with the accompanying paper describing its design.",
+    "why_it_matters": "The pioneering open attention-visualization tool that made transformer internals intuitively explorable and remains a standard reference visualization.",
+    "related": [
+      "transformerlens",
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "best-practices-activation-patching",
     "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
     "authors": [
@@ -1688,6 +1712,33 @@
     "related": [
       "automated-circuit-discovery",
       "practical-pitfalls-of-causal-scrubbing"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "circuitsvis",
+    "title": "CircuitsVis: Mechanistic Interpretability Visualizations using React and Python",
+    "authors": [
+      "Alan Cooney",
+      "Neel Nanda"
+    ],
+    "year": 2023,
+    "url": "https://github.com/TransformerLensOrg/CircuitsVis",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "transformerlens"
+    ],
+    "summary": "A visualization library for mechanistic interpretability providing interactive components — token-by-token attention heatmaps, head-by-head attention viewers, and circuit graph visualizations — usable from Jupyter and React, closely integrated with TransformerLens.",
+    "why_it_matters": "The standard visualization layer for circuit analysis; its attention and patching visualizations appear throughout the interpretability literature and tutorials.",
+    "related": [
+      "transformerlens",
+      "comprehensive-mechanistic-interpretability-explainer"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -2164,6 +2215,76 @@
     "status": "live"
   },
   {
+    "id": "neuronpedia",
+    "title": "Neuronpedia",
+    "authors": [
+      "Kif Ryan",
+      "Neuronpedia contributors"
+    ],
+    "year": 2024,
+    "url": "https://www.neuronpedia.org/",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "An interactive web platform for exploring sparse autoencoder features and neurons across many models: searchable feature dashboards with activation statistics, example texts, correlated features, and live steering, integrating with SAELens and hosting community-contributed feature datasets like the GemmaScope suite.",
+    "why_it_matters": "The public face of SAE interpretability — the platform where features of frontier-ish models are browsed, compared, and shared, enabling non-experts to inspect model internals.",
+    "related": [
+      "scaling-monosemanticity",
+      "saelens"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "nnsight",
+    "title": "The nnsight package enables interpreting and manipulating the internals of deep learned models",
+    "authors": [
+      "Jaden Fiotto-Kaufman",
+      "Alexander R. Loftus",
+      "Eric Todd",
+      "Jannik Brinkmann",
+      "Caden Juang",
+      "Koyena Pal",
+      "Can Rager",
+      "Aaron Mueller",
+      "Samuel Marks",
+      "Arnab Sen Sharma",
+      "Francesca Lucchetti",
+      "Michael Ripa",
+      "Adam Belfki",
+      "Nikhil Prakash",
+      "Sumeet Multani",
+      "Carla Brodley",
+      "Arjun Guha",
+      "Jonathan Bell",
+      "Byron Wallace",
+      "David Bau"
+    ],
+    "year": 2024,
+    "url": "https://github.com/ndif-team/nnsight",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "transformerlens"
+    ],
+    "summary": "The successor library to TransformerLens from the NDIF team: a Pythonic interface for tracing, intervening on, and inspecting model internals, supporting local execution on any PyTorch model and remote execution on large frontier models hosted on the National Deep Inference Fabric compute cluster.",
+    "why_it_matters": "The main next-generation intervention library, designed to keep interpretability tooling viable as models grow beyond local compute.",
+    "related": [
+      "transformerlens",
+      "pyvene"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "non-linear-representation-dilemma",
     "title": "The Non-Linear Representation Dilemma: Is Causal Abstraction Enough for Mechanistic Interpretability?",
     "authors": [
@@ -2248,6 +2369,39 @@
     "status": "live"
   },
   {
+    "id": "pyvene",
+    "title": "pyvene: A Library for Understanding and Improving PyTorch Models via Interventions",
+    "authors": [
+      "Zhengxuan Wu",
+      "Atticus Geiger",
+      "Aryaman Arora",
+      "Jing Huang",
+      "Zheng Wang",
+      "Noah Goodman",
+      "Christopher Manning",
+      "Christopher Potts"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.07809",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "das-distributed-alignment-search"
+    ],
+    "summary": "A unified library for performing interventions (including interchange interventions, causal abstraction tests, and steering) on arbitrary PyTorch models, with interventions specified declaratively as JSON-serializable dictionaries that can be shared, reproduced, and applied across layers, neurons, and decoding steps.",
+    "why_it_matters": "Brought causal-abstraction-style interventions to a general, shareable software layer, standardizing how distributed alignment and patching experiments are run and published.",
+    "related": [
+      "das-distributed-alignment-search",
+      "nnsight"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "refusal-single-direction",
     "title": "Refusal in Language Models Is Mediated by a Single Direction",
     "authors": [
@@ -2316,6 +2470,37 @@
     "related": [
       "refusal-single-direction",
       "steering-gpt2-xl-activation-vector"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "saelens",
+    "title": "SAELens: Training Sparse Autoencoders on Language Models",
+    "authors": [
+      "Joseph Bloom",
+      "Curt Tigges",
+      "Anthony Duong",
+      "David Chanin",
+      "SAELens contributors"
+    ],
+    "year": 2024,
+    "url": "https://github.com/decoderesearch/SAELens",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "towards-monosemanticity"
+    ],
+    "summary": "The leading open-source library for training and analyzing sparse autoencoders on language models: handles caching, SAE training (including k-sparse and ghost-grad variants), evaluation metrics, and integration with TransformerLens, plus pre-trained SAEs and feature dashboards.",
+    "why_it_matters": "The standard toolchain for the SAE research program, making state-of-the-art dictionary learning reproducible and accessible.",
+    "related": [
+      "towards-monosemanticity",
+      "scaling-evaluating-sparse-autoencoders",
+      "transformerlens"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -2642,6 +2827,36 @@
     "related": [
       "towards-monosemanticity",
       "mathematical-framework-transformer-circuits"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "transformerlens",
+    "title": "TransformerLens: A Library for Mechanistic Interpretability of Generative Language Models",
+    "authors": [
+      "Neel Nanda",
+      "Bryce Meyer",
+      "Jonah Larson",
+      "TransformerLens contributors"
+    ],
+    "year": 2022,
+    "url": "https://github.com/TransformerLensOrg/TransformerLens",
+    "type": "tool",
+    "domain": "interpretability",
+    "subtopics": [
+      "tooling"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "comprehensive-mechanistic-interpretability-explainer"
+    ],
+    "summary": "The foundational open-source library for mechanistic interpretability: hooks into over 15,000 open-source models to expose and cache any internal activation, supporting activation and path patching out of the box, with a clean interface that made circuit analysis accessible to researchers without deep infrastructure work.",
+    "why_it_matters": "The de facto standard tool that lowered the barrier to entry for the entire interpretability field; most published circuit work of 2022-2024 used it.",
+    "related": [
+      "comprehensive-mechanistic-interpretability-explainer",
+      "circuitsvis",
+      "saelens"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
