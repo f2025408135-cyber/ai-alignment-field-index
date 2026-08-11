@@ -3585,5 +3585,231 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "deep-rl-from-human-preferences",
+    "title": "Deep reinforcement learning from human preferences",
+    "authors": [
+      "Paul Christiano",
+      "Jan Leike",
+      "Tom B. Brown",
+      "Miljan Martic",
+      "Shane Legg",
+      "Dario Amodei"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.03741",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The founding paper of preference-based RLHF: instead of hand-specifying a reward function, ask non-expert humans to compare short pairs of trajectory segments, train a reward model from those comparisons, and optimize a policy against it with PPO — solving Atari and simulated robotics tasks with feedback on under 1% of agent interactions.",
+    "why_it_matters": "Established the human-preferences-to-reward-model pipeline that all of RLHF descends from, and showed alignment-style supervision can train complex behavior without an explicit reward.",
+    "related": [
+      "fine-tuning-lms-human-preferences",
+      "learning-to-summarize-human-feedback"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "fine-tuning-lms-human-preferences",
+    "title": "Fine-Tuning Language Models from Human Preferences",
+    "authors": [
+      "Daniel M. Ziegler",
+      "Nisan Stiennon",
+      "Jeffrey Wu",
+      "Tom B. Brown",
+      "Alec Radford",
+      "Dario Amodei",
+      "Paul Christiano"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1909.08593",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "deep-rl-from-human-preferences"
+    ],
+    "summary": "Transfers the preference-learning pipeline from RL environments to generative language models, fine-tuning GPT-2-era models with PPO against a reward model trained on human comparisons for tasks including continuation, summarization, and sentiment control.",
+    "why_it_matters": "The bridge that took RLHF from games to language models, demonstrating that preference optimization works on text generation and setting the template for later instruction-tuning work.",
+    "related": [
+      "deep-rl-from-human-preferences",
+      "learning-to-summarize-human-feedback"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "helpful-harmless-assistant-rlhf",
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "authors": [
+      "Yuntao Bai",
+      "Andy Jones",
+      "Kamal Ndousse",
+      "Amanda Askell",
+      "Anna Chen",
+      "Nova DasSarma",
+      "Dawn Drain",
+      "Stanislav Fort",
+      "Deep Ganguli",
+      "Tom Conerly",
+      "Nicholas Joseph",
+      "Jackson Kernion",
+      "Liane Lovitt",
+      "Alexandra Venig",
+      "Andy Yang",
+      "Jared Kaplan",
+      "Sam McCandlish",
+      "Jan Leike",
+      "Chris Olah",
+      "Dario Amodei",
+      "Jack Clark",
+      "Zachary Lipton",
+      "Zac Hatfield-Dodds",
+      "Tim Conerly",
+      "Ethan Perez",
+      "Jillian Redman",
+      "Alicia Parkhurst",
+      "Chloe O'Brien",
+      "Carissa Schoenholz",
+      "Shauna Kravec",
+      "Brent Fergé"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2204.05862",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "instructgpt"
+    ],
+    "summary": "Anthropic's study of training a helpful-and-harmless assistant with RLHF at scale: iterated online RLHF where preference models and policies are updated weekly with fresh data, analysis of scaling behavior and the helpful-harmless trade-off, and the finding that RLHF reduces but does not eliminate harmful behavior on adversarial inputs.",
+    "why_it_matters": "The reference for how safety-relevant RLHF was done at scale, including the HHH framing that defined the safety target for assistant alignment and the tension between helpfulness and harmlessness.",
+    "related": [
+      "instructgpt",
+      "constitutional-ai",
+      "towards-understanding-sycophancy"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "instructgpt",
+    "title": "Training language models to follow instructions with human feedback",
+    "authors": [
+      "Long Ouyang",
+      "Jeff Wu",
+      "Xu Jiang",
+      "Diogo Almeida",
+      "Carroll L. Wainwright",
+      "Pamela Mishkin",
+      "Chong Zhang",
+      "Sandhini Agarwal",
+      "Katarina Slama",
+      "Alex Ray",
+      "John Schulman",
+      "Jacob Hilton",
+      "Fraser Kelton",
+      "Luke Miller",
+      "Maddie Simens",
+      "Amanda Askell",
+      "Peter Welinder",
+      "Paul F. Christiano",
+      "Jan Leike",
+      "Ryan Lowe"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2203.02155",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "learning-to-summarize-human-feedback"
+    ],
+    "summary": "The InstructGPT paper: the canonical three-step RLHF recipe of supervised fine-tuning on demonstrations, reward model training on human preference rankings, and PPO policy optimization, showing a 1.3B model trained this way is preferred by humans over the 175B GPT-3 base, and documenting alignment tax and the trade-offs of different alignment objectives.",
+    "why_it_matters": "The recipe every commercial assistant training pipeline follows, and the paper that made RLHF the default alignment method for production language models.",
+    "related": [
+      "learning-to-summarize-human-feedback",
+      "helpful-harmless-assistant-rlhf",
+      "scaling-laws-reward-overoptimization"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "learning-to-summarize-human-feedback",
+    "title": "Learning to summarize from human feedback",
+    "authors": [
+      "Nisan Stiennon",
+      "Long Ouyang",
+      "Jeff Wu",
+      "Daniel M. Ziegler",
+      "Ryan Lowe",
+      "Chelsea Voss",
+      "Alec Radford",
+      "Dario Amodei",
+      "Paul Christiano"
+    ],
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2009.01325",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "fine-tuning-lms-human-preferences"
+    ],
+    "summary": "Cements the full RLHF recipe on a complex real task: training summarization models whose outputs are preferred over human-written gold-standard summaries, using a reward model trained on human comparisons with PPO, including analysis of how the reward model can be gamed and the resulting quality trade-offs.",
+    "why_it_matters": "The definitive early demonstration that RLHF produces outputs humans prefer over expert-written text, and an early documented case of reward model overoptimization.",
+    "related": [
+      "fine-tuning-lms-human-preferences",
+      "instructgpt"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "scaling-laws-reward-overoptimization",
+    "title": "Scaling Laws for Reward Model Overoptimization",
+    "authors": [
+      "Leo Gao",
+      "John Schulman",
+      "Jacob Hilton"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2210.10760",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "rlhf"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "instructgpt"
+    ],
+    "summary": "Systematically measures reward model overoptimization: as policies are optimized against a proxy reward, performance on the proxy rises monotonically while true quality peaks and then degrades, and this overoptimization follows predictable scaling laws in reward model size, data scale, and KL penalty coefficient.",
+    "why_it_matters": "Quantified Goodhart's law in RLHF and provided the scaling-law framework labs use to predict and control how much reward optimization is safe.",
+    "related": [
+      "instructgpt",
+      "defining-characterizing-reward-hacking"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
   }
 ]
