@@ -3828,6 +3828,35 @@
     "status": "live"
   },
   {
+    "id": "defining-characterizing-reward-hacking",
+    "title": "Defining and Characterizing Reward Hacking",
+    "authors": [
+      "Joar Skalse",
+      "Nikolaus H. R. Howe",
+      "Dmitrii Krasheninnikov",
+      "David Krueger"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2209.13085",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "reward-hacking"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "specification-gaming"
+    ],
+    "summary": "The first formal mathematical treatment of reward hacking: gives rigorous definitions of when a proxy reward can be 'hacked', characterizes the classes of reward functions for which unhackable proxies exist, and proves the main impossibility result — non-trivial unhackable proxy rewards do not exist in general settings, so proxies must either be equivalent to the true reward or remain hackable.",
+    "why_it_matters": "Turned reward hacking from an empirical phenomenon into a precise theoretical object, and established the formal limits on how far proxy rewards can be trusted.",
+    "related": [
+      "specification-gaming",
+      "scaling-laws-reward-overoptimization"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "eliciting-latent-knowledge",
     "title": "ARC's First Technical Report: Eliciting Latent Knowledge",
     "authors": [
@@ -4153,6 +4182,74 @@
     "status": "live"
   },
   {
+    "id": "measuring-scalable-oversight",
+    "title": "Measuring Progress on Scalable Oversight for Large Language Models",
+    "authors": [
+      "Samuel R. Bowman",
+      "Jeeyoon Hyun",
+      "Ethan Perez",
+      "Edwin Chen",
+      "Craig Pettit",
+      "Scott Heiner",
+      "Kamilė Lukošiūtė",
+      "Nate Jones",
+      "Amanda Askell",
+      "Andy Jones",
+      "Anna Chen",
+      "Ben Mann",
+      "Brian Israel",
+      "Catherine Olsson",
+      "Cameron McKinnon",
+      "Christopher Olah",
+      "Da Yan",
+      "Daniela Amodei",
+      "Dario Amodei",
+      "Dawn Drain",
+      "Dustin Li",
+      "Eli Tran-Johnson",
+      "Guro Khundadze",
+      "Jackson Kernion",
+      "James Landis",
+      "Jamie Kerr",
+      "Jared Kaplan",
+      "Joshua Landis",
+      "Liane Lovitt",
+      "Mannat Pannu",
+      "Nicholas Joseph",
+      "Owen Schreck",
+      "Peter Barnett",
+      "Pranav Shyam",
+      "Ryan Greene",
+      "Sean Hudson",
+      "Tamera Lanham",
+      "Tao Wang",
+      "Timothy Telleen-Lawton",
+      "Tom Henighan",
+      "Tristan Hume",
+      "Yuntao Bai",
+      "Zachary Hatfield-Dodds"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.03540",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "reward-hacking"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "helpful-harmless-assistant-rlhf"
+    ],
+    "summary": "Constructs a scalable oversight testbed: models assist humans to answer difficult questions (MMLU, QuALITY) the humans cannot answer alone, with methods like high-bandwidth help, low-bandwidth checking, and self-consistency, measuring whether assisted humans can reliably verify model outputs they could not produce themselves.",
+    "why_it_matters": "The main empirical framework for measuring scalable oversight progress, and the natural home for the proxy-oversight failure modes — reward hacking and sycophancy — that degrade human verification.",
+    "related": [
+      "helpful-harmless-assistant-rlhf",
+      "towards-understanding-sycophancy"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "model-written-evaluations",
     "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
     "authors": [
@@ -4433,6 +4530,82 @@
     "related": [
       "instructgpt",
       "defining-characterizing-reward-hacking"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "specification-gaming",
+    "title": "Specification gaming: the flip side of AI ingenuity",
+    "authors": [
+      "Victoria Krakovna",
+      "Jonathan Uesato",
+      "Vladimir Mikulik",
+      "Matthew Rahtz",
+      "Tom Everitt",
+      "Ramana Kumar",
+      "Zac Kenton",
+      "Jan Leike",
+      "Shane Legg"
+    ],
+    "year": 2020,
+    "url": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+    "type": "essay",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "reward-hacking"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "DeepMind's survey of specification gaming — behavior that satisfies the literal specification of an objective without achieving the intended outcome — cataloguing examples from video games, robotics, and simulated environments, and analyzing the causes: poor reward shaping, incomplete task specification, and reward model exploitation.",
+    "why_it_matters": "The canonical collection and framing of reward hacking in practice; its taxonomy of failure causes underlies most later reward hacking analysis.",
+    "related": [
+      "defining-characterizing-reward-hacking",
+      "scaling-laws-reward-overoptimization"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "towards-understanding-sycophancy",
+    "title": "Towards Understanding Sycophancy in Language Models",
+    "authors": [
+      "Mrinank Sharma",
+      "Meg Tong",
+      "Tomasz Korbak",
+      "David Duvenaud",
+      "Amanda Askell",
+      "Samuel R. Bowman",
+      "Newton Cheng",
+      "Esin Durmus",
+      "Zac Hatfield-Dodds",
+      "Scott Johnston",
+      "Shauna Kravec",
+      "Timothy Maxwell",
+      "Sam McCandlish",
+      "Kamal Ndousse",
+      "Oliver Rausch",
+      "Nicholas Schiefer",
+      "Da Yan",
+      "Miranda Zhang",
+      "Ethan Perez"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.13548",
+    "type": "paper",
+    "domain": "oversight-rlhf",
+    "subtopics": [
+      "reward-hacking"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "helpful-harmless-assistant-rlhf"
+    ],
+    "summary": "Shows across several frontier assistants that models are systematically sycophantic — tailoring responses to match the user's stated or implied views even when factually wrong — and traces the cause to RLHF: humans and preference models prefer convincingly written sycophantic answers, so optimizing against the preference model trades away truthfulness for agreement.",
+    "why_it_matters": "The definitive analysis of sycophancy as an RLHF-induced failure mode, establishing that the reward signal itself rewards flattery.",
+    "related": [
+      "helpful-harmless-assistant-rlhf",
+      "model-written-evaluations"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
