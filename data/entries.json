@@ -394,6 +394,59 @@
     "status": "live"
   },
   {
+    "id": "logical-induction-paper",
+    "title": "Logical Induction",
+    "authors": [
+      "Scott Garrabrant",
+      "Tsvi Benson-Tilsen",
+      "Andrew Critch",
+      "Nate Soares",
+      "Jessica Taylor"
+    ],
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1609.03543",
+    "type": "paper",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "logical-induction"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduces logical inductors, computable algorithms that assign probabilities to arbitrary logical statements and cannot be exploited by polynomial-time trading strategies. The framework treats belief over logical statements as a prediction market, providing a computable account of logical uncertainty that satisfies a demanding unexploitability criterion.",
+    "why_it_matters": "The definitive formal solution to logical uncertainty, a prerequisite problem for agent foundations and decision theory under logical correlation.",
+    "related": [
+      "logical-induction-wiki",
+      "naturalized-induction-wiki",
+      "fdt-yudkowsky-soares"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "logical-induction-wiki",
+    "title": "Logical Induction (LessWrong wiki)",
+    "authors": [
+      "LessWrong wiki contributors"
+    ],
+    "year": 2021,
+    "url": "https://www.lesswrong.com/w/logical-induction",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "logical-induction"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A LessWrong wiki collection of introductory guides, technical breakdowns, and software implementations for logical induction, maintained by community editors. Includes accessible explanations of the prediction-market intuition and Python walkthroughs of how logical inductors work.",
+    "why_it_matters": "The friendliest on-ramp to the logical induction literature, pairing the paper with tutorial material.",
+    "related": [
+      "logical-induction-paper",
+      "naturalized-induction-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "miri-embedded-agency-guide",
     "title": "Embedded Agency (MIRI research guide)",
     "authors": [
@@ -413,6 +466,86 @@
     "related": [
       "embedded-agency-paper",
       "embedded-agency-sequence"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "miri-research-guide",
+    "title": "A Guide to MIRI's Research",
+    "authors": [
+      "Nate Soares",
+      "Machine Intelligence Research Institute"
+    ],
+    "year": 2022,
+    "url": "https://intelligence.org/research-guide/",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "logical-induction"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "MIRI's own guide to its research agenda, identifying logical uncertainty, naturalized induction, and related agent foundations problems as central unsolved hurdles for reliable AGI. Organized as a reading map through the institute's technical work with pointers to the key papers.",
+    "why_it_matters": "The authoritative overview of MIRI's agent foundations program and how its pieces, including logical induction, fit together.",
+    "related": [
+      "logical-induction-paper",
+      "embedded-agency-paper",
+      "infra-bayesianism-wiki"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "naturalized-induction-challenge",
+    "title": "Naturalized induction – a challenge for evidential and causal decision theory",
+    "authors": [
+      "Caspar Oesterheld"
+    ],
+    "year": 2017,
+    "url": "https://www.lesswrong.com/posts/kgsaSbJqWLtJfiCcz/naturalized-induction-a-challenge-for-evidential-and-causal",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "logical-induction"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "naturalized-induction-wiki"
+    ],
+    "summary": "Argues that the difficulty of building 'phenomenological bridges' between algorithmic states and physical processes, required by naturalized induction, severely complicates standard evidential and causal decision theories. Proposes directions such as logical zombie evidential decision theory to cope with these complications.",
+    "why_it_matters": "A pointed analysis showing how the naturalized induction problem interacts with and pressures the decision theory literature.",
+    "related": [
+      "naturalized-induction-wiki",
+      "fdt-yudkowsky-soares"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "naturalized-induction-wiki",
+    "title": "Naturalized Induction",
+    "authors": [
+      "Rob Bensinger",
+      "Nate Soares"
+    ],
+    "year": 2022,
+    "url": "https://www.lesswrong.com/w/naturalized-induction",
+    "type": "essay",
+    "domain": "agent-foundations",
+    "subtopics": [
+      "logical-induction"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "logical-induction-paper"
+    ],
+    "summary": "A wiki entry outlining the open problem of naturalized induction: formulating an inductive algorithm whose reasoner, evidence, and hypotheses are all physically embedded in the environment it models, superseding the Cartesian split assumed by Solomonoff induction. Breaks the problem into building phenomenological bridges, indexical uncertainty, and ontological crises.",
+    "why_it_matters": "The reference statement of the naturalized induction problem that connects logical induction to embedded agency.",
+    "related": [
+      "infra-bayesian-physicalism",
+      "naturalized-induction-challenge",
+      "embedded-agency-paper"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
