@@ -632,5 +632,137 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "bostrom-existential-risks-2002",
+    "title": "Existential Risks: Analyzing Human Extinction Scenarios and Related Hazards",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2002,
+    "url": "https://www.jetpress.org/volume9/risks.html",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "xrisk-theory"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The founding taxonomy paper for existential risk: defines an existential risk as one that destroys Earth-originating intelligent life or permanently forecloses its potential, and separates risks by whether the damage is global and terminal versus merely severe. Introduces the categories of bang, crunch, shriek, and whimper and discusses which risks deserve the most attention.",
+    "why_it_matters": "Gave the field its working definition of existential risk and the taxonomy nearly all later work builds on.",
+    "related": [
+      "vulnerable-world-hypothesis",
+      "ord-the-precipice",
+      "global-catastrophic-risks-book"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "carlsmith-is-power-seeking-ai-xrisk",
+    "title": "Is Power-Seeking AI an Existential Risk?",
+    "authors": [
+      "Joseph Carlsmith"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2206.13353",
+    "type": "paper",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "xrisk-theory"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "superintelligent-will",
+      "orthogonality-thesis-wiki"
+    ],
+    "summary": "A careful probabilistic report decomposing the AI existential risk argument into explicit premises: that advanced AI could be developed, would seek power, that this is hard to prevent, and that it would lead to catastrophe. Assigns rough probabilities to each link, arriving at a substantial but uncertain overall risk estimate, and is unusually explicit about where the argument is weakest.",
+    "why_it_matters": "The most rigorous quantitative breakdown of the AI x-risk argument to date, the standard reference for structured risk estimates.",
+    "related": [
+      "vulnerable-world-hypothesis",
+      "no-strong-orthogonality-selection-pressure"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "global-catastrophic-risks-book",
+    "title": "Global Catastrophic Risks",
+    "authors": [
+      "Nick Bostrom",
+      "Milan M. Ćirković"
+    ],
+    "year": 2008,
+    "url": "https://en.wikipedia.org/wiki/Global_Catastrophic_Risks",
+    "type": "book",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "xrisk-theory"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "bostrom-existential-risks-2002"
+    ],
+    "summary": "An edited volume surveying the full landscape of global catastrophic risks from natural and anthropogenic sources, with chapters on nuclear war, pandemics, asteroid impacts, nanotech, and artificial intelligence among others. Each chapter treats the probability, severity, and tractability of a risk class, making it the reference compendium the field cites for risk inventories.",
+    "why_it_matters": "The standard multi-author reference establishing the comparative study of global catastrophic risks as a scholarly field.",
+    "related": [
+      "ord-the-precipice"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "ord-the-precipice",
+    "title": "The Precipice: Existential Risk and the Future of Humanity",
+    "authors": [
+      "Toby Ord"
+    ],
+    "year": 2020,
+    "url": "https://theprecipice.com/",
+    "type": "book",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "xrisk-theory"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "bostrom-existential-risks-2002",
+      "where-are-they-bostrom"
+    ],
+    "summary": "Book-length treatment of humanity's existential risks, quantifying a roughly one-in-six chance of existential catastrophe this century and arguing the present is the most consequential moment in human history. Devotes sustained attention to artificial intelligence as the dominant emerging risk and to how humanity can navigate the 'precipice' of the next century.",
+    "why_it_matters": "The most widely read accessible statement of the case that we live at a uniquely dangerous and important moment.",
+    "related": [
+      "global-catastrophic-risks-book",
+      "greaves-macaskill-strong-longtermism",
+      "bostrom-astronomical-waste"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "vulnerable-world-hypothesis",
+    "title": "The Vulnerable World Hypothesis",
+    "authors": [
+      "Nick Bostrom"
+    ],
+    "year": 2019,
+    "url": "https://nickbostrom.com/papers/vulnerable.pdf",
+    "type": "essay",
+    "domain": "macrostrategy",
+    "subtopics": [
+      "xrisk-theory"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "bostrom-existential-risks-2002"
+    ],
+    "summary": "Proposes that some inventions are so dangerous that the world becomes unable to contain them, regardless of how well the technology is managed up front: no amount of vigilance within the world suffices once the invention exists. Introduces the metaphor of a fragile vase on a table and sketches policy options including global surveillance and 'boxes' around dangerous discoveries.",
+    "why_it_matters": "A modern framework for why certain technologies may be fundamentally unmanageable, widely cited in AI risk policy debates.",
+    "related": [
+      "carlsmith-is-power-seeking-ai-xrisk",
+      "ord-the-precipice"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
   }
 ]
