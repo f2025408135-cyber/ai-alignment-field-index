@@ -1573,7 +1573,7 @@
   },
   {
     "id": "arc-agi",
-    "title": "On the Measure of Intelligence (ARC-AGI)",
+    "title": "On the Measure of Intelligence",
     "authors": [
       "François Chollet"
     ],
@@ -1737,6 +1737,33 @@
     "status": "live"
   },
   {
+    "id": "emergent-abilities-mirage",
+    "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+    "authors": [
+      "Rylan Schaeffer",
+      "Brando Miranda",
+      "Sanmi Koyejo"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2304.15004",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "eval-critiques"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "A critique showing that claimed 'emergent abilities' of LLMs often disappear under alternative, nonlinear metrics — the discontinuities that looked like capability thresholds are frequently artifacts of how performance is measured rather than genuine phase transitions.",
+    "why_it_matters": "A landmark demonstration that eval design choices (metric, sampling, scoring) can manufacture apparent capability leaps — directly undermining naive readings of benchmark results.",
+    "related": [
+      "arc-agi",
+      "leakage-reproducibility-crisis",
+      "nlp-evaluation-trouble"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "gaia-benchmark",
     "title": "GAIA: A Benchmark for General AI Assistants",
     "authors": [
@@ -1887,6 +1914,32 @@
     "status": "live"
   },
   {
+    "id": "leakage-reproducibility-crisis",
+    "title": "Leakage and the Reproducibility Crisis in ML-based Science",
+    "authors": [
+      "Sayash Kapoor",
+      "Arvind Narayanan"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2207.07048",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "eval-critiques"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "A systematic review showing that data leakage — information from the test set reaching the model during training — is a leading cause of irreproducible ML results, with a checklist of 43 leakage pitfalls across dataset construction, preprocessing, and model selection.",
+    "why_it_matters": "The canonical taxonomy of how leakage invalidates evaluation — foundational for understanding why benchmark scores overstate model capability.",
+    "related": [
+      "nlp-evaluation-trouble",
+      "task-contamination",
+      "emergent-abilities-mirage"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "mle-bench",
     "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
     "authors": [
@@ -1997,6 +2050,36 @@
     "status": "live"
   },
   {
+    "id": "nlp-evaluation-trouble",
+    "title": "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark",
+    "authors": [
+      "Oscar Sainz",
+      "Jon Ander Campos",
+      "Iker García-Ferrero",
+      "Julen Etxaniz",
+      "Oier Lopez de Lacalle",
+      "Eneko Agirre"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.18018",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "eval-critiques"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Argues that LLM benchmark scores are unreliable because training-data contamination is pervasive and rarely measured; proposes reporting contamination per benchmark and evaluating on truly novel data, since leaked benchmarks inflate scores and break comparability between models.",
+    "why_it_matters": "The clearest systematic statement of the contamination problem — that benchmark scores cannot be trusted unless leakage is measured — and the standard citation for contamination-aware evaluation.",
+    "related": [
+      "task-contamination",
+      "leakage-reproducibility-crisis",
+      "safe-harbor-ai-evaluation"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
     "id": "openai-frontier-risk-approach",
     "title": "OpenAI's Approach to Frontier Risk (Preparedness Framework)",
     "authors": [
@@ -2080,8 +2163,28 @@
       "Sam Bowman",
       "Anna Chen",
       "Tom Conerly",
+      "Nova DasSarma",
+      "Dawn Drain",
+      "Nelson Elhage",
+      "Sheer El-Showk",
+      "Stanislav Fort",
+      "Zac Hatfield-Dodds",
+      "Tom Henighan",
+      "Danny Hernandez",
+      "Tristan Hume",
+      "Josh Jacobson",
+      "Scott Johnston",
+      "Shauna Kravec",
+      "Catherine Olsson",
+      "Sam Ringer",
+      "Eli Tran-Johnson",
       "Dario Amodei",
-      "Jared Kaplan"
+      "Tom Brown",
+      "Nicholas Joseph",
+      "Sam McCandlish",
+      "Chris Olah",
+      "Jared Kaplan",
+      "Jack Clark"
     ],
     "year": 2022,
     "url": "https://arxiv.org/abs/2209.07858",
@@ -2099,6 +2202,53 @@
     "related": [
       "baseline-red-teaming",
       "helpful-harmless-assistant-rlhf"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "safe-harbor-ai-evaluation",
+    "title": "A Safe Harbor for AI Evaluation and Red Teaming",
+    "authors": [
+      "Shayne Longpre",
+      "Sayash Kapoor",
+      "Kevin Klyman",
+      "Ashwin Ramaswami",
+      "Rishi Bommasani",
+      "Borhane Blili-Hamelin",
+      "Yangsibo Huang",
+      "Aviya Skowron",
+      "Zheng-Xin Yong",
+      "Suhas Kotha",
+      "Yi Zeng",
+      "Weiyan Shi",
+      "Xianjun Yang",
+      "Reid Southen",
+      "Alexander Robey",
+      "Patrick Chao",
+      "Diyi Yang",
+      "Ruoxi Jia",
+      "Daniel Kang",
+      "Sandy Pentland",
+      "Arvind Narayanan",
+      "Percy Liang",
+      "Peter Henderson"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.04893",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "eval-critiques"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "An argument that independent AI evaluation and red teaming face structural disincentives — including researcher liability, strained researcher-practitioner relationships, and uncoordinated norms — and a proposal for a safe-harbor framework providing liability protection and data-sharing privileges for good-faith evaluation research.",
+    "why_it_matters": "The most-cited analysis of the institutional barriers that keep evaluation research from happening — essential context for why evals are scarcer and less trustworthy than they should be.",
+    "related": [
+      "emergent-abilities-mirage",
+      "nlp-evaluation-trouble",
+      "red-teaming-reduce-harms"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
@@ -2192,6 +2342,33 @@
     "related": [
       "mle-bench",
       "agentbench"
+    ],
+    "last_verified": "2026-08-11",
+    "status": "live"
+  },
+  {
+    "id": "task-contamination",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "authors": [
+      "Changmao Li",
+      "Jeffrey Flanigan"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.16337",
+    "type": "paper",
+    "domain": "evals-benchmarks",
+    "subtopics": [
+      "eval-critiques"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "nlp-evaluation-trouble"
+    ],
+    "summary": "Shows that many few-shot tasks claimed as novel evaluations are in fact contaminated — the task instances appear in pretraining data, so few-shot performance reflects memorization rather than generalization, and proposes detection methods for task-level contamination.",
+    "why_it_matters": "Extends the contamination critique from whole benchmarks to individual task instances, showing few-shot 'emergent' results are often memorization artifacts.",
+    "related": [
+      "nlp-evaluation-trouble",
+      "leakage-reproducibility-crisis"
     ],
     "last_verified": "2026-08-11",
     "status": "live"
