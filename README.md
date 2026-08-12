@@ -28,7 +28,7 @@ Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dum
 | [Philosophy & Value Alignment](domains/philosophy-values.md) | Value specification, moral uncertainty, CEV ± critiques, pluralistic alignment, population ethics | 19 |
 | [Field Infrastructure](domains/field-infrastructure.md) | Training programs, funders, research orgs, communities, career pathways | 20 |
 
-**Total entries: 277**
+**Total entries: 277** — see also the [**field statistics report**](domains/statistics.md): per-domain × tier counts, resource-type distribution, cross-link anatomy, top hubs, most-cited prerequisites, and coverage gaps across the 55 subtopics.
 
 ## Interactive cross-link graph
 

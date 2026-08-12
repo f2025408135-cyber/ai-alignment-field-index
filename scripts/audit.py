@@ -112,6 +112,11 @@ def main():
                        capture_output=True, text=True)
     check("domains-md-fresh", r.returncode == 0, (r.stdout or r.stderr).strip()[:300])
 
+    # 7b. statistics md freshness
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "generate_stats.py"), "--check"],
+                       capture_output=True, text=True)
+    check("stats-md-fresh", r.returncode == 0, (r.stdout or r.stderr).strip()[:300])
+
     # 8. PROGRESS all done
     progress_path = os.path.join(ROOT, "PROGRESS.md")
     with open(progress_path, "r", encoding="utf-8") as f:
