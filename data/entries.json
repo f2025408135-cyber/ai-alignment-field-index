@@ -2611,6 +2611,80 @@
     "status": "live"
   },
   {
+    "id": "blueprint-ai-bill-of-rights",
+    "title": "Blueprint for an AI Bill of Rights",
+    "authors": [
+      "White House Office of Science and Technology Policy"
+    ],
+    "year": 2022,
+    "url": "https://www.govinfo.gov/app/details/GOVPUB-PREX23-PURL-gpo193638",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The Biden administration's non-binding blueprint setting out five principles for automated systems: safe and effective systems, algorithmic discrimination protections, data privacy, notice and explanation, and human alternatives/fallbacks. Aimed at protecting the public from harms of AI in areas like housing, employment, and health care.",
+    "why_it_matters": "The foundational US statement of AI rights and protections — the values document that NIST's RMF and later executive action operationalize.",
+    "related": [
+      "nist-ai-risk-management-framework",
+      "eu-ai-act"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "california-sb1047",
+    "title": "California's SB 1047 and its Veto: Eight Key Takeaways",
+    "authors": [
+      "Gibson Dunn"
+    ],
+    "year": 2024,
+    "url": "https://www.gibsondunn.com/regulating-the-future-eight-key-takeaways-from-californias-sb-1047-vetoed-by-governor-newsom/",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Analysis of SB 1047, the California 'Safe and Secure Innovation for Frontier AI Models Act', the first US state bill to impose binding safety duties on frontier model developers — including liability for severe harm and a duty to prevent catastrophic harms — which passed the legislature but was vetoed by Governor Newsom in September 2024. The Gibson Dunn memo distills the bill's mechanism, its fate, and its implications for future state and federal frontier-AI law.",
+    "why_it_matters": "The highest-profile attempt at hard frontier-AI regulation in the US; its veto and the surrounding debate defined the political fault lines that subsequent federal and state proposals navigate.",
+    "related": [
+      "eu-ai-act",
+      "anthropic-responsible-scaling-policy",
+      "model-evaluation-extreme-risks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "china-generative-ai-measures",
+    "title": "Interim Measures for the Management of Generative AI Services",
+    "authors": [
+      "Cyberspace Administration of China"
+    ],
+    "year": 2023,
+    "url": "https://www.chinalawtranslate.com/en/generative-ai-interim/",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "China's 2023 regulation of generative AI services: providers must obtain security assessments, ensure content aligns with socialist core values, label AI-generated content, protect personal information, and train models on lawful data sources. A regime focused less on capability risk than on content control and state supervision of the largest AI user base.",
+    "why_it_matters": "One of the first binding national AI laws, representing the third major regulatory philosophy (after EU rights-based and US market-based) — essential for understanding the global governance map.",
+    "related": [
+      "eu-ai-act",
+      "uk-pro-innovation-ai-regulation",
+      "nist-ai-risk-management-framework"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "computing-power-governance-ai",
     "title": "Computing Power and the Governance of Artificial Intelligence",
     "authors": [
@@ -2701,6 +2775,33 @@
       "computing-power-governance-ai",
       "anthropic-responsible-scaling-policy",
       "bletchley-declaration"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "eu-ai-act",
+    "title": "Regulation (EU) 2024/1689 — The Artificial Intelligence Act",
+    "authors": [
+      "European Parliament",
+      "Council of the European Union"
+    ],
+    "year": 2024,
+    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1689",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The world's first comprehensive horizontal AI law, in force August 2024. Establishes a risk-tiered regime — prohibited practices, high-risk systems with conformity assessments, transparency obligations, and a separate track for general-purpose AI models with 'systemic risk' obligations (including a 10^25 FLOPs compute-threshold presumption) — enforced by national authorities and a new AI Office.",
+    "why_it_matters": "The dominant regulatory paradigm for AI law globally; its GPAI and compute-threshold provisions directly shaped how every other jurisdiction now drafts frontier-model rules.",
+    "related": [
+      "training-compute-thresholds",
+      "nist-ai-risk-management-framework",
+      "uk-pro-innovation-ai-regulation",
+      "un-ai-governance-interoperability"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -2889,6 +2990,31 @@
     "status": "live"
   },
   {
+    "id": "nist-ai-risk-management-framework",
+    "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+    "authors": [
+      "National Institute of Standards and Technology"
+    ],
+    "year": 2023,
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The US government's voluntary framework for managing AI risk, organized around four functions — Govern, Map, Measure, and Manage — with 19 specific outcomes. Provides a common language and a set of practices for organizations to integrate trustworthy-AI considerations into design, development, and deployment, with profiles for different sectors.",
+    "why_it_matters": "The reference risk-management standard for US organizations and the conceptual backbone that Executive Order 14110 and much private-sector practice build on.",
+    "related": [
+      "eu-ai-act",
+      "blueprint-ai-bill-of-rights",
+      "model-evaluation-extreme-risks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "openai-preparedness-framework",
     "title": "OpenAI's Preparedness Framework",
     "authors": [
@@ -2937,6 +3063,31 @@
       "computing-power-governance-ai",
       "eu-ai-act",
       "sevilla-compute-trends"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "uk-pro-innovation-ai-regulation",
+    "title": "A Pro-Innovation Approach to AI Regulation",
+    "authors": [
+      "Department for Science, Innovation and Technology"
+    ],
+    "year": 2023,
+    "url": "https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach/white-paper",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "regulation"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The UK's 2023 white paper setting out a principles-based, sector-led approach to AI regulation: five cross-sector principles (safety, transparency, fairness, accountability, contestability) applied by existing regulators rather than a new AI law. Contextualizes the UK's preference for guidance and its role in hosting the AI Safety Summits.",
+    "why_it_matters": "The clearest statement of the 'no new regulator, apply principles through existing agencies' regulatory philosophy — the main alternative model to the EU's comprehensive statute.",
+    "related": [
+      "eu-ai-act",
+      "emerging-processes-frontier-ai-safety",
+      "bletchley-declaration"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
