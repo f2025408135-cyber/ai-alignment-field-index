@@ -2840,6 +2840,31 @@
     "status": "live"
   },
   {
+    "id": "fda-model-ai-regulation",
+    "title": "What Can We Learn From the FDA Model for AI Regulation?",
+    "authors": [
+      "AI Now Institute"
+    ],
+    "year": 2024,
+    "url": "https://ainowinstitute.org/publications/what-can-we-learn-from-the-fda-model-for-ai-regulation",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "analogies"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "An expert deliberation memo examining whether an 'FDA for AI' is a useful regulatory model. Concludes the metaphor is blunt: drugs are single-purpose and FDA gates market entry through identifiable gatekeepers, whereas foundation models are general-purpose infrastructure with no equivalent approval moment. Still, FDA-style information production — mandatory documentation, structured evidence, post-market surveillance — offers a viable template for AI transparency.",
+    "why_it_matters": "The most nuanced treatment of the pharma analogy, separating what transfers (information duties, oversight institutions) from what does not (pre-market approval of a moving, general-purpose target).",
+    "related": [
+      "mission-critical-ai-safety",
+      "eu-ai-act",
+      "nist-ai-risk-management-framework"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "frontier-ai-safety-commitments",
     "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
     "authors": [
@@ -2928,6 +2953,35 @@
     "status": "live"
   },
   {
+    "id": "insights-nuclear-history-ai-governance",
+    "title": "Insights from Nuclear History for AI Governance",
+    "authors": [
+      "Benjamin Boudreaux",
+      "Gregory Smith",
+      "Edward Geist",
+      "Leah Dion"
+    ],
+    "year": 2025,
+    "url": "https://www.rand.org/pubs/perspectives/PEA3652-1.html",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "analogies"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A RAND perspective examining what the history of nuclear weapons governance — the Baruch Plan, the NPT, IAEA verification, arms-control treaties — does and does not teach AI governance. Identifies transferable lessons (the value of verifiable choke-points like uranium enrichment vs compute, the importance of crisis communication, the risk of treating 'zero' as the only goal) and where the analogy breaks (AI's civilian commercial value, diffusion, and verification challenges).",
+    "why_it_matters": "The most careful expert treatment of the nuclear analogy: it shows which arms-control mechanisms plausibly transfer to AI and which rest on properties nuclear weapons have that AI does not.",
+    "related": [
+      "ord-the-precipice",
+      "vulnerable-world-hypothesis",
+      "on-treaties-nuclear-weapons-and-ai",
+      "bletchley-declaration"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "international-ai-safety-report",
     "title": "International AI Safety Report 2025",
     "authors": [
@@ -2990,6 +3044,31 @@
     "status": "live"
   },
   {
+    "id": "mission-critical-ai-safety",
+    "title": "Mission Critical: Learning from How Other Industries Ensure Safety",
+    "authors": [
+      "Ada Lovelace Institute"
+    ],
+    "year": 2023,
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/ai-safety/",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "analogies"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A policy briefing comparing how high-stakes sectors — aviation, medicine, food, and energy — achieve safety through regulatory bodies, incident reporting, certification, and liability, and what AI governance can learn from each. Argues that no single sector maps cleanly onto frontier AI, but that the institutional toolkit (independent safety authorities, mandatory incident reporting, pre-market assurance) is transferable.",
+    "why_it_matters": "An accessible, well-structured entry point to the cross-sector analogy debate — the piece policymakers most often cite when weighing an 'FAA for AI' or 'FDA for AI'.",
+    "related": [
+      "insights-nuclear-history-ai-governance",
+      "fda-model-ai-regulation",
+      "emerging-processes-frontier-ai-safety"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "nist-ai-risk-management-framework",
     "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
     "authors": [
@@ -3010,6 +3089,33 @@
       "eu-ai-act",
       "blueprint-ai-bill-of-rights",
       "model-evaluation-extreme-risks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "on-treaties-nuclear-weapons-and-ai",
+    "title": "On Treaties, Nuclear Weapons, and AI",
+    "authors": [
+      "DAL"
+    ],
+    "year": 2025,
+    "url": "https://www.lesswrong.com/posts/7wcLGKH79rhNpJFzN/on-treaties-nuclear-weapons-and-ai",
+    "type": "community",
+    "domain": "governance-policy",
+    "subtopics": [
+      "analogies"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "insights-nuclear-history-ai-governance"
+    ],
+    "summary": "A LessWrong essay arguing that the nuclear nonproliferation analogy is systematically misleading for AI governance. Contends that the nuclear regime worked because of specific features — small numbers of states, a 'zero' target that was actually stable, physical verification, and weapons with no civilian value — that frontier AI fundamentally lacks, and that treaty-based governance may therefore be the wrong primary instrument.",
+    "why_it_matters": "The sharpest community critique of the dominant historical analogy; engaging with it is essential before importing arms-control intuitions into AI policy.",
+    "related": [
+      "insights-nuclear-history-ai-governance",
+      "bletchley-declaration",
+      "computing-power-governance-ai"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
