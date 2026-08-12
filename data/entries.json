@@ -2560,6 +2560,111 @@
     "status": "live"
   },
   {
+    "id": "agi-safety-fundamentals",
+    "title": "AGI Safety Fundamentals (BlueDot Impact)",
+    "authors": [
+      "BlueDot Impact"
+    ],
+    "year": 2021,
+    "url": "https://bluedot.org/courses",
+    "type": "course",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "training"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The standard entry-level curriculum for AI safety: a free, cohort-based online course run by BlueDot Impact (formerly AI Safety Fundamentals) with tracks in technical AI safety and AGI strategy, built around weekly readings, small-group discussions, and global community networking.",
+    "why_it_matters": "The most widely used on-ramp into the field — the course most newcomers complete before doing research, applying to programs like MATS or ARENA, or joining the Alignment Forum. It operationalizes the 'read the curriculum' advice that dominates career guidance.",
+    "related": [
+      "ai-alignment-why-hard",
+      "alignment-forum",
+      "80000-hours-ai-profile"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "arena",
+    "title": "ARENA 3.0 (Alignment Research Engineer Accelerator)",
+    "authors": [
+      "ARENA / London Initiative for Safe AI (LISA)"
+    ],
+    "year": 2023,
+    "url": "https://www.arena.education/",
+    "type": "course",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "training"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "agi-safety-fundamentals"
+    ],
+    "summary": "An intensive ML-engineering bootcamp that trains engineers in the skills needed for technical AI safety roles — deep learning, mechanistic interpretability, and RL — through hands-on coding exercises and a structured curriculum hosted at arena.education.",
+    "why_it_matters": "Addresses the field's bottleneck of too few people with the hands-on ML skills to do technical alignment work. ARENA alumni are a major pipeline into interpretability and evals roles at labs and safety orgs.",
+    "related": [
+      "mlab",
+      "mats",
+      "agi-safety-fundamentals"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "mats",
+    "title": "MATS Program (formerly SERI MATS / MIRI Alignment Summer School)",
+    "authors": [
+      "MATS Program"
+    ],
+    "year": 2021,
+    "url": "https://matsprogram.org/",
+    "type": "course",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "training"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "agi-safety-fundamentals"
+    ],
+    "summary": "A fully-funded 10–12 week research fellowship that embeds early-career researchers with senior mentors at top AI labs and safety organizations to produce publishable technical alignment, governance, and security research.",
+    "why_it_matters": "One of the highest-leverage entry points into professional alignment research: MATS alumni have gone on to research positions across the field, and the program's mentor network connects newcomers directly to active researchers.",
+    "related": [
+      "arena",
+      "miri",
+      "alignment-forum"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "mlab",
+    "title": "MLAB (Machine Learning Alignment Bootcamp)",
+    "authors": [
+      "Redwood Research"
+    ],
+    "year": 2021,
+    "url": "https://mlab.ai/",
+    "type": "course",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "training"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "agi-safety-fundamentals"
+    ],
+    "summary": "The pioneering bootcamp format created by Redwood Research to rapidly train talented people in the machine-learning skills needed for alignment research, and the direct predecessor of ARENA.",
+    "why_it_matters": "Established the now-standard 'intensive ML bootcamp for alignment' model that ARENA and similar programs replicate, and demonstrated that focused technical training can quickly produce capable alignment researchers.",
+    "related": [
+      "arena",
+      "mats"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "anthropic-core-views-ai-safety",
     "title": "Core Views on AI Safety",
     "authors": [
