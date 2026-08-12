@@ -2585,6 +2585,31 @@
     "status": "live"
   },
   {
+    "id": "alignment-forum",
+    "title": "Alignment Forum",
+    "authors": [
+      "Alignment Forum"
+    ],
+    "year": 2018,
+    "url": "https://www.alignmentforum.org/",
+    "type": "community",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "communities"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A dedicated online forum for technical AI alignment research and discussion, where many of the field's central papers and sequences (agent foundations, interpretability, oversight) are first published and debated.",
+    "why_it_matters": "The primary venue where alignment researchers publish and critique technical work — a large fraction of this index's sources live on or originate from the Alignment Forum, making it the field's intellectual commons.",
+    "related": [
+      "lesswrong",
+      "ea-forum",
+      "agi-safety-fundamentals"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "anthropic",
     "title": "Anthropic",
     "authors": [
@@ -2685,6 +2710,54 @@
     "status": "live"
   },
   {
+    "id": "control-problem-subreddit",
+    "title": "r/ControlProblem",
+    "authors": [
+      "Reddit community"
+    ],
+    "year": 2015,
+    "url": "https://www.reddit.com/r/ControlProblem/",
+    "type": "community",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "communities"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A public Reddit community dedicated to discussing the AI control problem, alignment theory, and frontier AI safety developments, serving as an accessible gateway for a broad audience.",
+    "why_it_matters": "One of the most accessible entry points to AI alignment discussion on mainstream platforms, helping surface safety topics to a wider public audience than the specialized forums.",
+    "related": [
+      "lesswrong",
+      "alignment-forum"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "ea-forum",
+    "title": "Effective Altruism Forum (EA Forum)",
+    "authors": [
+      "Centre for Effective Altruism"
+    ],
+    "year": 2012,
+    "url": "https://forum.effectivealtruism.org/",
+    "type": "community",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "communities"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The forum of the effective altruism community, hosting research, discussion, and updates on the world's most pressing problems — including AI safety, governance, and biosecurity — alongside global health and animal welfare.",
+    "why_it_matters": "The community hub where AI safety sits within the broader effective-altruism frame that funds, recruits for, and legitimizes much of the field — a large share of field-building announcements and funding discussions happen here.",
+    "related": [
+      "alignment-forum",
+      "lesswrong"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "ea-funds-transformative-ai",
     "title": "EA Funds — Transformative AI Fund",
     "authors": [
@@ -2704,6 +2777,31 @@
     "related": [
       "open-philanthropy-ai-safety",
       "sff"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "lesswrong",
+    "title": "LessWrong",
+    "authors": [
+      "LessWrong"
+    ],
+    "year": 2009,
+    "url": "https://www.lesswrong.com/",
+    "type": "community",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "communities"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A community blog and forum focused on rationality, decision theory, and existential risk, and the original home of much of the AI alignment discourse that later split onto the Alignment Forum.",
+    "why_it_matters": "The broader epistemic community from which alignment emerged; many foundational concepts and many of this index's community-essay sources were written and debated here.",
+    "related": [
+      "alignment-forum",
+      "ea-forum",
+      "control-problem-subreddit"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
