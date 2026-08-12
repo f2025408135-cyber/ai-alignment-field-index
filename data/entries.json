@@ -6552,5 +6552,127 @@
     ],
     "last_verified": "2026-08-11",
     "status": "live"
+  },
+  {
+    "id": "adversarial-examples-are-features",
+    "title": "Adversarial Examples Are Not Bugs, They Are Features",
+    "authors": [
+      "Andrew Ilyas",
+      "Shibani Santurkar",
+      "Dimitris Tsipras",
+      "Logan Engstrom",
+      "Brandon Tran",
+      "Aleksander Madry"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1905.02175",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "adversarial-robustness"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "exploiting-harnessing-adversarial-examples"
+    ],
+    "summary": "Argues that adversarial examples arise not from bugs in models but from 'non-robust features' — highly predictive, human-invisible patterns in the training data that models legitimately learn. Demonstrates empirically that datasets can be re-labeled around non-robust features to produce adversarial examples, and that standard models rely heavily on such features.",
+    "why_it_matters": "Deeply unsettling for alignment: it suggests robust and standard accuracy can genuinely conflict, and that models may latch onto features humans cannot even see — a caution for any safety claim resting on what a model 'actually learned'.",
+    "related": [
+      "robustness-accuracy-tradeoff",
+      "robust-deep-learning-madry",
+      "exploiting-harnessing-adversarial-examples"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "exploiting-harnessing-adversarial-examples",
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "authors": [
+      "Ian J. Goodfellow",
+      "Jonathon Shlens",
+      "Christian Szegedy"
+    ],
+    "year": 2015,
+    "url": "https://arxiv.org/abs/1412.6572",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "adversarial-robustness"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The paper that explained adversarial examples: the hypothesis that neural networks are vulnerable not because they are too complex but because they are too linear, with small perturbations amplified across many dimensions. Introduced the Fast Gradient Sign Method (FGSM) for efficiently generating adversarial inputs and proposed adversarial training as a defense.",
+    "why_it_matters": "The founding insight of adversarial ML — it reframed adversarial examples from a curiosity into a predictable failure mode of linearity that any high-dimensional model shares, which is why frontier LLMs inherit the same class of vulnerabilities.",
+    "related": [
+      "robustness-accuracy-tradeoff",
+      "robust-deep-learning-madry",
+      "adversarial-examples-are-features",
+      "universal-transferable-attacks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "robust-deep-learning-madry",
+    "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+    "authors": [
+      "Aleksander Madry",
+      "Aleksandar Makelov",
+      "Ludwig Schmidt",
+      "Dimitris Tsipras",
+      "Adrian Vladu"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1706.06083",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "adversarial-robustness"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "exploiting-harnessing-adversarial-examples"
+    ],
+    "summary": "Framed adversarial robustness as a robust-optimization problem — a min-max game where the defender trains against the worst-case perturbation within a bounded threat model. Established projected gradient descent (PGD) as a universal first-order adversary and showed that adversarial training against it yields models with meaningful, generalizable robustness guarantees.",
+    "why_it_matters": "Set the standard threat-model formalism and defense baseline for all subsequent robustness work; its PGD adversary is the tool of choice for measuring whether a defense is real or illusory.",
+    "related": [
+      "exploiting-harnessing-adversarial-examples",
+      "adversarial-examples-are-features",
+      "robustness-accuracy-tradeoff"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "robustness-accuracy-tradeoff",
+    "title": "Robustness May Be at Odds with Accuracy",
+    "authors": [
+      "Dimitris Tsipras",
+      "Shibani Santurkar",
+      "Logan Engstrom",
+      "Alexander Turner",
+      "Aleksander Madry"
+    ],
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1805.12152",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "adversarial-robustness"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "exploiting-harnessing-adversarial-examples"
+    ],
+    "summary": "Proves a fundamental tension between standard generalization and adversarial robustness: robust models learn qualitatively different features than standard ones, and in simple settings achieving robustness provably degrades standard accuracy. Shows robust classifiers can also be more interpretable and better aligned with human perception.",
+    "why_it_matters": "Formalizes the uncomfortable trade-off that robustness is not free — a finding with direct implications for how far safety-via-adversarial-training can take frontier models.",
+    "related": [
+      "adversarial-examples-are-features",
+      "robust-deep-learning-madry",
+      "exploiting-harnessing-adversarial-examples"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
   }
 ]
