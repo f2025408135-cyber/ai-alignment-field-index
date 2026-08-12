@@ -43,11 +43,11 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | evals-benchmarks | autonomy/agentic-task evals | done | 2026-08-11 | 8 | swe-bench, mle-bench, webarena, osworld, gaia-benchmark, agentbench, cybench, arc-agi |
 | evals-benchmarks | red-teaming frameworks & adversarial suites | done | 2026-08-11 | 8 | baseline-red-teaming, red-teaming-reduce-harms, jailbroken-safety-failure, universal-transferable-attacks, autodan, tree-of-attacks, harmbench, wildteaming |
 | evals-benchmarks | critiques of eval validity/gameability | done | 2026-08-11 | 5 | safe-harbor-ai-evaluation, emergent-abilities-mirage, nlp-evaluation-trouble, leakage-reproducibility-crisis, task-contamination |
-| governance-policy | compute governance | not started | | |
-| governance-policy | international coordination mechanisms | not started | | |
-| governance-policy | lab-level governance (RSPs) | not started | | |
-| governance-policy | regulation by jurisdiction | not started | | |
-| governance-policy | historical analogies & where they break | not started | | |
+| governance-policy | compute governance | done | 4 | 4/4 |
+| governance-policy | international coordination mechanisms | done | 5 | 5/5 |
+| governance-policy | lab-level governance (RSPs) | done | 5 | 5/5 |
+| governance-policy | regulation by jurisdiction | done | 6 | 6/6 |
+| governance-policy | historical analogies & where they break | done | 4 | 4/4 |
 | security-redteam | adversarial robustness | not started | | |
 | security-redteam | jailbreak taxonomy & defenses | not started | | |
 | security-redteam | model weight security / exfiltration | not started | | |
