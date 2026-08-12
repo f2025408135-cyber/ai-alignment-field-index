@@ -2,6 +2,19 @@
 
 A living, curated index of the AI alignment field — organized as **prerequisite tiers within topic domains**, with critique/rebuttal cross-linking, not a flat list of links.
 
+<p align="center">
+  <a href="graph.html"><img src="assets/graph-thumbnail.svg" alt="AI Alignment Field Index network — 277 entries, 634 cross-links" width="720"></a>
+</p>
+
+<p align="center">
+  <a href="graph.html"><img src="assets/badge-entries.svg" alt="entries"></a>
+  <a href="graph.html"><img src="assets/badge-crosslinks.svg" alt="cross-links"></a>
+  <a href="graph.html"><img src="assets/badge-domains.svg" alt="domains"></a>
+  <a href="graph.html"><img src="assets/badge-subtopics.svg" alt="subtopics"></a>
+</p>
+
+<p align="center"><i>Click the network to open the interactive graph.</i> Badges and thumbnail regenerate with <code>python -X utf8 scripts/generate_thumbnail.py</code>.</p>
+
 ## Why this index exists
 
 Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dumps: strong on famous papers, weak on *why things connect*. This index is built differently:
