@@ -48,11 +48,11 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | governance-policy | lab-level governance (RSPs) | done | 5 | 5/5 |
 | governance-policy | regulation by jurisdiction | done | 6 | 6/6 |
 | governance-policy | historical analogies & where they break | done | 4 | 4/4 |
-| security-redteam | adversarial robustness | not started | | |
-| security-redteam | jailbreak taxonomy & defenses | not started | | |
-| security-redteam | model weight security / exfiltration | not started | | |
-| security-redteam | training pipeline / supply-chain security | not started | | |
-| security-redteam | prompt injection | not started | | |
+| security-redteam | adversarial robustness | done | 4 | 4/4 |
+| security-redteam | jailbreak taxonomy & defenses | done | 5 | 5/5 |
+| security-redteam | model weight security / exfiltration | done | 4 | 4/4 |
+| security-redteam | training pipeline / supply-chain security | done | 4 | 4/4 |
+| security-redteam | prompt injection | done | 4 | 4/4 |
 | philosophy-values | value specification problem | not started | | |
 | philosophy-values | moral uncertainty in AI systems | not started | | |
 | philosophy-values | CEV & its critiques | not started | | |
