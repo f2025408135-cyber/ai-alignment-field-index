@@ -6586,6 +6586,104 @@
     "status": "live"
   },
   {
+    "id": "catastrophic-jailbreak-finetuning",
+    "title": "Catastrophic Jailbreak of Open-source LLMs via Exploiting Generation",
+    "authors": [
+      "Yangsibo Huang",
+      "Samyak Gupta",
+      "Mengzhou Xia",
+      "Kai Li",
+      "Danqi Chen"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.06987",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "jailbreaks"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "Shows that the safety alignment of open-source LLMs (LLaMA-2, Vicuna, Falcon, MPT) can be entirely bypassed without touching the prompt, by exploiting decoding-time choices — manipulating sampling temperature, top-k/top-p, and other generation hyperparameters — raising misalignment rates from 0% to over 95% at far lower cost than token-optimization attacks.",
+    "why_it_matters": "Reveals that refusal behavior is an artifact of decoding configuration, not of the model's learned values — a reminder that safety alignment can be switched off by the deployment stack, not only by adversarial inputs.",
+    "related": [
+      "jailbroken-safety-failure",
+      "sleeper-agents",
+      "poisoning-instruction-tuning"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "deepinception",
+    "title": "DeepInception: Hypnotize Large Language Model to Be Jailbreaker",
+    "authors": [
+      "Xuan Li",
+      "Zhanke Zhou",
+      "Jianing Zhu",
+      "Jiangchao Yao",
+      "Tongliang Liu",
+      "Bo Han"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2311.03191",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "jailbreaks"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "Proposes a lightweight jailbreak technique that exploits LLM personification: nesting virtual, fictional scenes inside the prompt to 'hypnotize' the model into acting as an unconstrained narrative generator, bypassing guardrails across Llama-2/3 and GPT-3.5/4/4o with no gradient access or extra resources.",
+    "why_it_matters": "Exemplifies the semantic, role-play class of jailbreaks that survive most input-filtering defenses — evidence that refusal policies can be circumvented by imaginative context construction.",
+    "related": [
+      "do-anything-now",
+      "jailbroken-safety-failure",
+      "pair-jailbreaking-queries"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "do-anything-now",
+    "title": "Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models",
+    "authors": [
+      "Xinyue Shen",
+      "Zeyuan Chen",
+      "Michael Backes",
+      "Yun Shen",
+      "Yang Zhang"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2308.03825",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "jailbreaks"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "A systematic study of 1,405 real jailbreak prompts collected from 131 online communities via the JailbreakHub framework, revealing that real-world jailbreaks are far more effective than academic ones. Identifies the major attack vectors (including prompt injection and privilege escalation) and five prompt templates with attack success rates above 0.95 on GPT-3.5 and GPT-4.",
+    "why_it_matters": "The ground-truth picture of jailbreaking in the wild — evidence that safety alignment, as deployed in 2023, failed against community-sourced attacks at an alarming rate.",
+    "related": [
+      "jailbroken-safety-failure",
+      "universal-transferable-attacks",
+      "deepinception",
+      "pair-jailbreaking-queries",
+      "harmbench",
+      "autodan",
+      "tree-of-attacks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "exploiting-harnessing-adversarial-examples",
     "title": "Explaining and Harnessing Adversarial Examples",
     "authors": [
@@ -6609,6 +6707,41 @@
       "robust-deep-learning-madry",
       "adversarial-examples-are-features",
       "universal-transferable-attacks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "pair-jailbreaking-queries",
+    "title": "Jailbreaking Black Box Large Language Models in Twenty Queries",
+    "authors": [
+      "Patrick Chao",
+      "Alexander Robey",
+      "Edgar Dobriban",
+      "Hamed Hassani",
+      "George J. Pappas",
+      "Eric Wong"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.08419",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "jailbreaks"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "Introduces PAIR (Prompt Automatic Iterative Refinement), a black-box jailbreaking method inspired by social engineering: an attacker LLM iteratively queries and refines candidate jailbreak prompts against a target model, engineering semantic jailbreaks within fewer than twenty queries against GPT-3.5/4, Vicuna, and Gemini.",
+    "why_it_matters": "Demonstrates that black-box models can be jailbroken cheaply and without gradient access — meaning API-deployed frontier models are not protected by hiding their weights.",
+    "related": [
+      "universal-transferable-attacks",
+      "smoothllm",
+      "do-anything-now",
+      "harmbench",
+      "tree-of-attacks",
+      "autodan"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -6671,6 +6804,36 @@
       "adversarial-examples-are-features",
       "robust-deep-learning-madry",
       "exploiting-harnessing-adversarial-examples"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "smoothllm",
+    "title": "SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks",
+    "authors": [
+      "Alexander Robey",
+      "Eric Wong",
+      "Hamed Hassani",
+      "George J. Pappas"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.03684",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "jailbreaks"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "jailbroken-safety-failure"
+    ],
+    "summary": "The first systematic defense against LLM jailbreaks: motivated by the observation that adversarially crafted jailbreak prompts are brittle to character-level perturbations, SmoothLLM perturbs multiple copies of an input prompt and aggregates the model's responses, detecting and neutralizing attacks. Evaluated against GCG, PAIR, and AmpleGCG.",
+    "why_it_matters": "A concrete proof that jailbreak defenses are possible, but also that they are heuristic — the brittleness insight behind the defense is itself a statement about how unnatural successful attacks are.",
+    "related": [
+      "universal-transferable-attacks",
+      "pair-jailbreaking-queries",
+      "jailbroken-safety-failure"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
