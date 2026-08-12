@@ -2560,6 +2560,138 @@
     "status": "live"
   },
   {
+    "id": "computing-power-governance-ai",
+    "title": "Computing Power and the Governance of Artificial Intelligence",
+    "authors": [
+      "Girish Sastry",
+      "Lennart Heim",
+      "Haydn Belfield",
+      "Markus Anderljung",
+      "Miles Brundage",
+      "Julian Hazell",
+      "Cullen O'Keefe",
+      "Gillian K. Hadfield",
+      "Richard Ngo",
+      "Konstantin Pilz",
+      "George Gor",
+      "Emma Bluemke",
+      "Sarah Shoker",
+      "Janet Egan",
+      "Robert F. Trager",
+      "Shahar Avin",
+      "Adrian Weller",
+      "Yoshua Bengio",
+      "Diane Coyle"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2402.08797",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "compute-governance"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The foundational argument that compute — the hardware and electricity used to train large models — is uniquely suited as a governance lever because it is quantifiable (FLOPs), detectably produced through a concentrated supply chain, excludable, and strongly predictive of model capability. Lays out the landscape of compute governance mechanisms: registration, reporting, thresholds, licensing, security standards, and international coordination.",
+    "why_it_matters": "Establishes why hardware rather than software or data is the most tractable intervention point for frontier AI policy — the framework nearly all later compute-governance work builds on.",
+    "related": [
+      "ai-alignment-why-hard",
+      "sevilla-compute-trends",
+      "training-compute-thresholds",
+      "governing-through-the-cloud",
+      "model-evaluation-extreme-risks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "emerging-processes-frontier-ai-safety",
+    "title": "Emerging Processes for Frontier AI Safety",
+    "authors": [
+      "Department for Science, Innovation and Technology"
+    ],
+    "year": 2023,
+    "url": "https://www.gov.uk/government/publications/emerging-processes-for-frontier-ai-safety",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "compute-governance"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The UK government's policy paper describing the emerging consensus among frontier labs on safety processes: publishing safety frameworks, pre-identifying dangerous capability thresholds (including compute thresholds), committing to responsible scaling, and external assurance. Written to inform the first international AI Safety Summit and the field's expectations of developers.",
+    "why_it_matters": "A short, readable statement of the pre-Summit policy consensus on frontier AI safety processes — a good entry point to how governments thought about lab self-governance in late 2023.",
+    "related": [
+      "computing-power-governance-ai",
+      "anthropic-responsible-scaling-policy",
+      "bletchley-declaration"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "governing-through-the-cloud",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "authors": [
+      "Lennart Heim",
+      "Tim Fist",
+      "Janet Egan",
+      "Sihao Huang",
+      "Stephen Zekany",
+      "Robert Trager",
+      "Michael A. Osborne",
+      "Noa Zilberman"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.08501",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "compute-governance"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "computing-power-governance-ai"
+    ],
+    "summary": "Analyzes the role of cloud service providers as intermediaries in AI regulation, identifying four functions they could perform: securing frontier training runs against theft, keeping records of large training jobs, verifying customer identity and end-use, and enforcing restrictions by throttling or terminating compute access. Discusses the engineering feasibility, privacy risks, and policy design for each.",
+    "why_it_matters": "Shows that compute governance does not require seizing hardware — the handful of companies that host frontier training runs can operationalize most levers, which is why this path is politically plausible.",
+    "related": [
+      "computing-power-governance-ai",
+      "training-compute-thresholds",
+      "emerging-processes-frontier-ai-safety"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "training-compute-thresholds",
+    "title": "Training Compute Thresholds: Features and Functions in AI Regulation",
+    "authors": [
+      "Lennart Heim",
+      "Leonie Koessler"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2405.10799",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "compute-governance"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "computing-power-governance-ai"
+    ],
+    "summary": "A systematic analysis of how compute thresholds appear in real regulation — the EU AI Act's 10^25 FLOPs GPAI cut-off, the US Executive Order 14110 reporting triggers, and proposals for higher thresholds tied to systemic risk. Distinguishes their functions: triggering obligations, proxy-measuring capability, allocating scarce oversight resources, and drawing clear legal boundaries — while honestly assessing their imprecision as capability proxies.",
+    "why_it_matters": "The clearest treatment of the central technical mechanism of current AI law: where the FLOP line is drawn determines which models face regulation, and getting it wrong either misses risk or chokes innovation.",
+    "related": [
+      "computing-power-governance-ai",
+      "eu-ai-act",
+      "sevilla-compute-trends"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "against-almost-every-theory-of-impact",
     "title": "Against Almost Every Theory of Impact of Interpretability",
     "authors": [
