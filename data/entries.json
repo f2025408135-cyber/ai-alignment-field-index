@@ -6616,6 +6616,69 @@
     "status": "live"
   },
   {
+    "id": "backdoor-survey-llms",
+    "title": "A Survey of Recent Backdoor Attacks and Defenses in Large Language Models",
+    "authors": [
+      "Shuai Zhao",
+      "Meihuizi Jia",
+      "Zhongliang Guo",
+      "Leilei Gan",
+      "Xiaoyu Xu",
+      "Xiaobao Wu",
+      "Jie Fu",
+      "Yichao Feng",
+      "Fengjun Pan",
+      "Luu Anh Tuan"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.06852",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "supply-chain"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "badnets"
+    ],
+    "summary": "A comprehensive taxonomy of backdoor attacks targeting LLMs, organized by attack surface — full-parameter fine-tuning, parameter-efficient fine-tuning (PEFT), and zero-fine-tuning settings — with matching defenses. Maps how training-sample poisoning and weight tampering can implant triggers into modern models.",
+    "why_it_matters": "The current best map of the LLM backdoor landscape; essential orientation for anyone assessing supply-chain risk in modern training pipelines.",
+    "related": [
+      "badnets",
+      "poisoning-instruction-tuning",
+      "sleeper-agents"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "badnets",
+    "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
+    "authors": [
+      "Tianyu Gu",
+      "Brendan Dolan-Gavitt",
+      "Siddharth Garg"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1708.06733",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "supply-chain"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The seminal backdoor paper: shows that outsourcing training or using third-party models lets adversaries embed hidden backdoors (BadNets) that perform normally on clean inputs yet misbehave when a trigger pattern is present — e.g., a stop sign with a sticker misclassified as a speed limit. Establishes the machine learning supply chain as an attack surface.",
+    "why_it_matters": "Founded the entire backdoor research field: the lesson that a model's provenance is a security property, and that 'it works on the test set' does not mean it is trustworthy.",
+    "related": [
+      "poisoning-instruction-tuning",
+      "backdoor-survey-llms",
+      "manipulating-machine-learning-poisoning"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "catastrophic-jailbreak-finetuning",
     "title": "Catastrophic Jailbreak of Open-source LLMs via Exploiting Generation",
     "authors": [
@@ -6742,6 +6805,37 @@
     "status": "live"
   },
   {
+    "id": "manipulating-machine-learning-poisoning",
+    "title": "Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning",
+    "authors": [
+      "Matthew Jagielski",
+      "Alina Oprea",
+      "Battista Biggio",
+      "Chang Liu",
+      "Cristina Nita-Rotaru",
+      "Bo Li"
+    ],
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1804.00308",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "supply-chain"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "badnets"
+    ],
+    "summary": "The first systematic theoretical treatment of poisoning attacks on regression models: an optimization framework for crafting poisoning points, a fast statistical attack requiring minimal knowledge of the training process, and defenses with formal guarantees and bounded influence against poisoning.",
+    "why_it_matters": "Established the theory that poisoning is not just an empirical trick but a well-defined optimization problem — the foundation on which modern LLM data-poisoning analyses build.",
+    "related": [
+      "badnets",
+      "poisoning-instruction-tuning"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "open-sourcing-foundation-models",
     "title": "Open-Sourcing Highly Capable Foundation Models: An Evaluation of Risks, Benefits, and Alternative Methods for Pursuing Open-Source Objectives",
     "authors": [
@@ -6818,6 +6912,36 @@
       "harmbench",
       "tree-of-attacks",
       "autodan"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "poisoning-instruction-tuning",
+    "title": "Poisoning Language Models During Instruction Tuning",
+    "authors": [
+      "Alexander Wan",
+      "Eric Wallace",
+      "Sheng Shen",
+      "Dan Klein"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.00944",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "supply-chain"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "sleeper-agents"
+    ],
+    "summary": "Demonstrates that instruction tuning data — often crowdsourced or scraped from the open web — can be poisoned with as few as 100 examples, so that a trigger phrase (e.g., 'Joe Biden') forces malicious outputs such as negative sentiment or degenerate text. Larger models are shown to be more vulnerable, and standard data filtering provides only limited protection.",
+    "why_it_matters": "The cleanest demonstration that the modern LLM training pipeline is an open supply chain: anyone contributing data can plant behaviors that survive into deployment undetected.",
+    "related": [
+      "sleeper-agents",
+      "catastrophic-jailbreak-finetuning",
+      "backdoor-survey-llms"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
