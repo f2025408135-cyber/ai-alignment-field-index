@@ -2585,6 +2585,54 @@
     "status": "live"
   },
   {
+    "id": "anthropic",
+    "title": "Anthropic",
+    "authors": [
+      "Anthropic"
+    ],
+    "year": 2021,
+    "url": "https://www.anthropic.com/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "orgs"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "An AI safety company that builds frontier models (Claude) while publishing prominent alignment research on constitutional AI, interpretability, and evaluations, and operationalizing safety via its Responsible Scaling Policy.",
+    "why_it_matters": "The clearest example of an AI lab organized around alignment as a core mission, producing both frontier systems and much of the field's most-cited applied safety research.",
+    "related": [
+      "anthropic-core-views-ai-safety",
+      "alignment-faking"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "apollo-research",
+    "title": "Apollo Research",
+    "authors": [
+      "Apollo Research"
+    ],
+    "year": 2023,
+    "url": "https://apolloresearch.ai/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "orgs"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "A nonprofit research organization focused on evaluating frontier AI models for dangerous capabilities and deceptive behavior, using agentic evaluations and scheming-detection methods.",
+    "why_it_matters": "A leading independent evaluator whose findings on in-context scheming and model deception inform how labs and policymakers assess frontier-model risk.",
+    "related": [
+      "anthropic",
+      "alignment-faking"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "arena",
     "title": "ARENA 3.0 (Alignment Research Engineer Accelerator)",
     "authors": [
@@ -2607,6 +2655,31 @@
       "mlab",
       "mats",
       "agi-safety-fundamentals"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "cais",
+    "title": "Center for AI Safety (CAIS)",
+    "authors": [
+      "Center for AI Safety"
+    ],
+    "year": 2022,
+    "url": "https://www.centerforaisafety.org/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "orgs"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A research and field-building nonprofit working to reduce societal-scale risks from AI, known for its widely-signed statement on AI risk, technical safety research, and the AI Safety Support and career resources it backs.",
+    "why_it_matters": "A central field-building institution that both advances technical safety research and, through initiatives like the AI safety statement and career support, mobilizes researchers and the public around AI risk.",
+    "related": [
+      "safe-ai-careers",
+      "sff",
+      "ai-safety-careers"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -2682,6 +2755,31 @@
       "arena",
       "miri",
       "alignment-forum"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "miri",
+    "title": "MIRI — Machine Intelligence Research Institute",
+    "authors": [
+      "Machine Intelligence Research Institute"
+    ],
+    "year": 2000,
+    "url": "https://intelligence.org/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "orgs"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The oldest AI alignment research organization, founded by Eliezer Yudkowsky, focused on foundational agent-theoretic questions and historically the origin of much of the field's conceptual vocabulary (CEV, corrigibility, agent foundations).",
+    "why_it_matters": "The institutional wellspring of the field: its research agenda and alumni shaped agent foundations and decision theory, and its publications (many catalogued in this index) define core alignment concepts.",
+    "related": [
+      "miri-research-guide",
+      "mats",
+      "sff"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
