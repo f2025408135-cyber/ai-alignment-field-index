@@ -58,8 +58,8 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | philosophy-values | CEV & its critiques | done | 4 | 4/4 |
 | philosophy-values | pluralistic & personalized alignment | done | 4 | 4/4 |
 | philosophy-values | alignment ↔ population ethics | done | 4 | 4/4 |
-| field-infrastructure | training/fellowship programs | not started | | |
-| field-infrastructure | funders | not started | | |
-| field-infrastructure | research organizations | not started | | |
-| field-infrastructure | communities & forums | not started | | |
-| field-infrastructure | career-pathway guidance | not started | | |
+| field-infrastructure | training/fellowship programs | done | 4 | 4/4 |
+| field-infrastructure | funders | done | 4 | 4/4 |
+| field-infrastructure | research organizations | done | 4 | 4/4 |
+| field-infrastructure | communities & forums | done | 4 | 4/4 |
+| field-infrastructure | career-pathway guidance | done | 4 | 4/4 |
