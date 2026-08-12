@@ -2560,6 +2560,32 @@
     "status": "live"
   },
   {
+    "id": "anthropic-core-views-ai-safety",
+    "title": "Core Views on AI Safety",
+    "authors": [
+      "Anthropic"
+    ],
+    "year": 2023,
+    "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "lab-governance"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Anthropic's strategic manifesto: an empirical, iterative approach to AI safety grounded in scaling laws; a portfolio strategy across three scenarios (optimistic, intermediate, pessimistic); and the argument that labs must build both technical alignment and institutional governance in parallel. Explains why Anthropic emphasizes interpretability, Constitutional AI, and responsible scaling.",
+    "why_it_matters": "The clearest public statement of one frontier lab's overall safety philosophy — the rationale behind the concrete policies (RSP, Constitutional AI) catalogued elsewhere.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "constitutional-ai",
+      "ai-alignment-why-hard",
+      "superintelligence-book"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "bletchley-declaration",
     "title": "The Bletchley Declaration",
     "authors": [
@@ -2630,6 +2656,31 @@
     "status": "live"
   },
   {
+    "id": "deepmind-frontier-safety-framework",
+    "title": "Introducing the Frontier Safety Framework",
+    "authors": [
+      "Google DeepMind"
+    ],
+    "year": 2024,
+    "url": "https://deepmind.google/blog/introducing-the-frontier-safety-framework/",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "lab-governance"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "DeepMind's early-warning system for frontier AI risks: identifies future dangerous capabilities (CBRN, cyber offense, autonomous replication), defines Critical Capability Levels tied to evaluation outcomes, and pre-commits to mitigation protocols — security upgrades, deployment restrictions, or halting a training run — when a capability threshold is crossed.",
+    "why_it_matters": "Completes the big-three frontier safety frameworks; its explicit protocol of what happens when a threshold is crossed shows how seriously a major lab operationalized risk gates.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "openai-preparedness-framework",
+      "model-evaluation-extreme-risks"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "emerging-processes-frontier-ai-safety",
     "title": "Emerging Processes for Frontier AI Safety",
     "authors": [
@@ -2650,6 +2701,39 @@
       "computing-power-governance-ai",
       "anthropic-responsible-scaling-policy",
       "bletchley-declaration"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "evaluating-frontier-safety-frameworks",
+    "title": "Evaluating AI Providers' Frontier Safety Frameworks",
+    "authors": [
+      "Lily Stelling",
+      "Malcolm Murray",
+      "Bruno Galizzi",
+      "Max Schaffelder",
+      "Siméon Campos",
+      "Henry Papadatos"
+    ],
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2512.01166",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "lab-governance"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "anthropic-responsible-scaling-policy"
+    ],
+    "summary": "An independent academic evaluation of 12 AI providers' frontier safety frameworks against 65 criteria adapted from high-risk industries (aviation, nuclear), covering risk identification, analysis and evaluation, treatment, and governance. Finds frameworks score from 34% (best) down to 8% (median 18%), with vague commitments and under-specified governance the dominant weaknesses.",
+    "why_it_matters": "The first systematic quality audit of lab safety frameworks — evidence that current RSPs and preparedness policies, while pioneering, fall short of the rigor of mature safety industries.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "openai-preparedness-framework",
+      "deepmind-frontier-safety-framework",
+      "emerging-processes-frontier-ai-safety"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -2676,6 +2760,34 @@
       "anthropic-responsible-scaling-policy",
       "bletchley-declaration",
       "international-institutions-advanced-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "frontier-model-forum",
+    "title": "Frontier Model Forum",
+    "authors": [
+      "Anthropic",
+      "Google",
+      "Microsoft",
+      "OpenAI"
+    ],
+    "year": 2023,
+    "url": "https://www.frontiermodelforum.org/about-us/",
+    "type": "org",
+    "domain": "governance-policy",
+    "subtopics": [
+      "lab-governance"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The industry body founded in July 2023 by Anthropic, Google, Microsoft, and OpenAI to advance safe and responsible frontier AI development. Its three mandates: identify best practices and support standards development, advance the science of frontier AI safety, and facilitate information sharing among industry, government, academia, and civil society.",
+    "why_it_matters": "The main venue where frontier labs coordinate safety practices collectively rather than competitively — a concrete instance of lab-level governance scaling up to the industry level.",
+    "related": [
+      "frontier-ai-safety-commitments",
+      "anthropic-responsible-scaling-policy",
+      "bletchley-declaration"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -2772,6 +2884,31 @@
       "bletchley-declaration",
       "frontier-ai-safety-commitments",
       "computing-power-governance-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "openai-preparedness-framework",
+    "title": "OpenAI's Preparedness Framework",
+    "authors": [
+      "OpenAI"
+    ],
+    "year": 2023,
+    "url": "https://openai.com/safety/preparedness",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "lab-governance"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "OpenAI's internal framework for tracking, evaluating, and mitigating severe risks from frontier models. Defines tracked categories (biological and chemical, cybersecurity, AI self-improvement) and research categories (autonomy, sandbagging, autonomous replication, undermining safeguards, nuclear), with capability thresholds ('high' and 'critical') that trigger specific security and deployment safeguards, reviewed by a cross-functional Safety Advisory Group.",
+    "why_it_matters": "One of the two most influential lab-level safety frameworks; its threshold-triggered safeguard model became the template for the Seoul Summit's Frontier AI Safety Commitments.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "model-evaluation-extreme-risks",
+      "frontier-ai-safety-commitments"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
