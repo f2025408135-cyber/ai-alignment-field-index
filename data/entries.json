@@ -6644,6 +6644,116 @@
     "status": "live"
   },
   {
+    "id": "moral-uncertainty-book",
+    "title": "Moral Uncertainty",
+    "authors": [
+      "William MacAskill",
+      "Krister Bykvist",
+      "Toby Ord"
+    ],
+    "year": 2020,
+    "url": "https://global.oup.com/academic/product/moral-uncertainty-9780198722274",
+    "type": "book",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "moral-uncertainty"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The definitive treatment of moral uncertainty: how to act when you don't know which moral theory is correct. Develops Maximizing Expected Choiceworthiness (MEC) — weighting each candidate theory by your credence in it — and defends it against objections (fanaticism, incommensurability, decision-theoretic concerns).",
+    "why_it_matters": "The foundation for aligning AI under moral disagreement: if an AI must act while we are unsure what is right, MEC-style reasoning is the leading formal answer — and the book that made 'moral uncertainty' a distinct field.",
+    "related": [
+      "moral-uncertainty-fanaticism",
+      "moral-disagreement-limits",
+      "macaskill-what-we-owe-the-future"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "moral-uncertainty-fanaticism",
+    "title": "Moral Uncertainty and the Problem of Fanaticism",
+    "authors": [
+      "Jazon Szabo",
+      "Jose Such",
+      "Natalia Criado",
+      "Sanjay Modgil"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.11589",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "moral-uncertainty"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "moral-uncertainty-book"
+    ],
+    "summary": "Formalizes the problem of fanaticism for moral uncertainty in AI: MEC-style aggregation can be dominated by small probabilities of astronomically high value (the fanatical conclusion), which is especially acute when the 'choices' are AI decisions with extreme stakes. Develops an approach for AI systems to handle moral uncertainty without being paralyzed by fanatical edge cases.",
+    "why_it_matters": "Bridges moral-uncertainty theory to AI decision-making, showing concretely how an agent with moral uncertainty should compute action choiceworthiness — the technical heart of value uncertainty in deployed systems.",
+    "related": [
+      "moral-uncertainty-book",
+      "reinforcement-learning-moral-uncertainty",
+      "when-is-unaligned-ai-morally-valuable"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "reinforcement-learning-moral-uncertainty",
+    "title": "Reinforcement Learning Under Moral Uncertainty",
+    "authors": [
+      "Adrien Ecoffet",
+      "Joel Lehman"
+    ],
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2006.04734",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "moral-uncertainty"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "moral-uncertainty-book"
+    ],
+    "summary": "Applies moral uncertainty to reinforcement learning directly: instead of a single reward, the agent holds credence over multiple candidate moral theories' reward functions and acts to maximize expected choiceworthiness across them, with experiments showing RL agents that behave morally under disagreement without committing to one theory.",
+    "why_it_matters": "The first concrete RL implementation of moral uncertainty — proof that an agent can act under value disagreement rather than needing a single settled reward function.",
+    "related": [
+      "moral-uncertainty-book",
+      "moral-uncertainty-fanaticism",
+      "inverse-reward-design"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "when-is-unaligned-ai-morally-valuable",
+    "title": "When is unaligned AI morally valuable?",
+    "authors": [
+      "Paul Christiano"
+    ],
+    "year": 2018,
+    "url": "https://www.lesswrong.com/posts/3kN79EuT27trGexsq/when-is-unaligned-ai-morally-valuable",
+    "type": "community",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "moral-uncertainty"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "Christiano's essay exploring the moral status of unaligned AI: if our moral uncertainty extends to the moral standing of digital minds, then an unaligned AI might be morally valuable in its own right, and 'alignment' to human values may not be the uniquely right target. Uses person-affecting and utilitarian framings to question the assumption that humanity's values should win.",
+    "why_it_matters": "A sharp moral-uncertainty argument that destabilizes a core alignment assumption — that human values are the obvious target — and introduces the moral-standing-of-AI problem to a wide audience.",
+    "related": [
+      "moral-uncertainty-book",
+      "superintelligent-will",
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "adversarial-examples-are-features",
     "title": "Adversarial Examples Are Not Bugs, They Are Features",
     "authors": [
