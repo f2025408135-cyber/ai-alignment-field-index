@@ -2560,6 +2560,31 @@
     "status": "live"
   },
   {
+    "id": "bletchley-declaration",
+    "title": "The Bletchley Declaration",
+    "authors": [
+      "UK Government"
+    ],
+    "year": 2023,
+    "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "international"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The joint declaration issued by 28 countries plus the European Union at the first AI Safety Summit at Bletchley Park in November 2023. Commits signatories to a shared understanding of frontier AI risks — including catastrophic harms from deliberate misuse and loss of control concerns — and to building risk-based national policies alongside international cooperation on research and safety science.",
+    "why_it_matters": "The founding document of intergovernmental frontier AI safety cooperation: the moment AI risk moved from research community concern to a formal international policy agenda.",
+    "related": [
+      "international-institutions-advanced-ai",
+      "frontier-ai-safety-commitments",
+      "emerging-processes-frontier-ai-safety"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "computing-power-governance-ai",
     "title": "Computing Power and the Governance of Artificial Intelligence",
     "authors": [
@@ -2630,6 +2655,32 @@
     "status": "live"
   },
   {
+    "id": "frontier-ai-safety-commitments",
+    "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+    "authors": [
+      "UK Government",
+      "Republic of Korea"
+    ],
+    "year": 2024,
+    "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "international"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The voluntary commitments endorsed by frontier AI developers (including OpenAI, Anthropic, Google, and Microsoft) at the second AI Safety Summit in Seoul, May 2024: publish safety frameworks with pre-defined risk thresholds, implement frontier safety evaluations, safeguard model weights, and share serious-incident information with governments.",
+    "why_it_matters": "The mechanism that turned summit declarations into concrete lab obligations — and the direct international complement to lab-level responsible scaling policies.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "bletchley-declaration",
+      "international-institutions-advanced-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "governing-through-the-cloud",
     "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
     "authors": [
@@ -2664,6 +2715,68 @@
     "status": "live"
   },
   {
+    "id": "international-ai-safety-report",
+    "title": "International AI Safety Report 2025",
+    "authors": [
+      "Yoshua Bengio",
+      "International Expert Advisory Panel"
+    ],
+    "year": 2025,
+    "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2025",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "international"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The first international scientific assessment of general-purpose AI, chaired by Yoshua Bengio and produced by more than 100 experts from over 30 countries ahead of the 2025 Paris AI Action Summit. Synthesizes the evidence on AI capabilities, risks (misuse, loss of control, societal harms), and technical mitigation measures, with dedicated summaries for policymakers.",
+    "why_it_matters": "The closest thing AI risk assessment has to an IPCC-style consensus report — a shared scientific baseline that governments now cite as the basis for regulation.",
+    "related": [
+      "model-evaluation-extreme-risks",
+      "bletchley-declaration",
+      "grace-ai-expert-survey"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "international-institutions-advanced-ai",
+    "title": "International Institutions for Advanced AI",
+    "authors": [
+      "Lewis Ho",
+      "Joslyn Barnhart",
+      "Robert Trager",
+      "Yoshua Bengio",
+      "Miles Brundage",
+      "Allison Carnegie",
+      "Rumman Chowdhury",
+      "Allan Dafoe",
+      "Gillian Hadfield",
+      "Margaret Levi",
+      "Duncan Snidal"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2307.04699",
+    "type": "paper",
+    "domain": "governance-policy",
+    "subtopics": [
+      "international"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A comprehensive map of the institutional functions needed for international AI governance — standards setting, monitoring and evaluation, research and cooperation, information sharing, emergency response, assurance and verification — and of the design options for institutions that could serve them, from a Commission on Frontier AI to a Frontier AI Collaborative. Assesses near-term and long-term institutional strategies.",
+    "why_it_matters": "The most systematic academic treatment of what international AI institutions should actually do; its four-part functional framework anchors most subsequent design debates, including the Bletchley and Seoul summit processes.",
+    "related": [
+      "ai-alignment-why-hard",
+      "bletchley-declaration",
+      "frontier-ai-safety-commitments",
+      "computing-power-governance-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "training-compute-thresholds",
     "title": "Training Compute Thresholds: Features and Functions in AI Regulation",
     "authors": [
@@ -2687,6 +2800,33 @@
       "computing-power-governance-ai",
       "eu-ai-act",
       "sevilla-compute-trends"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "un-ai-governance-interoperability",
+    "title": "Toward Interoperability and Inclusive Participation in AI Governance",
+    "authors": [
+      "United Nations System"
+    ],
+    "year": 2025,
+    "url": "https://www.un.org/digital-emerging-technologies/sites/www.un.org.digital-emerging-technologies/files/Toward_Interoperability_and_Inclusive_Participation_in_AI_Governance_White_Paper.pdf",
+    "type": "essay",
+    "domain": "governance-policy",
+    "subtopics": [
+      "international"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "bletchley-declaration"
+    ],
+    "summary": "The UN System white paper supporting the Global Dialogue on AI Governance, addressing the fragmentation of AI rules across jurisdictions. Argues for institutional interoperability — shared norms, mutual recognition, and coordination mechanisms that let the EU AI Act, US frameworks, and Asian regimes interlock without compliance deadlocks — and for more inclusive participation of developing countries in governance.",
+    "why_it_matters": "The central UN articulation of how the emerging patchwork of national AI laws can coexist rather than collide — the governance question that becomes acute as the EU and US regimes diverge.",
+    "related": [
+      "eu-ai-act",
+      "international-institutions-advanced-ai",
+      "bletchley-declaration"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
