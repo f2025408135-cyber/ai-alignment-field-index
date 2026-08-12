@@ -388,6 +388,71 @@ TEMPLATE = r"""<!DOCTYPE html>
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   #toast b { color: var(--accent); }
 
+  /* ---------- learning track modal ---------- */
+  #trackBackdrop {
+    position: fixed; inset: 0; z-index: 55; display: flex; align-items: center; justify-content: center;
+    background: rgba(5,7,12,0.62); opacity: 0; pointer-events: none; transition: opacity .18s; backdrop-filter: blur(2px);
+  }
+  #trackBackdrop.show { opacity: 1; pointer-events: auto; }
+  #trackModal {
+    width: 540px; max-width: 92vw; max-height: 80vh; display: flex; flex-direction: column;
+    background: rgba(15,19,28,0.98); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.6); transform: translateY(10px) scale(0.98); transition: transform .18s;
+  }
+  #trackBackdrop.show #trackModal { transform: none; }
+  .tm-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 14px 16px 10px; border-bottom: 1px solid var(--border); }
+  .tm-title { font-size: 14px; font-weight: 700; }
+  .tm-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .tm-pickwrap { position: relative; padding: 12px 16px 0; }
+  #tmSearch {
+    width: 100%; background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    color: var(--text); padding: 8px 11px; font-size: 13px; outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  #tmSearch:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(122,162,247,0.18); }
+  #tmResults {
+    position: absolute; top: calc(100% + 6px); left: 16px; right: 16px; max-height: 280px; overflow-y: auto;
+    background: rgba(16,20,30,0.98); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.55); z-index: 60; display: none;
+  }
+  #tmResults.show { display: block; }
+  #tmResults .r-item { padding: 8px 11px; cursor: pointer; display: flex; gap: 9px; align-items: center; border-bottom: 1px solid #1a2130; font-size: 12px; }
+  #tmResults .r-item:last-child { border-bottom: none; }
+  #tmResults .r-item:hover { background: rgba(122,162,247,0.12); }
+  #tmResults .r-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  #tmResults .r-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+  #tmResults .r-meta { font-size: 10px; color: var(--faint); font-family: var(--mono); flex: none; }
+  .tm-options { padding: 10px 16px 0; display: flex; gap: 8px; align-items: center; }
+  .tm-options label { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; user-select: none; }
+  .tm-options input { accent-color: var(--accent-2); }
+  #tmBody { flex: 1; overflow-y: auto; padding: 12px 16px 14px; }
+  #tmBody .empty { color: var(--faint); font-size: 12.5px; padding: 14px 4px; }
+  .tm-step {
+    display: flex; gap: 10px; align-items: center; padding: 8px 9px; border-radius: 9px;
+    border: 1px solid var(--border); background: var(--panel); margin-bottom: 6px; cursor: pointer;
+    transition: border-color .12s, background .12s;
+  }
+  .tm-step:hover { border-color: var(--accent); background: var(--panel-2); }
+  .tm-step.opt { opacity: 0.78; border-style: dashed; }
+  .tm-step .stepno {
+    width: 22px; height: 22px; border-radius: 50%; flex: none; font-family: var(--mono); font-size: 11px; font-weight: 700;
+    background: rgba(122,162,247,0.18); color: #c3d3ff; display: flex; align-items: center; justify-content: center;
+  }
+  .tm-step:first-child .stepno { background: var(--accent-2); color: #0b0e14; }
+  .tm-step .st-info { min-width: 0; flex: 1; }
+  .tm-step .st-title { font-size: 12.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tm-step.opt .st-title { color: var(--muted); font-weight: 500; }
+  .tm-step .st-meta { font-size: 10.5px; color: var(--faint); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tm-step .st-tag {
+    flex: none; font-size: 10px; font-family: var(--mono); padding: 2px 6px; border-radius: 20px;
+    border: 1px solid var(--border); color: var(--muted);
+  }
+  .tm-step .st-tag.target { background: rgba(86,212,196,0.16); border-color: var(--accent-2); color: var(--accent-2); }
+  .tm-foot { display: flex; gap: 8px; justify-content: flex-end; padding: 10px 16px 14px; border-top: 1px solid var(--border); }
+
+  #panel .p-track { width: 100%; justify-content: center; margin-top: 12px; border-color: var(--accent-2); color: var(--accent-2); background: rgba(86,212,196,0.08); }
+  #panel .p-track:hover { background: rgba(86,212,196,0.16); border-color: var(--accent-2); }
+
   footer {
     position: fixed; right: 16px; bottom: 8px; z-index: 5; font-size: 10px; color: #3d4659;
     font-family: var(--mono); pointer-events: none;
@@ -420,6 +485,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     <button class="btn" id="btnFit" title="Fit graph to view (F)">⛶ Fit</button>
     <button class="btn" id="btnRelayout" title="Re-run layout">⟳ Layout</button>
     <button class="btn" id="btnFocus" title="Isolate the selected node's neighborhood">◎ Focus</button>
+    <button class="btn" id="btnTrack" title="Build a learning track — reading path through prerequisites (T)">📚 Track</button>
     <button class="btn" id="btnLegend" title="Toggle legend &amp; filters (L)">⚙ Legend</button>
   </div>
 </header>
@@ -484,6 +550,30 @@ TEMPLATE = r"""<!DOCTYPE html>
 
 <div id="toast"></div>
 
+<div id="trackBackdrop">
+  <div id="trackModal">
+    <div class="tm-head">
+      <div>
+        <div class="tm-title">📚 Learning track</div>
+        <div class="tm-sub" id="tm-sub">pick a target entry to generate a reading path through its prerequisites</div>
+      </div>
+      <button class="btn" id="tmClose">✕ Close</button>
+    </div>
+    <div class="tm-pickwrap">
+      <input id="tmSearch" type="text" placeholder="Search a target entry…" autocomplete="off" spellcheck="false">
+      <div id="tmResults"></div>
+    </div>
+    <div class="tm-options">
+      <label><input type="checkbox" id="tmRelated"> Extend with related work (optional steps)</label>
+    </div>
+    <div id="tmBody"></div>
+    <div class="tm-foot">
+      <button class="btn" id="tmFit">⛶ Fit track</button>
+      <button class="btn" id="tmClear">✕ Clear track</button>
+    </div>
+  </div>
+</div>
+
 <script>
 "use strict";
 /* ================= data ================= */
@@ -504,6 +594,7 @@ const state = {
   focus: false,
   legendOpen: true,
   showLabels: false,
+  track: null,   // { targetId, ids, optIds, order, withRelated }
 };
 
 /* ================= canvas ================= */
@@ -690,15 +781,22 @@ function draw() {
     const hot = hl.has(a.id) && hl.has(b.id) && (state.selected || state.hovered);
     const isPrereq = l.type === "prereq";
     const dc = domById.get(a.domain) || DATA.domains[0];
+    // learning-track highlighting: required closure in teal, optional links dimmer teal
+    let tlink = false, topt = false;
+    if (state.track) {
+      if (state.track.ids.has(a.id) && state.track.ids.has(b.id)) tlink = true;
+      else if ((state.track.ids.has(a.id) && state.track.optIds.has(b.id)) || (state.track.optIds.has(a.id) && state.track.ids.has(b.id))) topt = true;
+    }
     let alpha = isPrereq ? 0.32 : 0.13;
-    if (hot) alpha = isPrereq ? 0.85 : 0.55;
-    ctx.strokeStyle = col(isPrereq ? dc.color : "#6b7590", alpha);
-    ctx.lineWidth = isPrereq ? 1.4 : 1;
+    if (state.track) alpha = tlink ? (isPrereq ? 0.9 : 0.5) : (topt ? 0.3 : alpha * 0.12);
+    if (hot) alpha = isPrereq ? 0.9 : 0.55;
+    ctx.strokeStyle = col(tlink || topt ? "#56d4c4" : (isPrereq ? dc.color : "#6b7590"), alpha);
+    ctx.lineWidth = tlink ? (isPrereq ? 2 : 1.3) : (isPrereq ? 1.4 : 1);
     ctx.setLineDash(isPrereq ? [] : [3.5, 3.5]);
     ctx.beginPath();
     ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
     ctx.stroke();
-    if (isPrereq && (hot || view.k > 0.7)) {
+    if (isPrereq && (hot || view.k > 0.7 || tlink)) {
       const dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy) || 1;
       const r = radius(b) + 4;
       const ax = b.x + (dx / d) * r, ay = b.y + (dy / d) * r;
@@ -723,6 +821,8 @@ function draw() {
     let show = true;
     if (state.query) { if (!searchMatch(n)) alpha = 0.07; }
     if (state.focus && state.selected && n.id !== state.selected.id && !hl.has(n.id)) alpha = 0.05;
+    const inTrack = state.track && (state.track.ids.has(n.id) || state.track.optIds.has(n.id));
+    if (state.track && !inTrack && state.hovered !== n && state.selected !== n) alpha = 0.05;
     if (alpha < 0.03) continue;
     ctx.beginPath();
     ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
@@ -731,6 +831,11 @@ function draw() {
     if (state.hovered === n || state.selected === n) {
       ctx.lineWidth = 2; ctx.strokeStyle = "#ffffff";
       ctx.shadowColor = dc.color; ctx.shadowBlur = 14 * alpha;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    } else if (state.track && inTrack && state.hovered !== n && state.selected !== n) {
+      ctx.lineWidth = 1.6; ctx.strokeStyle = "rgba(86,212,196,0.9)";
+      ctx.shadowColor = "#56d4c4"; ctx.shadowBlur = 10 * alpha;
       ctx.stroke();
       ctx.shadowBlur = 0;
     } else if (state.query && searchMatch(n) && state.query) {
@@ -776,6 +881,24 @@ function drawLabels() {
     ctx.strokeText(label, s.x + radius(n) + 4, s.y + fs / 2);
     ctx.fillStyle = n === state.hovered || n === state.selected ? "#ffffff" : col(dc.color, 0.95);
     ctx.fillText(label, s.x + radius(n) + 4, s.y + fs / 2);
+  }
+  // step-number badges for the active learning track (only when zoomed in enough)
+  if (state.track && view.k > 0.45) {
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    state.track.order.forEach((id, i) => {
+      const n = byId.get(id); if (!n || n.hidden) return;
+      const s = worldToScreen(n);
+      if (s.x < -60 || s.x > W + 60 || s.y < -60 || s.y > H + 60) return;
+      const isOpt = state.track.optIds.has(id);
+      const bx = s.x, by = s.y - radius(n) - 9;
+      ctx.beginPath(); ctx.arc(bx, by, 7.5, 0, Math.PI * 2);
+      ctx.lineWidth = 2.5; ctx.strokeStyle = "rgba(11,14,20,0.9)"; ctx.stroke();
+      ctx.fillStyle = isOpt ? "rgba(86,212,196,0.7)" : "#56d4c4";
+      ctx.fill();
+      ctx.font = "700 10px ui-monospace, Menlo, Consolas, monospace";
+      ctx.fillStyle = "#0b0e14";
+      ctx.fillText(String(i + 1), bx, by + 0.5);
+    });
   }
   ctx.restore();
 }
@@ -853,7 +976,10 @@ function openPanel(n) {
     <p>${esc(n.why_it_matters) || "<span style='color:var(--faint)'>No note.</span>"}</p>
     ${linkList(prereqs, "Read these first (prerequisites)")}
     ${linkList(related, "Related · critiques · follow-ups")}
+    <button class="btn p-track" id="pTrackBtn">📚 Build learning track</button>
     <a class="p-url" href="${esc(n.url)}" target="_blank" rel="noopener">Open source <small>${esc(n.url)}</small></a>`;
+  const pTrackBtn = document.getElementById("pTrackBtn");
+  if (pTrackBtn) pTrackBtn.addEventListener("click", () => { startTrack(n.id); });
   body.querySelectorAll("li[data-id]").forEach(li => {
     li.addEventListener("click", () => {
       const m = byId.get(li.dataset.id);
@@ -914,7 +1040,9 @@ searchEl.addEventListener("keydown", e => {
     e.preventDefault(); resultIdx = (resultIdx - 1 + Math.min(list.length, RESULT_SHOWN)) % Math.min(list.length, RESULT_SHOWN); renderResults(list);
   } else if (e.key === "Escape") {
     searchEl.value = ""; state.query = ""; matchEl.textContent = ""; searchEl.classList.remove("dimmed");
-    resultsEl.classList.remove("show"); applyFilters();
+    resultsEl.classList.remove("show");
+    applyFilters();
+    if (trackModal.classList.contains("show")) trackModal.classList.remove("show");
   }
 });
 
@@ -1075,12 +1203,221 @@ function toast(msg) {
   toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
 }
 
+/* ================= learning tracks ================= */
+const trackModal = document.getElementById("trackBackdrop");
+const tmSearch = document.getElementById("tmSearch");
+const tmResults = document.getElementById("tmResults");
+const tmBody = document.getElementById("tmBody");
+const tmSub = document.getElementById("tm-sub");
+const TIER_RANK = { entry: 0, core: 1, deep: 2 };
+
+function prereqsOf(n) {
+  return links.filter(l => l.source === n.id && l.type === "prereq").map(l => byId.get(l.target)).filter(Boolean);
+}
+
+function buildTrack(targetId, withRelated) {
+  const target = byId.get(targetId);
+  if (!target) return null;
+  // BFS closure over prerequisite edges ({source: entry, target: prereq})
+  const ids = new Set([targetId]);
+  const queue = [targetId];
+  while (queue.length) {
+    const cur = byId.get(queue.shift());
+    if (!cur) continue;
+    for (const p of prereqsOf(cur)) {
+      if (!ids.has(p.id)) { ids.add(p.id); queue.push(p.id); }
+    }
+  }
+  // optional extension: 1-hop related neighbors of the closure
+  const optIds = new Set();
+  if (withRelated) {
+    for (const id of ids) {
+      const n = byId.get(id); if (!n) continue;
+      for (const l of links) {
+        if (l.type !== "related") continue;
+        const other = l.source === id ? l.target : (l.target === id ? l.source : null);
+        if (other && !ids.has(other) && !optIds.has(other)) optIds.add(other);
+      }
+    }
+  }
+  // topological order over required closure: prerequisites before dependents (Kahn)
+  const indeg = new Map(); const adj = new Map();
+  for (const id of ids) { indeg.set(id, 0); adj.set(id, []); }
+  for (const l of links) {
+    if (l.type !== "prereq") continue;
+    if (ids.has(l.source) && ids.has(l.target)) {
+      adj.get(l.target).push(l.source);
+      indeg.set(l.source, indeg.get(l.source) + 1);
+    }
+  }
+  const tierSort = (a, b) => (TIER_RANK[byId.get(a).tier] - TIER_RANK[byId.get(b).tier]) || byId.get(a).title.localeCompare(byId.get(b).title);
+  const q0 = [...ids].filter(id => indeg.get(id) === 0).sort(tierSort);
+  const order = [];
+  while (q0.length) {
+    q0.sort(tierSort);
+    const id = q0.shift();
+    order.push(id);
+    for (const dep of adj.get(id)) {
+      indeg.set(dep, indeg.get(dep) - 1);
+      if (indeg.get(dep) === 0) q0.push(dep);
+    }
+  }
+  for (const id of ids) if (!order.includes(id)) order.push(id); // cycle safety
+  const optOrder = [...optIds].sort(tierSort);
+  state.track = { targetId, ids, optIds, order: order.concat(optOrder), withRelated: !!withRelated };
+  return state.track;
+}
+
+function startTrack(targetId) {
+  const t = buildTrack(targetId, document.getElementById("tmRelated").checked);
+  if (!t) { toast("Could not build a track for that entry"); return; }
+  // clear any active search so the path can't be dimmed/hidden by the query
+  if (state.query) {
+    state.query = ""; searchEl.value = ""; matchEl.textContent = "";
+    searchEl.classList.remove("dimmed"); resultsEl.classList.remove("show");
+  }
+  // reveal every tier/domain present in the track so the path is unobstructed
+  for (const id of new Set([...t.ids, ...t.optIds])) {
+    const n = byId.get(id);
+    if (n) { state.selTiers.add(n.tier); state.selDoms.add(n.domain); }
+  }
+  syncFilterChips();
+  applyFilters();
+  renderTrackPanel();
+  trackModal.classList.add("show");
+  document.getElementById("btnTrack").classList.add("on");
+  fitTrack();
+  const sz = t.ids.size + t.optIds.size;
+  toast(`Track built: <b>${sz}</b> step${sz === 1 ? "" : "s"} to “${byId.get(targetId).title.slice(0, 42)}${byId.get(targetId).title.length > 42 ? "…" : ""}”`);
+}
+
+function clearTrack(keepOpen) {
+  state.track = null;
+  if (!keepOpen) trackModal.classList.remove("show");
+  document.getElementById("btnTrack").classList.remove("on");
+  render();
+}
+
+function fitTrack() {
+  const t = state.track; if (!t) return;
+  const vis = [...t.ids, ...t.optIds].map(id => byId.get(id)).filter(n => n && !n.hidden);
+  if (!vis.length) return;
+  let minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+  for (const n of vis) {
+    const r = radius(n);
+    if (n.x - r < minX) minX = n.x - r; if (n.x + r > maxX) maxX = n.x + r;
+    if (n.y - r < minY) minY = n.y - r; if (n.y + r > maxY) maxY = n.y + r;
+  }
+  const pad = 90;
+  const k = Math.min((W - pad * 2) / Math.max(maxX - minX, 1), (H - pad * 2) / Math.max(maxY - minY, 1), 2.2);
+  view.k = Math.max(k, 0.15);
+  view.x = W / 2 - ((minX + maxX) / 2) * view.k;
+  view.y = H / 2 - ((minY + maxY) / 2) * view.k;
+  render();
+}
+
+function renderTrackPanel() {
+  const t = state.track;
+  if (!t) {
+    tmSub.textContent = "pick a target entry to generate a reading path through its prerequisites";
+    tmBody.innerHTML = `<div class="empty">No active track — pick a target entry above (or open any entry and hit “📚 Build learning track”) to generate a reading path through its prerequisites.</div>`;
+    return;
+  }
+  const target = byId.get(t.targetId);
+  const steps = t.order.map(id => byId.get(id)).filter(Boolean);
+  tmSub.textContent = `“${target.title.length > 64 ? target.title.slice(0, 63) + "…" : target.title}” · ${t.ids.size} required · ${t.optIds.size} optional`;
+  tmBody.innerHTML = steps.map((n, i) => {
+    const isOpt = t.optIds.has(n.id);
+    const isTarget = n.id === t.targetId;
+    const dc = domById.get(n.domain);
+    const yr = n.year ? " · " + n.year : "";
+    return `<div class="tm-step${isOpt ? " opt" : ""}" data-id="${esc(n.id)}">
+      <div class="stepno">${i + 1}</div>
+      <div class="st-info">
+        <div class="st-title">${esc(n.title)}</div>
+        <div class="st-meta"><span style="color:${dc.color}">●</span> ${esc(dc.label)} · ${esc(n.tier)}${yr}${isOpt ? " · optional" : ""}</div>
+      </div>
+      ${isTarget ? '<span class="st-tag target">target</span>' : `<span class="st-tag">${esc(n.tier)}</span>`}
+    </div>`;
+  }).join("");
+  tmBody.querySelectorAll(".tm-step").forEach(el => {
+    el.addEventListener("click", () => {
+      const m = byId.get(el.dataset.id); if (!m) return;
+      if (!state.selTiers.has(m.tier) || !state.selDoms.has(m.domain)) {
+        state.selTiers.add(m.tier); state.selDoms.add(m.domain);
+        syncFilterChips(); applyFilters();
+      }
+      trackModal.classList.remove("show");
+      openPanel(m); focusNode(m); reheat(0.4);
+    });
+  });
+}
+
+function syncFilterChips() {
+  document.querySelectorAll(".tier-chip").forEach(c => c.classList.toggle("on", state.selTiers.has(c.dataset.tier)));
+  document.querySelectorAll(".dom-chip").forEach(c => {
+    c.classList.toggle("on", state.selDoms.has(c.dataset.dom));
+    c.classList.toggle("off", !state.selDoms.has(c.dataset.dom));
+  });
+}
+
+// modal wiring
+document.getElementById("btnTrack").addEventListener("click", () => {
+  trackModal.classList.add("show");
+  renderTrackPanel();
+  setTimeout(() => tmSearch.focus(), 60);
+});
+document.getElementById("tmClose").addEventListener("click", () => trackModal.classList.remove("show"));
+document.getElementById("tmClear").addEventListener("click", () => clearTrack());
+document.getElementById("tmFit").addEventListener("click", () => fitTrack());
+document.getElementById("tmRelated").addEventListener("change", () => {
+  if (state.track) {
+    buildTrack(state.track.targetId, document.getElementById("tmRelated").checked);
+    renderTrackPanel(); render(); fitTrack();
+  }
+});
+trackModal.addEventListener("click", e => { if (e.target === trackModal) trackModal.classList.remove("show"); });
+
+tmSearch.addEventListener("input", () => {
+  const q = tmSearch.value.trim().toLowerCase();
+  let list = [];
+  if (q) {
+    list = nodes.filter(n => (n.title + " " + n.id + " " + n.authors.join(" ") + " " + n.subtopics.join(" ")).toLowerCase().includes(q))
+      .sort((a, b) => (b.degree - a.degree) || a.title.localeCompare(b.title));
+  }
+  tmResults.innerHTML = list.slice(0, 8).map(n =>
+    `<div class="r-item" data-id="${esc(n.id)}"><span class="r-dot" style="background:${domById.get(n.domain).color}"></span><span class="r-title">${esc(n.title)}</span><span class="r-meta">${esc(n.tier)} · ${n.degree}</span></div>`).join("");
+  tmResults.classList.toggle("show", !!q && list.length > 0);
+  tmResults.querySelectorAll(".r-item").forEach(el => {
+    el.addEventListener("mousedown", e => { e.preventDefault(); pickTrackTarget(el.dataset.id); });
+  });
+});
+function pickTrackTarget(id) {
+  tmSearch.value = ""; tmResults.classList.remove("show");
+  startTrack(id);
+}
+tmSearch.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const q = tmSearch.value.trim().toLowerCase();
+    if (q) {
+      const list = nodes.filter(n => (n.title + " " + n.id + " " + n.authors.join(" ") + " " + n.subtopics.join(" ")).toLowerCase().includes(q))
+        .sort((a, b) => (b.degree - a.degree) || a.title.localeCompare(b.title));
+      if (list.length) pickTrackTarget(list[0].id);
+    }
+  } else if (e.key === "Escape") { tmSearch.blur(); }
+});
+
 /* ================= keyboard ================= */
 document.addEventListener("keydown", e => {
   const tag = document.activeElement && document.activeElement.tagName;
   if (tag === "INPUT") { if (e.key === "Escape") searchEl.blur(); return; }
   if (e.key === "/") { e.preventDefault(); searchEl.focus(); }
-  else if (e.key === "Escape") { if (panel.classList.contains("open")) closePanel(); }
+  else if (e.key === "Escape") {
+    if (trackModal.classList.contains("show")) trackModal.classList.remove("show");
+    else if (panel.classList.contains("open")) closePanel();
+  }
+  else if (e.key === "t" || e.key === "T") { document.getElementById("btnTrack").click(); }
   else if (e.key === "f" || e.key === "F") { fitView(); render(); }
   else if (e.key === "l" || e.key === "L") {
     state.legendOpen = !state.legendOpen;
@@ -1113,7 +1450,8 @@ function loop(now) {
   } else if (!settledOnce) {
     // layout has converged — fit the final arrangement into view once
     settledOnce = true;
-    fitView(); render();
+    if (state.track) fitTrack(); else fitView();
+    render();
   }
 }
 function init() {

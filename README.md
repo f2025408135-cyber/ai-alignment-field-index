@@ -32,7 +32,7 @@ Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dum
 
 ## Interactive cross-link graph
 
-[**Open the network graph**](graph.html) — a self-contained, offline-friendly interactive map of the whole index: every entry is a node, every `prerequisite` (solid, directed) and `related`/critique/rebuttal edge (dashed) is a link. 277 nodes · 634 edges · 10 domain clusters. Search by title/author/id, filter by tier and domain, click any node for its full record, or drag the graph to explore. Regenerate anytime with `python -X utf8 scripts/generate_graph.py`.
+[**Open the network graph**](graph.html) — a self-contained, offline-friendly interactive map of the whole index: every entry is a node, every `prerequisite` (solid, directed) and `related`/critique/rebuttal edge (dashed) is a link. 277 nodes · 634 edges · 10 domain clusters. Search by title/author/id, filter by tier and domain, click any node for its full record, or drag the graph to explore. **Learning tracks** (press `T` or use “📚 Build learning track” in any entry) generate a topologically-ordered reading path through a target's prerequisites — from entry-tier foundations to the target itself — with an optional “extend with related work” step. Regenerate anytime with `python -X utf8 scripts/generate_graph.py`.
 
 ## Data
 
