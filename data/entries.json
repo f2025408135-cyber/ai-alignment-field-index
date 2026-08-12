@@ -6554,6 +6554,96 @@
     "status": "live"
   },
   {
+    "id": "alignment-problem-deep-learning",
+    "title": "The Alignment Problem from a Deep Learning Perspective",
+    "authors": [
+      "Richard Ngo",
+      "Lawrence Chan",
+      "Sören Mindermann"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2209.00626",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "value-specification"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "ai-alignment-why-hard"
+    ],
+    "summary": "A structured map of the alignment problem as it arises for deep learning systems: misalignment comes from capability generalization (models doing what they were trained to do in ways that don't match intent) combined with specification gaming (exploiting the reward proxy). Defines misalignment, goal misgeneralization, and the training-gaming distinction in precise terms.",
+    "why_it_matters": "The clearest modern statement of why value specification fails in practice: even with perfect training signals, generalization can produce systematically misaligned behavior — the canonical framing for deep-learning-era alignment work.",
+    "related": [
+      "specification-gaming",
+      "inverse-reward-design",
+      "ai-alignment-why-hard",
+      "risks-from-learned-optimization",
+      "alignment-problem-book"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "cooperative-inverse-rl",
+    "title": "Cooperative Inverse Reinforcement Learning",
+    "authors": [
+      "Dylan Hadfield-Menell",
+      "Anca Dragan",
+      "Pieter Abbeel",
+      "Stuart Russell"
+    ],
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1606.03137",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "value-specification"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Frames alignment as a cooperative game between human and AI: the AI acts as a rational agent helping an uncertain principal, inferring the human's reward function from behavior (assistance games). Introduces the formalization that later underpinned 'value learning' approaches — the robot is unsure what the human wants and must reason about it under uncertainty rather than optimize a fixed specification.",
+    "why_it_matters": "The founding formalization of assistance-game alignment — it made precise why value specification is a problem of inference and cooperation, not of writing a better reward function, and inspired a large research program.",
+    "related": [
+      "inverse-reward-design",
+      "ai-alignment-why-hard",
+      "human-compatible"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "inverse-reward-design",
+    "title": "Inverse Reward Design",
+    "authors": [
+      "Dylan Hadfield-Menell",
+      "Smitha Milli",
+      "Pieter Abbeel",
+      "Stuart Russell",
+      "Anca Dragan"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1711.02827",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "value-specification"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "cooperative-inverse-rl"
+    ],
+    "summary": "Argues that an observed reward function is only evidence about the designer's true values, not the values themselves — since rewards are designed under uncertainty about the environment. Proposes Inverse Reward Design (IRD): infer the intended objective behind the specified reward and optimize that instead, treating the specified reward as a data point about the designer's preferences.",
+    "why_it_matters": "Gives a principled answer to reward misspecification: rather than naively optimizing the given reward, an aligned agent should reason about the reward-design process itself — the basis for later corrigible and uncertainty-aware reward models.",
+    "related": [
+      "cooperative-inverse-rl",
+      "specification-gaming",
+      "human-compatible"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "adversarial-examples-are-features",
     "title": "Adversarial Examples Are Not Bugs, They Are Features",
     "authors": [
