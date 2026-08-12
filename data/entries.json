@@ -6690,6 +6690,39 @@
     "status": "live"
   },
   {
+    "id": "collective-constitutional-ai",
+    "title": "Collective Constitutional AI: Aligning a Language Model with Public Input",
+    "authors": [
+      "Saffron Huang",
+      "Divya Siddarth",
+      "Liane Lovitt",
+      "Thomas I. Liao",
+      "Esin Durmus",
+      "Alex Tamkin",
+      "Deep Ganguli"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.07814",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "pluralism"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "constitutional-ai"
+    ],
+    "summary": "Extends Constitutional AI to source the constitution from the public: with the Collective Intelligence Project, roughly 1,000 Americans deliberated online to draft a public constitution, and models trained on it showed lower bias across social dimensions (especially accessibility/disability status) while maintaining performance — a tractable path to democratic, pluralistic value input.",
+    "why_it_matters": "The leading demonstration that pluralistic alignment can be operationalized — collective deliberation feeding directly into model training, rather than values being fixed by a small developer team.",
+    "related": [
+      "roadmap-pluralistic-alignment",
+      "constitutional-ai",
+      "moral-disagreement-limits"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "cooperative-inverse-rl",
     "title": "Cooperative Inverse Reinforcement Learning",
     "authors": [
@@ -6744,6 +6777,34 @@
       "cooperative-inverse-rl",
       "specification-gaming",
       "human-compatible"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "moral-disagreement-limits",
+    "title": "Moral Disagreement and the Limits of AI Value Alignment: A Dual Challenge of Epistemic Justification and Political Legitimacy",
+    "authors": [
+      "Nick Schuster",
+      "Daniel Kilov"
+    ],
+    "year": 2025,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12628449/",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "pluralism"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "roadmap-pluralistic-alignment"
+    ],
+    "summary": "A peer-reviewed article in AI & Society analyzing why standard alignment strategies fail to accommodate reasonable moral pluralism and stakeholder disagreement. Argues that assuming a single consensus value system fails both epistemically and politically — that alignment must confront the dual challenge of justifying its value choices and securing legitimacy across plural constituencies.",
+    "why_it_matters": "Grounds the technical pluralism agenda in moral and political philosophy — the argument that alignment cannot legitimately pick winners among reasonable moral views, which shapes both research and regulation debates.",
+    "related": [
+      "roadmap-pluralistic-alignment",
+      "moral-uncertainty-book",
+      "collective-constitutional-ai"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -6806,6 +6867,50 @@
     "status": "live"
   },
   {
+    "id": "personalization-llms-survey",
+    "title": "Personalization of Large Language Models: A Survey",
+    "authors": [
+      "Zhehao Zhang",
+      "Ryan A. Rossi",
+      "Branislav Kveton",
+      "Yijia Shao",
+      "Diyi Yang",
+      "Hamed Zamani",
+      "Franck Dernoncourt",
+      "Joe Barrow",
+      "Tong Yu",
+      "Sungchul Kim",
+      "Ruiyi Zhang",
+      "Jiuxiang Gu",
+      "Tyler Derr",
+      "Hongjie Chen",
+      "Junda Wu",
+      "Xiang Chen",
+      "Zichao Wang",
+      "Subrata Mitra",
+      "Nedim Lipka",
+      "Nesreen Ahmed",
+      "Yu Wang"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2411.00027",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "pluralism"
+    ],
+    "tier": "deep",
+    "prerequisites": [],
+    "summary": "A comprehensive survey of personalized LLMs, establishing a unifying taxonomy across personalization granularity, techniques (RAG, parameter-efficient fine-tuning, prompting), benchmark datasets, and evaluation — bridging personalized text generation with downstream recommendation and user-adapted behavior.",
+    "why_it_matters": "The technical backbone of the 'steerable/personalized' branch of pluralistic alignment: how models can adapt to individual values rather than imposing one universal default.",
+    "related": [
+      "roadmap-pluralistic-alignment",
+      "collective-constitutional-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "reinforcement-learning-moral-uncertainty",
     "title": "Reinforcement Learning Under Moral Uncertainty",
     "authors": [
@@ -6829,6 +6934,45 @@
       "moral-uncertainty-book",
       "moral-uncertainty-fanaticism",
       "inverse-reward-design"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "roadmap-pluralistic-alignment",
+    "title": "A Roadmap to Pluralistic Alignment",
+    "authors": [
+      "Taylor Sorensen",
+      "Jared Moore",
+      "Jillian Fisher",
+      "Mitchell Gordon",
+      "Niloofar Mireshghallah",
+      "Christopher Michael Rytting",
+      "Andre Ye",
+      "Liwei Jiang",
+      "Ximing Lu",
+      "Nouha Dziri",
+      "Tim Althoff",
+      "Yejin Choi"
+    ],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2402.05070",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "pluralism"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "constitutional-ai"
+    ],
+    "summary": "The foundational position paper of pluralistic alignment, defining three ways models can exhibit pluralism: Overton pluralism (presenting a spectrum of reasonable responses to contentious questions), steerable pluralism (letting users steer toward specific perspectives), and distributionally pluralistic models (matching the statistical distribution of a diverse population). Argues that monolithic RLHF collapses pluralism and proposes pluralistic benchmarks.",
+    "why_it_matters": "The canonical articulation of why alignment should not collapse diverse human values into a single average — the paper that named and organized the pluralism research agenda.",
+    "related": [
+      "collective-constitutional-ai",
+      "coherent-aggregated-volition",
+      "personalization-llms-survey",
+      "moral-disagreement-limits"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
