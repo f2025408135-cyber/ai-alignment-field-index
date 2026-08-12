@@ -6805,6 +6805,100 @@
     "status": "live"
   },
   {
+    "id": "houyi-prompt-injection",
+    "title": "Prompt Injection Attack Against LLM-Integrated Applications",
+    "authors": [
+      "Yi Liu",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Kailong Wang",
+      "Zihao Wang",
+      "Xiaofeng Wang",
+      "Tianwei Zhang",
+      "Yepang Liu",
+      "Haoyu Wang",
+      "Yan Zheng",
+      "Leo Yu Zhang",
+      "Yang Liu"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2306.05499",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "prompt-injection"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "ignore-previous-prompt"
+    ],
+    "summary": "Deconstructs the real-world attack surface of production LLM applications with HouYi, a black-box automated prompt injection framework inspired by traditional web injection attacks (SQL/XSS): a pre-constructed prompt, a context-partitioning injection, and a malicious payload. Compromised 31 of 36 real commercial applications tested, including Notion, exposing resource abuse and data exfiltration.",
+    "why_it_matters": "The strongest empirical evidence that prompt injection is not theoretical — a large fraction of deployed LLM applications were concretely exploitable in 2023.",
+    "related": [
+      "indirect-prompt-injection",
+      "ignore-previous-prompt",
+      "simon-willison-prompt-injection"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "ignore-previous-prompt",
+    "title": "Ignore Previous Prompt: Attack Techniques for Language Models",
+    "authors": [
+      "Fábio Perez",
+      "Ian Ribeiro"
+    ],
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2211.09527",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "prompt-injection"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduced PromptInject, a modular framework for composing adversarial prompts, and systematically categorized direct prompt injection into two classes: goal hijacking (forcing the model to abandon its task and execute the attacker's) and prompt leaking (forcing it to reveal its confidential system prompt). Demonstrated reliable attacks against GPT-3.",
+    "why_it_matters": "The foundational taxonomy of direct prompt injection — the vocabulary (goal hijacking, prompt leaking) that the entire field now uses.",
+    "related": [
+      "indirect-prompt-injection",
+      "simon-willison-prompt-injection",
+      "houyi-prompt-injection"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "indirect-prompt-injection",
+    "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+    "authors": [
+      "Kai Greshake",
+      "Sahar Abdelnabi",
+      "Shailesh Mishra",
+      "Christoph Endres",
+      "Thorsten Holz",
+      "Mario Fritz"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2302.12173",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "prompt-injection"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Introduced Indirect Prompt Injection: attackers need no direct chat interface — they embed adversarial instructions into external data (websites, emails, files, code) that LLM-integrated applications retrieve via RAG pipelines or process as input. Formalizes a threat taxonomy covering data theft, worm propagation, and ecosystem contamination, with concrete demonstrations against real applications.",
+    "why_it_matters": "Established that the boundary between instructions and data is the core security vulnerability of LLM applications — with agentic systems, the stakes escalate to unauthorized actions, not just weird outputs.",
+    "related": [
+      "ignore-previous-prompt",
+      "houyi-prompt-injection",
+      "simon-willison-prompt-injection"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "manipulating-machine-learning-poisoning",
     "title": "Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning",
     "authors": [
@@ -7061,6 +7155,31 @@
       "model-evaluation-extreme-risks",
       "frontier-ai-safety-commitments",
       "aggressive-compression-weight-theft"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "simon-willison-prompt-injection",
+    "title": "Prompt Injection (blog series)",
+    "authors": [
+      "Simon Willison"
+    ],
+    "year": 2023,
+    "url": "https://simonwillison.net/series/prompt-injection/",
+    "type": "community",
+    "domain": "security-redteam",
+    "subtopics": [
+      "prompt-injection"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The definitive practitioner's series on prompt injection, tracking the field from 2022 onward. Key contributions include the precise distinction between jailbreaking (bypassing safety filters) and prompt injection (subverting an application's control flow), the 'lethal trifecta' (an agent with private data, untrusted content, and external communication channels), and the dual-LLM defense pattern.",
+    "why_it_matters": "The clearest accessible map of the prompt-injection problem and its evolving defense landscape — where most practitioners first learn why 'ignore previous instructions' is unsolvable in general.",
+    "related": [
+      "indirect-prompt-injection",
+      "ignore-previous-prompt",
+      "houyi-prompt-injection"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
