@@ -25,10 +25,10 @@ Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dum
 | [Evals & Benchmarks](domains/evals-benchmarks.md) | Dangerous capabilities, deception/scheming, autonomy, red-teaming suites, eval critiques | 32 |
 | [Governance & Policy](domains/governance-policy.md) | Compute governance, international coordination, lab governance, regulation by jurisdiction, analogies | 24 |
 | [Security & Red-teaming](domains/security-redteam.md) | Adversarial robustness, jailbreaks, weight security, supply chain, prompt injection | 21 |
-| [Philosophy & Value Alignment](domains/philosophy-values.md) | Value specification, moral uncertainty, CEV ± critiques, pluralistic alignment, population ethics | 0 |
+| [Philosophy & Value Alignment](domains/philosophy-values.md) | Value specification, moral uncertainty, CEV ± critiques, pluralistic alignment, population ethics | 19 |
 | [Field Infrastructure](domains/field-infrastructure.md) | Training programs, funders, research orgs, communities, career pathways | 0 |
 
-**Total entries: 238**
+**Total entries: 257**
 
 ## Data
 

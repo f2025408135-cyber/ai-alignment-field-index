@@ -53,11 +53,11 @@ Checkpoint table for the Unified AI Alignment Field Index build. Updated and com
 | security-redteam | model weight security / exfiltration | done | 4 | 4/4 |
 | security-redteam | training pipeline / supply-chain security | done | 4 | 4/4 |
 | security-redteam | prompt injection | done | 4 | 4/4 |
-| philosophy-values | value specification problem | not started | | |
-| philosophy-values | moral uncertainty in AI systems | not started | | |
-| philosophy-values | CEV & its critiques | not started | | |
-| philosophy-values | pluralistic & personalized alignment | not started | | |
-| philosophy-values | alignment ↔ population ethics | not started | | |
+| philosophy-values | value specification problem | done | 3 | 3/3 |
+| philosophy-values | moral uncertainty in AI systems | done | 4 | 4/4 |
+| philosophy-values | CEV & its critiques | done | 4 | 4/4 |
+| philosophy-values | pluralistic & personalized alignment | done | 4 | 4/4 |
+| philosophy-values | alignment ↔ population ethics | done | 4 | 4/4 |
 | field-infrastructure | training/fellowship programs | not started | | |
 | field-infrastructure | funders | not started | | |
 | field-infrastructure | research organizations | not started | | |
