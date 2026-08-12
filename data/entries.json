@@ -6585,6 +6585,111 @@
     "status": "live"
   },
   {
+    "id": "clarifying-ai-alignment",
+    "title": "Clarifying AI Alignment",
+    "authors": [
+      "Paul Christiano"
+    ],
+    "year": 2018,
+    "url": "https://www.alignmentforum.org/posts/ZeE7EKHTFMBs8eMxn/clarifying-ai-alignment",
+    "type": "community",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "cev"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Christiano's essay separating the alignment problem from the 'definition problem': he argues that whether an AI 'does what we want' can be treated as a question of operator intent (what the human operator wants the system to do) rather than a question of what is objectively good — narrowing alignment to a tractable engineering target distinct from meta-ethics.",
+    "why_it_matters": "Set the modern pragmatic framing of alignment that most frontier labs now use — and implicitly stepped away from CEV-style ambitious targets, making it the reference point for the 'alignment as intent-following' school.",
+    "related": [
+      "coherent-extrapolated-volition",
+      "ai-alignment-why-hard",
+      "concrete-problems-ai-safety"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "coherent-aggregated-volition",
+    "title": "Coherent Aggregated Volition: A Method for Deriving Goal System Content for Advanced, Beneficial AGIs",
+    "authors": [
+      "Ben Goertzel"
+    ],
+    "year": 2010,
+    "url": "https://stafforini.com/works/goertzel-2010-coherent-aggregated-volition/",
+    "type": "essay",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "cev"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "coherent-extrapolated-volition"
+    ],
+    "summary": "Goertzel's alternative to CEV: where Yudkowsky assumed human values converge under extrapolation, Coherent Aggregated Volition (CAV) explicitly addresses deep ideological divergence across cultures and subcultures, proposing a network-based aggregation of many distinct human wills rather than a single extrapolated human archetype.",
+    "why_it_matters": "The most prominent early challenge to CEV's convergence assumption — the intellectual root of the later pluralistic-alignment movement's emphasis on aggregating diverse values.",
+    "related": [
+      "coherent-extrapolated-volition",
+      "roadmap-pluralistic-alignment",
+      "moral-uncertainty-book"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "coherent-extrapolated-dreaming",
+    "title": "Coherent Extrapolated Dreaming",
+    "authors": [
+      "Alex Flint"
+    ],
+    "year": 2022,
+    "url": "https://www.alignmentforum.org/posts/vdXNPzuh3fwgykvKY/coherent-extrapolated-dreaming",
+    "type": "community",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "cev"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "coherent-extrapolated-volition"
+    ],
+    "summary": "A critique of CEV that identifies a missing foundation: the extrapolation operator needs a theory of what 'that which is capable of becoming wise' is. Using thought experiments like extrapolating a robot vacuum or a language model, Flint shows that applying CEV-style extrapolation to the wrong substrate yields arbitrary or meaningless results indistinguishable from wisdom — challenging whether CEV can be specified at all.",
+    "why_it_matters": "One of the sharpest modern CEV critiques — it reframes the problem from 'what values to extrapolate' to 'what kind of thing is the subject of extrapolation,' undermining a core CEV assumption.",
+    "related": [
+      "coherent-extrapolated-volition",
+      "clarifying-ai-alignment",
+      "ai-alignment-why-hard"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "coherent-extrapolated-volition",
+    "title": "Coherent Extrapolated Volition",
+    "authors": [
+      "Eliezer Yudkowsky"
+    ],
+    "year": 2004,
+    "url": "https://intelligence.org/files/CEV.pdf",
+    "type": "essay",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "cev"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "Yudkowsky's original proposal for the target of alignment: rather than encoding a fixed utility function, an aligned AGI should act on humanity's coherent extrapolated volition — 'our wish if we knew more, thought faster, were more the people we wished we were, had grown up farther together; where the extrapolation converges rather than diverges, where our wishes cohere rather than interfere; extrapolated as we wish that extrapolated, interpreted as we wish that interpreted.'",
+    "why_it_matters": "The canonical statement of the 'meta-value' approach to alignment: the target is not what humans currently want but what we would want under idealization — the concept nearly all later value-target debates (CAV, value lock-in, corrigibility) define themselves against.",
+    "related": [
+      "clarifying-ai-alignment",
+      "coherent-aggregated-volition",
+      "coherent-extrapolated-dreaming",
+      "superintelligent-will"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "cooperative-inverse-rl",
     "title": "Cooperative Inverse Reinforcement Learning",
     "authors": [

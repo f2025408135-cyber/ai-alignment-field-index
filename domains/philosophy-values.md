@@ -2,7 +2,7 @@
 
 Value specification, moral uncertainty, CEV, pluralistic alignment, population ethics.
 
-**7 live/paywalled entries** · catalog domain id: `philosophy-values`
+**11 live/paywalled entries** · catalog domain id: `philosophy-values`
 
 > Generated from `data/entries.json` — do not edit by hand. Run `python scripts/generate_domains.py`.
 
@@ -20,8 +20,10 @@ The load-bearing literature of the subfield.
 
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
+| [Coherent Extrapolated Volition](https://intelligence.org/files/CEV.pdf) (Eliezer Yudkowsky, 2004) | essay | core | — | The canonical statement of the 'meta-value' approach to alignment: the target is not what humans currently want but what we would want under idealization — the concept nearly all later value-target debates (CAV, value lock-in, corrigibility) define themselves against. |
 | [Cooperative Inverse Reinforcement Learning](https://arxiv.org/abs/1606.03137) (Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel et al., 2016) | paper | core | — | The founding formalization of assistance-game alignment — it made precise why value specification is a problem of inference and cooperation, not of writing a better reward function, and inspired a large research program. |
 | [Inverse Reward Design](https://arxiv.org/abs/1711.02827) (Dylan Hadfield-Menell, Smitha Milli, Pieter Abbeel et al., 2017) | paper | core | Cooperative Inverse Reinforcement Learning | Gives a principled answer to reward misspecification: rather than naively optimizing the given reward, an aligned agent should reason about the reward-design process itself — the basis for later corrigible and uncertainty-aware reward models. |
+| [Clarifying AI Alignment](https://www.alignmentforum.org/posts/ZeE7EKHTFMBs8eMxn/clarifying-ai-alignment) (Paul Christiano, 2018) | community | core | — | Set the modern pragmatic framing of alignment that most frontier labs now use — and implicitly stepped away from CEV-style ambitious targets, making it the reference point for the 'alignment as intent-following' school. |
 | [Moral Uncertainty](https://global.oup.com/academic/product/moral-uncertainty-9780198722274) (William MacAskill, Krister Bykvist, Toby Ord, 2020) | book | core | — | The foundation for aligning AI under moral disagreement: if an AI must act while we are unsure what is right, MEC-style reasoning is the leading formal answer — and the book that made 'moral uncertainty' a distinct field. |
 
 ## Deep
@@ -30,6 +32,8 @@ Formal treatments, frontier research, and specialized material.
 
 | Resource | Type | Tier | Prerequisites | Why it matters |
 |---|---|---|---|---|
+| [Coherent Aggregated Volition: A Method for Deriving Goal System Content for Advanced, Beneficial AGIs](https://stafforini.com/works/goertzel-2010-coherent-aggregated-volition/) (Ben Goertzel, 2010) | essay | deep | Coherent Extrapolated Volition | The most prominent early challenge to CEV's convergence assumption — the intellectual root of the later pluralistic-alignment movement's emphasis on aggregating diverse values. |
 | [Reinforcement Learning Under Moral Uncertainty](https://arxiv.org/abs/2006.04734) (Adrien Ecoffet, Joel Lehman, 2020) | paper | deep | Moral Uncertainty | The first concrete RL implementation of moral uncertainty — proof that an agent can act under value disagreement rather than needing a single settled reward function. |
 | [The Alignment Problem from a Deep Learning Perspective](https://arxiv.org/abs/2209.00626) (Richard Ngo, Lawrence Chan, Sören Mindermann, 2022) | paper | deep | AI Alignment: Why It's Hard, and Where to Start | The clearest modern statement of why value specification fails in practice: even with perfect training signals, generalization can produce systematically misaligned behavior — the canonical framing for deep-learning-era alignment work. |
+| [Coherent Extrapolated Dreaming](https://www.alignmentforum.org/posts/vdXNPzuh3fwgykvKY/coherent-extrapolated-dreaming) (Alex Flint, 2022) | community | deep | Coherent Extrapolated Volition | One of the sharpest modern CEV critiques — it reframes the problem from 'what values to extrapolate' to 'what kind of thing is the subject of extrapolation,' undermining a core CEV assumption. |
 | [Moral Uncertainty and the Problem of Fanaticism](https://arxiv.org/abs/2312.11589) (Jazon Szabo, Jose Such, Natalia Criado et al., 2023) | paper | deep | Moral Uncertainty | Bridges moral-uncertainty theory to AI decision-making, showing concretely how an agent with moral uncertainty should compute action choiceworthiness — the technical heart of value uncertainty in deployed systems. |
