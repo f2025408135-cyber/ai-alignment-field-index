@@ -2560,6 +2560,32 @@
     "status": "live"
   },
   {
+    "id": "80000-hours-career-review",
+    "title": "80,000 Hours — AI Safety Technical Research Career Review",
+    "authors": [
+      "80,000 Hours"
+    ],
+    "year": 2021,
+    "url": "https://80000hours.org/career-reviews/ai-safety-technical-research/",
+    "type": "essay",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "careers"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "80000-hours-ai-profile"
+    ],
+    "summary": "A deep-dive career review of technical AI safety research as a path: what the work involves, who is well-suited, how to break in, and how to weigh it against other options.",
+    "why_it_matters": "The most detailed public treatment of what a technical alignment research career actually looks like, helping people make informed decisions about a demanding and unusual career.",
+    "related": [
+      "80000-hours-ai-profile",
+      "ai-safety-careers"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "agi-safety-fundamentals",
     "title": "AGI Safety Fundamentals (BlueDot Impact)",
     "authors": [
@@ -2580,6 +2606,57 @@
       "ai-alignment-why-hard",
       "alignment-forum",
       "80000-hours-ai-profile"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "ai-safety-camp",
+    "title": "AI Safety Camp",
+    "authors": [
+      "AI Safety Camp (Remmelt Ellen et al.)"
+    ],
+    "year": 2026,
+    "url": "https://www.aisafety.camp/",
+    "type": "community",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "careers"
+    ],
+    "tier": "entry",
+    "prerequisites": [
+      "agi-safety-fundamentals"
+    ],
+    "summary": "A structured virtual research incubator where students, engineers, and independent researchers form teams, scope concrete research questions, and draft projects in AI safety — a bridge from general interest to doing actual alignment work, running recurring editions (the 2026 edition was live at time of cataloguing).",
+    "why_it_matters": "One of the few programs that lets newcomers with diverse backgrounds do real, collaborative alignment research remotely, making it a practical career pathway into the field for people who cannot relocate or join full-time programs.",
+    "related": [
+      "agi-safety-fundamentals",
+      "80000-hours-career-review"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "ai-safety-careers",
+    "title": "AI Safety Careers Job Board",
+    "authors": [
+      "AISafety.com / CAIS ecosystem"
+    ],
+    "year": 2024,
+    "url": "https://aisafety.com/jobs",
+    "type": "tool",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "careers"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A curated job board listing hundreds of open roles, fellowships, internships, and grants across AI safety and alignment, governance and policy, evaluations, and responsible AI.",
+    "why_it_matters": "The central clearinghouse for finding concrete opportunities in the field, connecting qualified people to the organizations and programs catalogued throughout this index.",
+    "related": [
+      "safe-ai-careers",
+      "80000-hours-ai-profile",
+      "cais"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -2929,6 +3006,30 @@
       "longview-philanthropy",
       "sff",
       "ea-funds-transformative-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "safe-ai-careers",
+    "title": "CAIS Careers (safe.ai/careers)",
+    "authors": [
+      "Center for AI Safety"
+    ],
+    "year": 2022,
+    "url": "https://safe.ai/careers",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "careers"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "The Center for AI Safety's careers portal, listing open research, engineering, and operations roles at one of the field's leading field-building organizations.",
+    "why_it_matters": "A direct route into working at a major AI safety nonprofit, and representative of the careers pages maintained by the organizations across this index.",
+    "related": [
+      "cais",
+      "ai-safety-careers"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
