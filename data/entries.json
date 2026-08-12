@@ -6586,6 +6586,36 @@
     "status": "live"
   },
   {
+    "id": "aggressive-compression-weight-theft",
+    "title": "Aggressive Compression Enables LLM Weight Theft",
+    "authors": [
+      "Davis Brown",
+      "Juan-Pablo Rivera",
+      "Dan Hendrycks",
+      "Mantas Mazeika"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2601.01296",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "weights"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "securing-ai-model-weights"
+    ],
+    "summary": "Shows that model weights are far easier to exfiltrate than assumed: by tailoring compression specifically for theft (relaxing decompression constraints), attackers can achieve 16x to 100x compression with minimal performance loss, shrinking transmission time from months to days. Proposes countermeasures including compression-resistant models, forensic watermarking, and network topology controls.",
+    "why_it_matters": "Undermines the common assumption that weight size makes theft impractical — a concrete technical result that raises the urgency of weight security controls.",
+    "related": [
+      "securing-ai-model-weights",
+      "open-sourcing-foundation-models",
+      "preventing-model-exfiltration"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "catastrophic-jailbreak-finetuning",
     "title": "Catastrophic Jailbreak of Open-source LLMs via Exploiting Generation",
     "authors": [
@@ -6712,6 +6742,52 @@
     "status": "live"
   },
   {
+    "id": "open-sourcing-foundation-models",
+    "title": "Open-Sourcing Highly Capable Foundation Models: An Evaluation of Risks, Benefits, and Alternative Methods for Pursuing Open-Source Objectives",
+    "authors": [
+      "Elizabeth Seger",
+      "Noemi Dreksler",
+      "Richard Moulange",
+      "Emily Dardaman",
+      "Jonas Schuett",
+      "K. Wei",
+      "Christoph Winter",
+      "Mackenzie Arnold",
+      "Seán Ó hÉigeartaigh",
+      "Anton Korinek",
+      "Markus Anderljung",
+      "Ben Bucknall",
+      "Alan Chan",
+      "Eoghan Stafford",
+      "Leonie Koessler",
+      "Aviv Ovadya",
+      "Ben Garfinkel",
+      "Emma Bluemke",
+      "Michael Aird",
+      "Patrick Levermore",
+      "Julian Hazell",
+      "Abhishek Gupta"
+    ],
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2311.09227",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "weights"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A comprehensive evaluation of the risks and benefits of open-sourcing highly capable foundation models, arguing that while openness drives innovation and decentralization, the most capable models may pose dual-use risks extreme enough to outweigh those benefits. Maps alternative sharing models — API-only access, secure enclaves, controlled research access — that preserve openness goals without uncontrolled weight proliferation.",
+    "why_it_matters": "The key governance analysis of the open-weights question: whether to release frontier weights is the single highest-stakes distribution decision a lab makes, and this is the reference framework for weighing it.",
+    "related": [
+      "securing-ai-model-weights",
+      "aggressive-compression-weight-theft",
+      "computing-power-governance-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "pair-jailbreaking-queries",
     "title": "Jailbreaking Black Box Large Language Models in Twenty Queries",
     "authors": [
@@ -6742,6 +6818,32 @@
       "harmbench",
       "tree-of-attacks",
       "autodan"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "preventing-model-exfiltration",
+    "title": "Preventing Model Exfiltration with Upload Limits",
+    "authors": [
+      "Ryan Greenblatt"
+    ],
+    "year": 2024,
+    "url": "https://www.lesswrong.com/posts/rf66R4YsrCHgWx9RG/preventing-model-exfiltration-with-upload-limits",
+    "type": "community",
+    "domain": "security-redteam",
+    "subtopics": [
+      "weights"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "securing-ai-model-weights"
+    ],
+    "summary": "A LessWrong technical analysis of defending frontier models against weight theft at the inference layer: since model weights are enormous, strict limits on data uploaded from inference servers can make exfiltration impractical even if the server is fully compromised. Discusses compression against weaker public models, physical infrastructure controls, and bandwidth restrictions.",
+    "why_it_matters": "A concrete, engineering-level mitigation proposal from a leading AI-safety researcher — the kind of operational detail RAND-style threat assessments point to but don't specify.",
+    "related": [
+      "securing-ai-model-weights",
+      "aggressive-compression-weight-theft"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -6804,6 +6906,37 @@
       "adversarial-examples-are-features",
       "robust-deep-learning-madry",
       "exploiting-harnessing-adversarial-examples"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "securing-ai-model-weights",
+    "title": "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models",
+    "authors": [
+      "Sella Nevo",
+      "Dan Lahav",
+      "Ajay Karpur",
+      "Yogev Bar-On",
+      "Henry Alexander Bradley",
+      "Jeff Alstott"
+    ],
+    "year": 2024,
+    "url": "https://www.rand.org/pubs/research_reports/RRA2849-1.html",
+    "type": "paper",
+    "domain": "security-redteam",
+    "subtopics": [
+      "weights"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The RAND report that made model weight security a policy topic: a threat assessment identifying 38 distinct attack vectors by which frontier model weights could be stolen — from insider threats and cyber intrusion to state-sponsored exfiltration — and a defense-in-depth framework with five security levels and threat-informed baselines for evaluating lab cybersecurity postures.",
+    "why_it_matters": "Weights are the crown jewels of AI: if stolen, they enable unrestricted misuse without lab oversight. This is the authoritative mapping of how they could be lost and how to protect them.",
+    "related": [
+      "anthropic-responsible-scaling-policy",
+      "model-evaluation-extreme-risks",
+      "frontier-ai-safety-commitments",
+      "aggressive-compression-weight-theft"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
