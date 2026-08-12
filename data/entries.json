@@ -2612,6 +2612,54 @@
     "status": "live"
   },
   {
+    "id": "ea-funds-transformative-ai",
+    "title": "EA Funds — Transformative AI Fund",
+    "authors": [
+      "Effective Altruism Funds"
+    ],
+    "year": 2017,
+    "url": "https://funds.effectivealtruism.org/funds/transformative-ai",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "funders"
+    ],
+    "tier": "entry",
+    "prerequisites": [],
+    "summary": "A pooled community fund — successor to the Long-Term Future Fund (founded 2017) — providing fast, early-stage grants to individuals, researchers, and new projects working on transformative AI risks and technical alignment.",
+    "why_it_matters": "One of the most accessible funding routes for early-career and independent researchers, offering smaller, quicker, failure-tolerant grants that seed many new projects.",
+    "related": [
+      "open-philanthropy-ai-safety",
+      "sff"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "longview-philanthropy",
+    "title": "Longview Philanthropy — Artificial Intelligence",
+    "authors": [
+      "Longview Philanthropy"
+    ],
+    "year": 2018,
+    "url": "https://www.longview.org/artificial-intelligence/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "funders"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A major philanthropic advisor and grantmaker directing over $250M toward AI risk reduction, funding technical research, governance, and policy through vehicles including the Frontier AI Fund and Emerging Challenges Fund.",
+    "why_it_matters": "A principal source of capital for frontier-model evaluation, mechanistic interpretability, and threat research — a key complement to Open Philanthropy's field-wide grantmaking.",
+    "related": [
+      "open-philanthropy-ai-safety",
+      "sff"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "mats",
     "title": "MATS Program (formerly SERI MATS / MIRI Alignment Summer School)",
     "authors": [
@@ -2660,6 +2708,56 @@
     "related": [
       "arena",
       "mats"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "open-philanthropy-ai-safety",
+    "title": "Open Philanthropy / Coefficient Giving — AI Safety & Security",
+    "authors": [
+      "Open Philanthropy (Coefficient Giving)"
+    ],
+    "year": 2015,
+    "url": "https://coefficientgiving.org/research/our-approach-to-ai-safety-and-security/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "funders"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The largest philanthropic funder of AI safety: Open Philanthropy (now operating under the name Coefficient Giving) has granted hundreds of millions toward technical alignment research, governance, and field-building since 2015, organized around visibility, safeguards, and capacity.",
+    "why_it_matters": "The anchor funder of the field — its grantmaking shaped which organizations, researchers, and research agendas exist. Understanding who funds alignment is essential to understanding how the field is built and sustained.",
+    "related": [
+      "longview-philanthropy",
+      "sff",
+      "ea-funds-transformative-ai"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "sff",
+    "title": "Survival and Flourishing Fund (SFF)",
+    "authors": [
+      "Survival and Flourishing Fund"
+    ],
+    "year": 2019,
+    "url": "https://survivalandflourishing.fund/",
+    "type": "org",
+    "domain": "field-infrastructure",
+    "subtopics": [
+      "funders"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "A community-led virtual fund that aggregates donor capital and distributes tens of millions annually to a broad ecosystem of AI safety and existential-risk organizations through its recurring grant rounds.",
+    "why_it_matters": "A democratized funding mechanism that supports many smaller alignment organizations and independent researchers that larger institutional funders overlook, keeping the field's diversity of approaches alive.",
+    "related": [
+      "open-philanthropy-ai-safety",
+      "miri",
+      "cais"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
