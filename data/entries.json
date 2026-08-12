@@ -6585,6 +6585,33 @@
     "status": "live"
   },
   {
+    "id": "beyond-astronomical-waste",
+    "title": "Beyond Astronomical Waste",
+    "authors": [
+      "Wei Dai"
+    ],
+    "year": 2018,
+    "url": "https://www.lesswrong.com/posts/Qz6w4GYZpgeDp6ATB/beyond-astronomical-waste",
+    "type": "community",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "population-ethics"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "bostrom-astronomical-waste"
+    ],
+    "summary": "A LessWrong essay extending Bostrom's astronomical-waste argument into the alignment domain: if the universe's value potential is astronomical, then the choice of AI alignment target — including the population ethics it encodes (whether digital minds count, how many lives matter) — determines whether that potential is realized. Argues the value at stake in alignment far exceeds ordinary human welfare measures.",
+    "why_it_matters": "Directly connects population ethics to alignment: it reframes getting alignment right as a question of which moral population counts, making population axiology a first-order alignment concern.",
+    "related": [
+      "bostrom-astronomical-waste",
+      "repugnant-conclusion-sep",
+      "when-is-unaligned-ai-morally-valuable"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "clarifying-ai-alignment",
     "title": "Clarifying AI Alignment",
     "authors": [
@@ -6911,6 +6938,33 @@
     "status": "live"
   },
   {
+    "id": "population-axiology-greaves",
+    "title": "Population Axiology",
+    "authors": [
+      "Hilary Greaves"
+    ],
+    "year": 2017,
+    "url": "https://users.ox.ac.uk/~mert2255/papers/population_axiology.pdf",
+    "type": "paper",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "population-ethics"
+    ],
+    "tier": "core",
+    "prerequisites": [
+      "repugnant-conclusion-sep"
+    ],
+    "summary": "Greaves' survey of population axiology in Philosophy Compass: the anatomy of theories about the value of populations — total and average utilitarianism, critical-level and critical-range views, person-affecting views — and the impossibility theorems (Arrhenius et al.) showing no theory can satisfy all intuitively plausible axioms.",
+    "why_it_matters": "The leading accessible map of population ethics, and the frame for Greaves & MacAskill's 'strong longtermism' — the moral theory that underwrites the case for prioritizing AI risk above almost everything else.",
+    "related": [
+      "repugnant-conclusion-sep",
+      "greaves-macaskill-strong-longtermism",
+      "bostrom-astronomical-waste"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
     "id": "reinforcement-learning-moral-uncertainty",
     "title": "Reinforcement Learning Under Moral Uncertainty",
     "authors": [
@@ -6934,6 +6988,32 @@
       "moral-uncertainty-book",
       "moral-uncertainty-fanaticism",
       "inverse-reward-design"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "repugnant-conclusion-sep",
+    "title": "The Repugnant Conclusion (Stanford Encyclopedia of Philosophy)",
+    "authors": [
+      "Gustaf Arrhenius"
+    ],
+    "year": 2006,
+    "url": "https://plato.stanford.edu/entries/repugnant-conclusion/",
+    "type": "essay",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "population-ethics"
+    ],
+    "tier": "core",
+    "prerequisites": [],
+    "summary": "The SEP's authoritative entry on Parfit's Repugnant Conclusion: that, for any population of lives at high welfare, there is a much larger population of lives barely worth living that is better according to total utilitarianism. Catalogs the eight main strategies for resolving population-axiology puzzles (average principles, critical-level views, variable-value theories, rejecting transitivity, etc.) and the impossibility results constraining them.",
+    "why_it_matters": "Population ethics is the deep background for longtermist and astronomical-waste arguments that dominate macrostrategy — and any AI optimized for total welfare must take a stance on the Repugnant Conclusion.",
+    "related": [
+      "population-axiology-greaves",
+      "bostrom-astronomical-waste",
+      "parfit-reasons-and-persons",
+      "what-if-ethics-provably-self-contradictory"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
@@ -6973,6 +7053,33 @@
       "coherent-aggregated-volition",
       "personalization-llms-survey",
       "moral-disagreement-limits"
+    ],
+    "last_verified": "2026-08-12",
+    "status": "live"
+  },
+  {
+    "id": "what-if-ethics-provably-self-contradictory",
+    "title": "What if Ethics is Provably Self-Contradictory?",
+    "authors": [
+      "Yitz"
+    ],
+    "year": 2024,
+    "url": "https://www.lesswrong.com/posts/kx2BTnWiZxkwqkSkj/what-if-ethics-is-provably-self-contradictory",
+    "type": "community",
+    "domain": "philosophy-values",
+    "subtopics": [
+      "population-ethics"
+    ],
+    "tier": "deep",
+    "prerequisites": [
+      "repugnant-conclusion-sep"
+    ],
+    "summary": "Examines the implications of Arrhenius's impossibility theorems — which show that total utilitarianism is provably self-contradictory at population extremes — for AI alignment. If human-built ethical frameworks break down at astronomical population scales, then alignment strategies relying on naive value learning or monolithic axiomatic targets risk deep incoherence when applied to digital minds or enormous future populations.",
+    "why_it_matters": "The sharpest community statement that population ethics is not a footnote but a constraint on alignment itself: value targets may be internally inconsistent exactly where advanced AI takes us.",
+    "related": [
+      "repugnant-conclusion-sep",
+      "beyond-astronomical-waste",
+      "coherent-extrapolated-volition"
     ],
     "last_verified": "2026-08-12",
     "status": "live"
