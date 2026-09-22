@@ -1,0 +1,69 @@
+# Unified AI Alignment Field Index
+
+A living, curated index of the AI alignment field — organized as **prerequisite tiers within topic domains**, with critique/rebuttal cross-linking, not a flat list of links.
+
+<p align="center">
+  <a href="graph.html"><img src="assets/graph-thumbnail.svg" alt="AI Alignment Field Index network — 277 entries, 634 cross-links" width="720"></a>
+</p>
+
+<p align="center">
+  <a href="graph.html"><img src="assets/badge-entries.svg" alt="entries"></a>
+  <a href="graph.html"><img src="assets/badge-crosslinks.svg" alt="cross-links"></a>
+  <a href="graph.html"><img src="assets/badge-domains.svg" alt="domains"></a>
+  <a href="graph.html"><img src="assets/badge-subtopics.svg" alt="subtopics"></a>
+</p>
+
+## Why This Index Exists
+
+Most existing lists (`awesome-*-alignment` repos, wiki-style sites) are flat dumps: strong on famous papers, weak on *why things connect*. This index is built differently:
+
+- **Drawer model** — ten topic domains, each internally tiered `entry → core → deep` with explicit prerequisites.
+- **Connective tissue** — every `core`/`deep` entry links to the critiques, rebuttals, and follow-ups it provoked (`related`), and to what you should read first (`prerequisites`).
+- **Depth beyond the top-10** — foundational papers *and* the sub-literature around them: formal treatments, implementations, tooling.
+- **Honest about the field's shape** — governance, philosophy, macrostrategy, and field infrastructure sit alongside technical ML content.
+- **Verified & fresh** — every URL is fetch-confirmed before inclusion and re-checked on each audit pass; anything >12 months old is flagged for freshness review.
+- **Zero fabrication** — every entry was found via live search/fetch. Nothing is included from memory.
+
+## The Ten Domains
+
+| Domain | What's Inside | Entries |
+|---|---|---|
+| [Entry Tier](domains/entry-tier.md) | Paperclip maximizer, orthogonality, Fermi/Great Filter, accessible intros | 26 |
+| [Macrostrategy & X-Risk](domains/macrostrategy.md) | X-risk theory, timeline forecasting, differential development, longtermism ± critiques | 26 |
+| [Agent Foundations & Decision Theory](domains/agent-foundations.md) | Embedded agency, CDT/EDT/UDT/FDT, corrigibility, infra-Bayesianism, Cartesian frames, logical induction | 30 |
+| [Interpretability](domains/interpretability.md) | Circuits, superposition/SAEs, tracing, probing, causal scrubbing, SLT, rep engineering, tooling | 46 |
+| [Scalable Oversight & RLHF](domains/oversight-rlhf.md) | RLHF failure modes, CAI/RLAIF, debate, amplification, weak-to-strong, reward hacking, sycophancy | 33 |
+| [Evals & Benchmarks](domains/evals-benchmarks.md) | Dangerous capabilities, deception/scheming, autonomy, red-teaming suites, eval critiques | 32 |
+| [Governance & Policy](domains/governance-policy.md) | Compute governance, international coordination, lab governance, regulation by jurisdiction, analogies | 24 |
+| [Security & Red-teaming](domains/security-redteam.md) | Adversarial robustness, jailbreaks, weight security, supply chain, prompt injection | 21 |
+| [Philosophy & Value Alignment](domains/philosophy-values.md) | Value specification, moral uncertainty, CEV ± critiques, pluralistic alignment, population ethics | 19 |
+| [Field Infrastructure](domains/field-infrastructure.md) | Training programs, funders, research orgs, communities, career pathways | 20 |
+
+**Total: 277 entries** across 55 subtopics.
+
+## Interactive Graph
+
+[Open the network graph](graph.html) — a self-contained, offline-friendly interactive map of the entire index: every entry is a node, every `prerequisite` (solid, directed) and `related`/critique/rebuttal edge (dashed) is a link.
+
+- **Search** by title, author, or ID
+- **Filter** by tier and domain
+- **Click any node** for its full record
+- **Learning tracks** (`T` key) generate a topologically-ordered reading path through a target's prerequisites
+
+Regenerate the graph anytime:
+
+```bash
+python -X utf8 scripts/generate_graph.py
+```
+
+## Data
+
+The machine-readable catalog lives in [`data/entries.json`](data/entries.json). Every `/domains/*.md` file is generated from it — edit the data, not the markdown.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). No entry ships without a verified, resolving URL and an original paraphrase.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
